@@ -33,12 +33,6 @@ export function SEOHead({
   const baseUrl = 'https://invoicemonk.com';
   const fullCanonical = canonical || baseUrl;
   
-  // Extract the path from canonical for hreflang URLs
-  const path = canonical?.replace(baseUrl, '') || '/';
-  
-  // Supported locales for hreflang tags
-  const hreflangLocales = ['en-NG', 'en-US', 'en-GB', 'en-CA', 'en-AU'];
-
   return (
     <Helmet>
       {/* Primary Meta Tags */}
@@ -47,19 +41,8 @@ export function SEOHead({
       <meta name="author" content="Invoicemonk" />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
       
-      {/* Canonical */}
+      {/* Canonical - single canonical URL, no hreflang needed for single-language site */}
       <link rel="canonical" href={fullCanonical} />
-      
-      {/* Hreflang for international targeting with locale-specific URLs */}
-      {hreflangLocales.map((loc) => (
-        <link 
-          key={loc}
-          rel="alternate" 
-          hrefLang={loc} 
-          href={`${baseUrl}${path}${path.includes('?') ? '&' : '?'}locale=${loc}`} 
-        />
-      ))}
-      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}${path}`} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
