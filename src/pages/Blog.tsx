@@ -8,6 +8,7 @@ import { pillars, pillarClusters } from '@/data/topicalMap';
 import { BlogPostCard } from '@/components/blog/BlogPostCard';
 import { PillarCard } from '@/components/blog/PillarCard';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { BlogTopicListSchema } from '@/components/seo/ItemListSchema';
 import { useLocale } from '@/hooks/useLocale';
 import { pageSEO } from '@/components/seo/seoConfig';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
@@ -74,6 +75,11 @@ const Blog = () => {
         description={seo.getDescription(locale)}
         canonical="https://invoicemonk.com/blog"
       />
+      
+      {/* ItemList Schema for blog topics */}
+      {viewMode === 'topics' && !selectedPillar && !selectedCategory && (
+        <BlogTopicListSchema topics={pillars} />
+      )}
       
       <div className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

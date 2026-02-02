@@ -7,6 +7,7 @@ export function WebSiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://invoicemonk.com/#website",
     "name": "Invoicemonk",
     "alternateName": "Invoice Monk",
     "url": "https://invoicemonk.com",
@@ -15,14 +16,20 @@ export function WebSiteSchema() {
     "publisher": {
       "@id": "https://invoicemonk.com/#organization"
     },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://invoicemonk.com/blog?q={search_term_string}"
+    "potentialAction": [
+      {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://invoicemonk.com/blog?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       },
-      "query-input": "required name=search_term_string"
-    }
+      {
+        "@type": "ReadAction",
+        "target": "https://invoicemonk.com/blog"
+      }
+    ]
   };
 
   return (
