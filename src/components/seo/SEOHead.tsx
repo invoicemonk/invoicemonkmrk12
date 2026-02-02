@@ -32,6 +32,12 @@ export function SEOHead({
   const { locale } = useLocale();
   const baseUrl = 'https://invoicemonk.com';
   const fullCanonical = canonical || baseUrl;
+  
+  // Extract the path from canonical for hreflang URLs
+  const path = canonical?.replace(baseUrl, '') || '/';
+  
+  // Supported locales for hreflang tags
+  const hreflangLocales = ['en-NG', 'en-US', 'en-GB', 'en-CA', 'en-AU'];
 
   return (
     <Helmet>
@@ -44,13 +50,16 @@ export function SEOHead({
       {/* Canonical */}
       <link rel="canonical" href={fullCanonical} />
       
-      {/* Hreflang for international targeting */}
-      <link rel="alternate" hrefLang="en-NG" href={`${baseUrl}${canonical?.replace(baseUrl, '') || '/'}`} />
-      <link rel="alternate" hrefLang="en-US" href={`${baseUrl}${canonical?.replace(baseUrl, '') || '/'}`} />
-      <link rel="alternate" hrefLang="en-GB" href={`${baseUrl}${canonical?.replace(baseUrl, '') || '/'}`} />
-      <link rel="alternate" hrefLang="en-CA" href={`${baseUrl}${canonical?.replace(baseUrl, '') || '/'}`} />
-      <link rel="alternate" hrefLang="en-AU" href={`${baseUrl}${canonical?.replace(baseUrl, '') || '/'}`} />
-      <link rel="alternate" hrefLang="x-default" href={baseUrl} />
+      {/* Hreflang for international targeting with locale-specific URLs */}
+      {hreflangLocales.map((loc) => (
+        <link 
+          key={loc}
+          rel="alternate" 
+          hrefLang={loc} 
+          href={`${baseUrl}${path}${path.includes('?') ? '&' : '?'}locale=${loc}`} 
+        />
+      ))}
+      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}${path}`} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />

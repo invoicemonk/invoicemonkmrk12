@@ -9,8 +9,11 @@ import { FAQSection } from '@/components/home/FAQSection';
 import { WaveCTASection } from '@/components/home/WaveCTASection';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { SoftwareApplicationSchema } from '@/components/seo/SoftwareApplicationSchema';
+import { WebSiteSchema } from '@/components/seo/WebSiteSchema';
+import { FAQSchema } from '@/components/seo/FAQSchema';
 import { useLocale } from '@/hooks/useLocale';
 import { pageSEO } from '@/components/seo/seoConfig';
+import { homepageFAQs } from '@/data/homepageFAQs';
 
 const Index = () => {
   const { locale } = useLocale();
@@ -23,7 +26,9 @@ const Index = () => {
         description={seo.getDescription(locale)}
         canonical="https://invoicemonk.com/"
       />
+      <WebSiteSchema />
       <SoftwareApplicationSchema />
+      <FAQSchema items={homepageFAQs} />
       <Layout>
         {/* Flow: Hero -> Products -> Benefits -> Testimonials -> Personas -> Blog -> FAQ -> CTA */}
         <HeroSection />

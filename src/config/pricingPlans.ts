@@ -19,7 +19,7 @@ export interface PricingPlan {
 
 // Feature lists for each tier
 export const freeTierFeatures = [
-  'Up to 5 invoices/month',
+  '5 invoices/month',
   'Clean invoice layout',
   'Subtle Invoicemonk branding',
   'View invoice online',
@@ -30,7 +30,7 @@ export const freeTierFeatures = [
 export const starterTierFeatures = [
   'Unlimited invoices',
   'PDF export',
-  'Branded invoices',
+  'Branded invoices (with footer)',
   'Basic compliance fields',
   '7-year retention',
   'Email support',

@@ -97,32 +97,34 @@ export function WaveProductTabs() {
           </p>
         </AnimatedSection>
 
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 max-w-3xl mx-auto">
-          {products.map((product) => {
-            const Icon = product.icon;
-            const isActive = activeTab === product.id;
+        {/* Tab Navigation - Horizontal scroll on mobile */}
+        <div className="overflow-x-auto pb-2 mb-12 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
+          <div className="flex sm:flex-wrap sm:justify-center gap-2 min-w-max sm:min-w-0 max-w-3xl mx-auto">
+            {products.map((product) => {
+              const Icon = product.icon;
+              const isActive = activeTab === product.id;
 
-            return (
-              <button
-                key={product.id}
-                onClick={() => setActiveTab(product.id)}
-                className={`flex items-center gap-2 px-5 py-3 rounded-full text-body font-medium transition-all duration-300 ${
-                  isActive
-                    ? 'bg-primary text-primary-foreground shadow-soft-md'
-                    : 'bg-card text-muted-foreground hover:bg-muted border border-border'
-                }`}
-              >
-                <Icon className="w-4 h-4" />
-                {product.name}
-                {!product.available && (
-                  <span className="text-[10px] font-semibold uppercase tracking-wide opacity-70">
-                    Soon
-                  </span>
-                )}
-              </button>
-            );
-          })}
+              return (
+                <button
+                  key={product.id}
+                  onClick={() => setActiveTab(product.id)}
+                  className={`flex items-center gap-2 px-5 py-3 rounded-full text-body font-medium transition-all duration-300 whitespace-nowrap ${
+                    isActive
+                      ? 'bg-primary text-primary-foreground shadow-soft-md'
+                      : 'bg-card text-muted-foreground hover:bg-muted border border-border'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  {product.name}
+                  {!product.available && (
+                    <span className="text-[10px] font-semibold uppercase tracking-wide opacity-70">
+                      Soon
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Tab Content */}

@@ -13,6 +13,8 @@ import { WaveBlogPreview } from '@/components/home/WaveBlogPreview';
 import { WaveProductFAQ } from '@/components/home/WaveProductFAQ';
 import { WaveCTASection } from '@/components/home/WaveCTASection';
 import { useLocale } from '@/hooks/useLocale';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const estimateTabbedFeatures = [
   {
@@ -129,6 +131,18 @@ const Estimates = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Professional Estimates & Quotes Software | Proposals | Invoicemonk"
+        description="Create professional estimates and quotes. Get client approval online and convert to invoices with one click. Win more business with better proposals."
+        canonical="https://invoicemonk.com/estimates"
+      />
+      <ServiceSchema
+        serviceName="Invoicemonk Estimates & Proposals"
+        serviceType="Quoting Software"
+        description="Create professional estimates and quotes. Get client approval online and convert to invoices with one click."
+        url="https://invoicemonk.com/estimates"
+      />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-20 lg:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -339,7 +353,7 @@ const Estimates = () => {
       <WaveBlogPreview
         title="Proposal and estimate tips"
         subtitle="Win more clients with better proposals."
-        category="Small Business"
+        pillarId="estimates-proposals"
       />
 
       {/* FAQ Section */}

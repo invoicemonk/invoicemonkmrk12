@@ -2,6 +2,12 @@ import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, CheckCircle, Clock, FileText, TrendingUp, Shield, Zap } from 'lucide-react';
+import { PageHero } from '@/components/shared/PageHero';
+import { 
+  FloatingInvoiceCard, 
+  FloatingPaymentBadge, 
+  FloatingCalendarBadge 
+} from '@/components/shared/FloatingElements';
 
 const Freelancers = () => {
   const benefits = [
@@ -43,36 +49,32 @@ const Freelancers = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              <Zap className="w-4 h-4" />
-              For Freelancers
-            </span>
-            <h1 className="text-display-sm lg:text-display-md font-bold text-foreground mb-6">
-              Invoicing made simple for freelancers
-            </h1>
-            <p className="text-body-lg text-muted-foreground mb-8">
-              Spend less time on paperwork and more time doing what you love. 
-              Invoicemonk handles your invoicing, so you can focus on your craft.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="https://app.invoicemonk.com/signup" target="_blank" rel="noopener noreferrer">
-                  Start Free
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="/pricing">
-                  View Pricing
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="relative">
+        <PageHero
+          badge={{ icon: Zap, text: 'For Freelancers' }}
+          title="Invoicing made simple for freelancers"
+          accentWord="freelancers"
+          description="Spend less time on paperwork and more time doing what you love. Invoicemonk handles your invoicing, so you can focus on your craft."
+          primaryCta={{ text: 'Start Free', href: 'https://app.invoicemonk.com/signup' }}
+          secondaryCta={{ text: 'View Pricing', href: '/pricing', external: false }}
+          trustBadge="Join 10,000+ freelancers who trust Invoicemonk"
+          backgroundVariant="gradient"
+        />
+        {/* Floating Elements */}
+        <FloatingInvoiceCard 
+          className="absolute top-32 right-8 lg:right-24 hidden lg:block" 
+          delay={0.4}
+          variant="paid"
+        />
+        <FloatingPaymentBadge 
+          className="absolute top-48 left-8 lg:left-20 hidden lg:block" 
+          delay={0.6}
+        />
+        <FloatingCalendarBadge 
+          className="absolute bottom-32 right-12 lg:right-32 hidden lg:block" 
+          delay={0.8}
+        />
+      </div>
 
       {/* Benefits */}
       <section className="py-16 lg:py-24">

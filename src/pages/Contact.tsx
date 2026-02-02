@@ -4,28 +4,137 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface FormErrors {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
+}
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    } else if (formData.firstName.length > 100) {
+      newErrors.firstName = 'First name must be under 100 characters';
+    }
+
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    } else if (formData.lastName.length > 100) {
+      newErrors.lastName = 'Last name must be under 100 characters';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Subject is required';
+    } else if (formData.subject.length > 200) {
+      newErrors.subject = 'Subject must be under 200 characters';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.length > 5000) {
+      newErrors.message = 'Message must be under 5000 characters';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      toast({
+        title: "Please fix the errors",
+        description: "Some fields need your attention.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-message', {
+        body: formData,
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      if (data?.error) {
+        throw new Error(data.error);
+      }
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+      setErrors({});
+
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: "Failed to send message",
+        description: error instanceof Error ? error.message : "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -116,8 +225,16 @@ const Contact = () => {
                         id="firstName" 
                         name="firstName"
                         placeholder="John" 
-                        required 
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className={errors.firstName ? 'border-destructive' : ''}
                       />
+                      {errors.firstName && (
+                        <p className="text-destructive text-sm flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.firstName}
+                        </p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last Name</Label>
@@ -125,8 +242,16 @@ const Contact = () => {
                         id="lastName" 
                         name="lastName"
                         placeholder="Doe" 
-                        required 
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className={errors.lastName ? 'border-destructive' : ''}
                       />
+                      {errors.lastName && (
+                        <p className="text-destructive text-sm flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.lastName}
+                        </p>
+                      )}
                     </div>
                   </div>
                   
@@ -137,8 +262,16 @@ const Contact = () => {
                       name="email"
                       type="email" 
                       placeholder="john@company.com" 
-                      required 
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={errors.email ? 'border-destructive' : ''}
                     />
+                    {errors.email && (
+                      <p className="text-destructive text-sm flex items-center gap-1">
+                        <AlertCircle className="w-3 h-3" />
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
                   
                   <div className="space-y-2">
@@ -147,8 +280,16 @@ const Contact = () => {
                       id="subject" 
                       name="subject"
                       placeholder="How can we help?" 
-                      required 
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className={errors.subject ? 'border-destructive' : ''}
                     />
+                    {errors.subject && (
+                      <p className="text-destructive text-sm flex items-center gap-1">
+                        <AlertCircle className="w-3 h-3" />
+                        {errors.subject}
+                      </p>
+                    )}
                   </div>
                   
                   <div className="space-y-2">
@@ -158,12 +299,33 @@ const Contact = () => {
                       name="message"
                       placeholder="Tell us more about your inquiry..."
                       rows={5}
-                      required
+                      value={formData.message}
+                      onChange={handleChange}
+                      className={errors.message ? 'border-destructive' : ''}
                     />
+                    {errors.message && (
+                      <p className="text-destructive text-sm flex items-center gap-1">
+                        <AlertCircle className="w-3 h-3" />
+                        {errors.message}
+                      </p>
+                    )}
+                    <p className="text-muted-foreground text-xs text-right">
+                      {formData.message.length}/5000
+                    </p>
                   </div>
                   
-                  <Button type="submit" size="lg" disabled={isSubmitting}>
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
+                    {isSubmitting ? (
+                      <>
+                        <span className="animate-spin mr-2">⏳</span>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <CheckCircle className="w-4 h-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>

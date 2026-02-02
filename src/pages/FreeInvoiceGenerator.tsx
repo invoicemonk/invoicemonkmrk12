@@ -2,6 +2,12 @@ import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, FileText, Download, Zap, Shield, CheckCircle } from 'lucide-react';
+import { PageHero } from '@/components/shared/PageHero';
+import { 
+  FloatingInvoiceCard,
+  FloatingPDFBadge,
+  FloatingIcon
+} from '@/components/shared/FloatingElements';
 
 const FreeInvoiceGenerator = () => {
   const features = [
@@ -48,36 +54,33 @@ const FreeInvoiceGenerator = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
-              <CheckCircle className="w-4 h-4" />
-              100% Free
-            </span>
-            <h1 className="text-display-sm lg:text-display-md font-bold text-foreground mb-6">
-              Free Invoice Generator
-            </h1>
-            <p className="text-body-lg text-muted-foreground mb-8">
-              Create professional invoices in minutes. No signup required to get started. 
-              Perfect for freelancers and small businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="https://app.invoicemonk.com" target="_blank" rel="noopener noreferrer">
-                  Create Free Invoice
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="/invoicing">
-                  Learn About Full Platform
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="relative">
+        <PageHero
+          badge={{ icon: CheckCircle, text: '100% Free' }}
+          title="Free Invoice Generator"
+          accentWord="Free"
+          description="Create professional invoices in minutes. No signup required to get started. Perfect for freelancers and small businesses."
+          primaryCta={{ text: 'Create Free Invoice', href: 'https://app.invoicemonk.com' }}
+          secondaryCta={{ text: 'Learn About Full Platform', href: '/invoicing', external: false }}
+          trustBadge="No credit card required • No signup needed • Unlimited invoices"
+          backgroundVariant="dots"
+        />
+        {/* Floating Elements */}
+        <FloatingInvoiceCard 
+          className="absolute top-28 right-8 lg:right-20 hidden lg:block" 
+          delay={0.4}
+        />
+        <FloatingPDFBadge 
+          className="absolute bottom-36 left-8 lg:left-16 hidden lg:block" 
+          delay={0.6}
+        />
+        <FloatingIcon 
+          icon={Zap}
+          className="absolute top-52 left-16 lg:left-32 hidden lg:block" 
+          delay={0.8}
+          size="sm"
+        />
+      </div>
 
       {/* Features */}
       <section className="py-16 lg:py-24">

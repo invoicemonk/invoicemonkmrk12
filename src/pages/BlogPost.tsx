@@ -15,7 +15,7 @@ import { AuthorCard } from '@/components/blog/AuthorCard';
 import { ClusterNavigation } from '@/components/blog/ClusterNavigation';
 import { ClusterTopicMap } from '@/components/blog/ClusterTopicMap';
 import { TopicBreadcrumb } from '@/components/blog/TopicBreadcrumb';
-import { PillarBadge } from '@/components/blog/PillarBadge';
+
 import { PillarPageLayout } from '@/components/blog/PillarPageLayout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ArticleSchema } from '@/components/seo/ArticleSchema';
@@ -168,13 +168,7 @@ const BlogPost = () => {
           {/* Article Header */}
           <header className="max-w-5xl mx-auto text-center mb-12">
             {/* Hero Featured Image */}
-            <div className="mb-8 rounded-2xl overflow-hidden relative">
-              {pillar && (
-                <div 
-                  className="absolute top-0 left-0 right-0 h-1.5 z-10"
-                  style={{ backgroundColor: pillar.color }}
-                />
-              )}
+            <div className="mb-8 rounded-2xl overflow-hidden">
               <img
                 src={post.featuredImage}
                 alt={post.featuredImageAlt}
@@ -184,25 +178,11 @@ const BlogPost = () => {
               />
             </div>
             
-            {/* Topic and Category Badges */}
+            {/* Category Badge */}
             <div className="flex flex-wrap justify-center gap-2 mb-4">
-              {pillar ? (
-                <PillarBadge pillar={pillar} clusterType={clusterType} size="md" />
-              ) : (
-                <Badge variant="secondary">
-                  {post.category}
-                </Badge>
-              )}
-              {post.pillarContent && (
-                <Badge className="bg-primary text-primary-foreground">
-                  Complete Guide
-                </Badge>
-              )}
-              {post.priority && (
-                <Badge variant="outline" className="text-xs">
-                  Priority: {post.priority}
-                </Badge>
-              )}
+              <Badge variant="secondary">
+                {post.category}
+              </Badge>
             </div>
             
             <h1 className="text-display-sm lg:text-display-md font-bold text-foreground mb-6">
@@ -274,14 +254,21 @@ const BlogPost = () => {
             )}
           </div>
 
-          {/* Mobile Cluster Navigation (for non-pillar pages) */}
+          {/* Mobile Cluster Navigation (for non-pillar pages) - Moved higher for better discovery */}
           {!isPillarPage && pillar && clusterPosts.length > 0 && (
-            <div className="lg:hidden max-w-3xl mx-auto mt-12">
-              <ClusterNavigation 
-                pillar={pillar}
-                currentPostSlug={post.slug}
-                relatedPosts={clusterPosts}
-              />
+            <div className="lg:hidden max-w-3xl mx-auto mt-8 mb-8">
+              <details className="bg-muted/30 rounded-xl border border-border" open>
+                <summary className="px-4 py-3 font-medium text-foreground cursor-pointer hover:bg-muted/50 rounded-xl transition-colors">
+                  More in this series ({clusterPosts.length} articles)
+                </summary>
+                <div className="px-4 pb-4">
+                  <ClusterNavigation 
+                    pillar={pillar}
+                    currentPostSlug={post.slug}
+                    relatedPosts={clusterPosts}
+                  />
+                </div>
+              </details>
             </div>
           )}
 
@@ -313,7 +300,7 @@ const BlogPost = () => {
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {relatedPosts.map((relatedPost) => (
-                  <BlogPostCard key={relatedPost.slug} post={relatedPost} showPillar />
+                  <BlogPostCard key={relatedPost.slug} post={relatedPost} />
                 ))}
               </div>
             </section>

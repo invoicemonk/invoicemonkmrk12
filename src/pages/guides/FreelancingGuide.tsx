@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
-import { GuideHero, ConceptGrid, ArticleList, GuideCTA, GuideFAQ } from '@/components/guides';
+import { GuideHero, ConceptGrid, ArticleList, GuideCTA, GuideFAQ, GuideCrossLink } from '@/components/guides';
 import { getPillarBySlug, getClusterPostsForPillar } from '@/data/topicalMap';
 import { blogPosts } from '@/data/blogPosts';
 import NotFound from '@/pages/NotFound';
@@ -37,6 +37,7 @@ export default function FreelancingGuide() {
       
       <GuideHero pillar={pillar} />
       <ConceptGrid pillar={pillar} />
+      <GuideCrossLink pillar={pillar} />
       <ArticleList pillar={pillar} articles={articles} />
       <GuideCTA pillar={pillar} />
       <GuideFAQ pillar={pillar} />

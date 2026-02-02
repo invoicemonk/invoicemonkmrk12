@@ -39,7 +39,7 @@ export const enNG: LocaleConfig = {
     free: 0,
     starter: 2000,
     professional: 4000,
-    business: 10000,
+    business: 8000,
     annualMultiplier: 10, // 10 months = 2 months free
   },
   pricingContent: {

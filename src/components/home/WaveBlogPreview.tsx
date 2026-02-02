@@ -60,7 +60,7 @@ export function WaveBlogPreview({
         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {displayPosts.map((post) => (
             <StaggerItem key={post.slug}>
-              <BlogPostCard post={post} showPillar />
+              <BlogPostCard post={post} />
             </StaggerItem>
           ))}
         </StaggerContainer>

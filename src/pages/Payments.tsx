@@ -12,6 +12,8 @@ import { WaveBlogPreview } from '@/components/home/WaveBlogPreview';
 import { WaveProductFAQ } from '@/components/home/WaveProductFAQ';
 import { WaveCTASection } from '@/components/home/WaveCTASection';
 import { useLocale } from '@/hooks/useLocale';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const paymentTabbedFeatures = [
   {
@@ -111,6 +113,18 @@ const Payments = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Accept Online Payments | Payment Processing | Invoicemonk"
+        description="Accept payments directly from invoices. Credit cards, bank transfers, and digital wallets with automatic reconciliation and low processing fees."
+        canonical="https://invoicemonk.com/payments"
+      />
+      <ServiceSchema
+        serviceName="Invoicemonk Payment Processing"
+        serviceType="Payment Processing Software"
+        description="Accept payments directly from invoices. Credit cards, bank transfers, and digital wallets with automatic reconciliation."
+        url="https://invoicemonk.com/payments"
+      />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-20 lg:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -376,7 +390,7 @@ const Payments = () => {
       <WaveBlogPreview
         title="Getting paid faster"
         subtitle="Tips and strategies to improve your cash flow."
-        category="Getting Paid"
+        pillarId="getting-paid"
       />
 
       {/* FAQ Section */}

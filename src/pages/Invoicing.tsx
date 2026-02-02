@@ -12,6 +12,8 @@ import { WaveProductFAQ } from '@/components/home/WaveProductFAQ';
 import { WaveBlogPreview } from '@/components/home/WaveBlogPreview';
 import { WaveCTASection } from '@/components/home/WaveCTASection';
 import { useLocale } from '@/hooks/useLocale';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const quickFeatures = [
   {
@@ -120,6 +122,18 @@ const Invoicing = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Professional Invoicing Software | Create & Send Invoices | Invoicemonk"
+        description="Create beautiful professional invoices in minutes. Automate payment reminders, maintain audit trails, and get paid faster with Invoicemonk's invoicing software."
+        canonical="https://invoicemonk.com/invoicing"
+      />
+      <ServiceSchema
+        serviceName="Invoicemonk Invoicing Software"
+        serviceType="Invoicing Software"
+        description="Create beautiful professional invoices in minutes. Automate payment reminders, maintain complete audit trails, and get paid faster."
+        url="https://invoicemonk.com/invoicing"
+      />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-20 lg:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -425,7 +439,7 @@ const Invoicing = () => {
       <WaveBlogPreview
         title="Learn more about invoicing"
         subtitle="Tips and best practices to help you get paid faster."
-        category="Invoicing and Billing Tips"
+        pillarId="invoicing-mastery"
       />
 
       {/* FAQ Section */}

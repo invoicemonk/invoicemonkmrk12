@@ -291,8 +291,8 @@ const PrivacyPolicy = () => {
                 for which it was collected, including:
               </p>
               
-              <div className="overflow-x-auto mb-6">
-                <table className="min-w-full border border-border rounded-lg">
+              <div className="overflow-x-auto mb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
+                <table className="min-w-full border border-border rounded-lg text-sm">
                   <thead className="bg-muted/50">
                     <tr>
                       <th className="px-4 py-3 text-left text-sm font-semibold text-foreground">Data Type</th>

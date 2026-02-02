@@ -11,7 +11,6 @@ const testimonials = [
     title: 'Founder',
     company: 'PixelCraft Studio',
     location: 'Singapore',
-    avatar: '/placeholder.svg',
   },
   {
     quote: "Finally, a finance tool that's both powerful and simple. Our team was up and running in a day, and the audit trails are invaluable.",
@@ -20,7 +19,6 @@ const testimonials = [
     title: 'CFO',
     company: 'Alpine Consulting',
     location: 'Germany',
-    avatar: '/placeholder.svg',
   },
   {
     quote: "The expense tracking alone has saved us thousands. I recommend Invoicemonk to every business owner I know.",
@@ -29,9 +27,18 @@ const testimonials = [
     title: 'CEO',
     company: 'Bloom Digital',
     location: 'United Kingdom',
-    avatar: '/placeholder.svg',
   },
 ];
+
+// Helper to extract initials from name
+const getInitials = (name: string) => {
+  return name
+    .split(' ')
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
+};
 
 export function WaveTestimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -86,12 +93,10 @@ export function WaveTestimonials() {
               >
                 {/* Avatar */}
                 <div className="hidden lg:flex flex-col items-center">
-                  <div className="w-32 h-32 rounded-full bg-primary/10 overflow-hidden mb-4">
-                    <img
-                      src={current.avatar}
-                      alt={current.name}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <span className="text-3xl font-semibold text-primary">
+                      {getInitials(current.name)}
+                    </span>
                   </div>
                   <div className="text-center">
                     <p className="text-body font-semibold text-heading">{current.name}</p>
@@ -110,12 +115,10 @@ export function WaveTestimonials() {
 
                   {/* Mobile avatar */}
                   <div className="flex items-center gap-4 lg:hidden">
-                    <div className="w-14 h-14 rounded-full bg-primary/10 overflow-hidden">
-                      <img
-                        src={current.avatar}
-                        alt={current.name}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-lg font-semibold text-primary">
+                        {getInitials(current.name)}
+                      </span>
                     </div>
                     <div>
                       <p className="text-body font-semibold text-heading">{current.name}</p>

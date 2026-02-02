@@ -1,7 +1,13 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, CheckCircle, Building2, Users, BarChart3, Shield, FileText, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Building2, Users, BarChart3, Shield, FileText } from 'lucide-react';
+import { PageHero } from '@/components/shared/PageHero';
+import { 
+  FloatingChartCard,
+  FloatingInvoiceCard,
+  FloatingIcon
+} from '@/components/shared/FloatingElements';
 
 const SmallBusinesses = () => {
   const benefits = [
@@ -49,36 +55,37 @@ const SmallBusinesses = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              <Building2 className="w-4 h-4" />
-              For Small Businesses
-            </span>
-            <h1 className="text-display-sm lg:text-display-md font-bold text-foreground mb-6">
-              Financial tools that grow with your business
-            </h1>
-            <p className="text-body-lg text-muted-foreground mb-8">
-              From invoicing to expense tracking, Invoicemonk gives small businesses 
-              the financial infrastructure they need to operate professionally and scale.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="https://app.invoicemonk.com/signup" target="_blank" rel="noopener noreferrer">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="/pricing">
-                  View Business Plans
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="relative">
+        <PageHero
+          badge={{ icon: Building2, text: 'For Small Businesses' }}
+          title="Financial tools that grow with your business"
+          accentWord="grow"
+          description="From invoicing to expense tracking, Invoicemonk gives small businesses the financial infrastructure they need to operate professionally and scale."
+          primaryCta={{ text: 'Start Free Trial', href: 'https://app.invoicemonk.com/signup' }}
+          secondaryCta={{ text: 'View Business Plans', href: '/pricing', external: false }}
+          stats={[
+            { value: '50%', label: 'Faster payments' },
+            { value: '10hrs', label: 'Saved monthly' },
+            { value: '100%', label: 'Audit-ready' }
+          ]}
+          backgroundVariant="gradient"
+        />
+        {/* Floating Elements */}
+        <FloatingChartCard 
+          className="absolute top-28 right-8 lg:right-20 hidden lg:block" 
+          delay={0.4}
+        />
+        <FloatingInvoiceCard 
+          className="absolute bottom-48 left-8 lg:left-16 hidden lg:block" 
+          delay={0.6}
+        />
+        <FloatingIcon 
+          icon={Users}
+          className="absolute top-52 left-12 lg:left-28 hidden lg:block" 
+          delay={0.8}
+          size="sm"
+        />
+      </div>
 
       {/* Benefits */}
       <section className="py-16 lg:py-24">

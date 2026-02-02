@@ -1,7 +1,13 @@
 import { Layout } from '@/components/layout/Layout';
-import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
+import { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 import { Shield, FileCheck, Clock, Lock } from 'lucide-react';
 import { useLocale } from '@/hooks/useLocale';
+import { PageHero } from '@/components/shared/PageHero';
+import { 
+  FloatingSecurityBadge,
+  FloatingLockBadge,
+  FloatingImmutableStamp
+} from '@/components/shared/FloatingElements';
 
 const complianceFeatures = [
   { icon: Lock, title: 'Immutable Records', description: 'Once created, invoice records cannot be altered or deleted, ensuring complete data integrity for audits.' },
@@ -16,19 +22,37 @@ const Compliance = () => {
 
   return (
     <Layout>
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-accent/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-3 py-1 text-caption font-medium rounded-full bg-primary/10 text-primary mb-4">
-              {compliance.authority}-Compliant
-            </span>
-            <h1 className="text-h1 text-heading mb-4">Built for Audit-Ready Confidence</h1>
-            <p className="text-body-lg text-muted-foreground">
-              {compliance.message}. Invoicemonk maintains immutable records and comprehensive audit trails, 
-              so you're always prepared for regulatory review.
-            </p>
-          </AnimatedSection>
+      {/* Hero Section */}
+      <div className="relative">
+        <PageHero
+          badge={{ icon: Shield, text: `${compliance.authority}-Compliant` }}
+          title="Built for audit-ready confidence"
+          accentWord="audit-ready"
+          description={`${compliance.message}. Invoicemonk maintains immutable records and comprehensive audit trails, so you're always prepared for regulatory review.`}
+          primaryCta={{ text: 'Start Free', href: 'https://app.invoicemonk.com/signup' }}
+          secondaryCta={{ text: 'Learn More', href: '/why-invoicemonk', external: false }}
+          trustBadge="Immutable records • Complete audit trails • Export-ready reports"
+          backgroundVariant="mesh"
+        />
+        {/* Floating Elements */}
+        <FloatingSecurityBadge 
+          label="Audit Ready"
+          className="absolute top-28 right-8 lg:right-20 hidden lg:block" 
+          delay={0.4}
+        />
+        <FloatingLockBadge 
+          className="absolute bottom-40 left-8 lg:left-16 hidden lg:block" 
+          delay={0.6}
+        />
+        <FloatingImmutableStamp 
+          className="absolute top-52 left-20 lg:left-36 hidden lg:block" 
+          delay={0.8}
+        />
+      </div>
 
+      {/* Features Section */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <StaggerContainer className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {complianceFeatures.map((feature) => {
               const Icon = feature.icon;

@@ -146,8 +146,8 @@ const CookiePolicy = () => {
                 and improve our services:
               </p>
               
-              <div className="overflow-x-auto mb-6">
-                <table className="min-w-full border border-border rounded-lg">
+              <div className="overflow-x-auto mb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
+                <table className="min-w-full border border-border rounded-lg text-sm">
                   <thead className="bg-muted/50">
                     <tr>
                       <th className="px-4 py-3 text-left text-sm font-semibold text-foreground">Provider</th>
@@ -261,8 +261,8 @@ const CookiePolicy = () => {
                 Below is a list of the main cookies used on our platform:
               </p>
               
-              <div className="overflow-x-auto mb-6">
-                <table className="min-w-full border border-border rounded-lg">
+              <div className="overflow-x-auto mb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
+                <table className="min-w-full border border-border rounded-lg text-sm">
                   <thead className="bg-muted/50">
                     <tr>
                       <th className="px-4 py-3 text-left text-sm font-semibold text-foreground">Cookie Name</th>

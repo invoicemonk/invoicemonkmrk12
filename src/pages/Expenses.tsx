@@ -12,6 +12,8 @@ import { WaveBlogPreview } from '@/components/home/WaveBlogPreview';
 import { WaveProductFAQ } from '@/components/home/WaveProductFAQ';
 import { WaveCTASection } from '@/components/home/WaveCTASection';
 import { useLocale } from '@/hooks/useLocale';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const automationFeatures = [
   {
@@ -56,21 +58,29 @@ const bannerFeatures = [
   'Generate expense reports',
 ];
 
+import expensesReceiptScanning from '@/assets/expenses-receipt-scanning.jpg';
+import expensesCategories from '@/assets/expenses-categories.jpg';
+import expensesTaxTracking from '@/assets/expenses-tax-tracking.jpg';
+import expensesAutomation from '@/assets/expenses-automation.jpg';
+
 const tabbedFeatures = [
   {
     label: 'Receipt Scanning',
     title: 'Capture expenses on the go',
     description: 'Simply snap a photo of your receipt and our AI extracts the vendor, amount, date, and category automatically. No more manual data entry or lost receipts.',
+    image: expensesReceiptScanning,
   },
   {
     label: 'Categories',
     title: 'Automatic smart categorization',
     description: 'Our system learns from your expenses and automatically categorizes them. Easily track office supplies, travel, meals, software, and more.',
+    image: expensesCategories,
   },
   {
     label: 'Tax Tracking',
     title: 'Tax deductions made easy',
     description: 'Automatically flag tax-deductible expenses and generate reports ready for your accountant. Never miss a deduction again.',
+    image: expensesTaxTracking,
   },
 ];
 
@@ -109,6 +119,18 @@ const Expenses = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Business Expense Tracking Software | Receipt Scanning | Invoicemonk"
+        description="Track business expenses effortlessly with AI-powered receipt scanning, automatic categorization, and tax-ready reports. Integrated with invoicing."
+        canonical="https://invoicemonk.com/expenses"
+      />
+      <ServiceSchema
+        serviceName="Invoicemonk Expense Tracking"
+        serviceType="Expense Management Software"
+        description="Track business expenses effortlessly with AI-powered receipt scanning, automatic categorization, and tax-ready reports."
+        url="https://invoicemonk.com/expenses"
+      />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-20 lg:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -122,9 +144,9 @@ const Expenses = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wave-orange/10 text-wave-orange mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wave-green/10 text-wave-green mb-6"
               >
-                <span className="text-body-sm font-medium">Coming Soon</span>
+                <span className="text-body-sm font-medium">Now Available</span>
               </motion.div>
 
               <motion.div
@@ -170,7 +192,7 @@ const Expenses = () => {
                   className="rounded-full px-8 h-14 text-body-lg bg-accent-orange hover:bg-accent-orange/90 text-accent-orange-foreground shadow-soft-md group"
                 >
                   <a href="https://app.invoicemonk.com/signup">
-                    Join the Waitlist
+                    Start Your Free Trial
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                   </a>
                 </Button>
@@ -245,7 +267,7 @@ const Expenses = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-h2 text-heading mb-4">
-              What's <span className="font-serif italic text-primary">coming</span>
+              What you'll <span className="font-serif italic text-primary">get</span>
             </h2>
             <p className="text-body-lg text-muted-foreground">
               Expense tracking designed to integrate seamlessly with your invoicing workflow.
@@ -287,6 +309,7 @@ const Expenses = () => {
         title="Save hours every month"
         subtitle="Automate the tedious parts of expense tracking."
         features={automationFeatures}
+        image={expensesAutomation}
         className="bg-background"
       />
 
@@ -306,7 +329,7 @@ const Expenses = () => {
       <WaveBlogPreview
         title="Expense management tips"
         subtitle="Learn how to track expenses more efficiently."
-        category="Small Business"
+        pillarId="business-finances"
       />
 
       {/* FAQ Section */}

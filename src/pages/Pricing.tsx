@@ -9,8 +9,8 @@ import { getPricingPlans, calculatePrice } from '@/config/pricingPlans';
 
 const faqs = [
   {
-    question: 'Is Invoicemonk really free to start?',
-    answer: 'Yes! Our Free plan includes everything you need to send up to 5 invoices per month. No credit card required.',
+    question: 'Is there a free tier?',
+    answer: 'Yes! Our Free tier lets you send up to 5 invoices per month with clean, professional layouts. Upgrade to Starter or Professional for unlimited invoices and advanced features.',
   },
   {
     question: 'Can I upgrade or downgrade anytime?',
@@ -204,7 +204,7 @@ const Pricing = () => {
               className="rounded-full px-10 h-14 text-body-lg bg-white hover:bg-white/90 text-black shadow-lg"
             >
               <a href="https://app.invoicemonk.com/signup">
-                Start Free Today
+                Start Your Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>

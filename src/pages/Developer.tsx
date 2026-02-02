@@ -2,6 +2,12 @@ import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Code, Webhook, Shield, Zap, BookOpen, Terminal } from 'lucide-react';
+import { PageHero } from '@/components/shared/PageHero';
+import { 
+  FloatingTerminal, 
+  FloatingEndpointBadge,
+  FloatingIcon
+} from '@/components/shared/FloatingElements';
 
 const Developer = () => {
   const features = [
@@ -39,36 +45,35 @@ const Developer = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              <Terminal className="w-4 h-4" />
-              Developer API
-            </span>
-            <h1 className="text-display-sm lg:text-display-md font-bold text-foreground mb-6">
-              Build with Invoicemonk
-            </h1>
-            <p className="text-body-lg text-muted-foreground mb-8">
-              Integrate invoicing, expenses, and financial data directly into your applications. 
-              Our API makes it easy to build powerful financial workflows.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="https://docs.invoicemonk.com" target="_blank" rel="noopener noreferrer">
-                  View Documentation
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="https://app.invoicemonk.com/signup" target="_blank" rel="noopener noreferrer">
-                  Get API Keys
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="relative">
+        <PageHero
+          badge={{ icon: Terminal, text: 'Developer API' }}
+          title="Build with Invoicemonk"
+          accentWord="Invoicemonk"
+          description="Integrate invoicing, expenses, and financial data directly into your applications. Our API makes it easy to build powerful financial workflows."
+          primaryCta={{ text: 'View Documentation', href: 'https://docs.invoicemonk.com' }}
+          secondaryCta={{ text: 'Get API Keys', href: 'https://app.invoicemonk.com/signup' }}
+          trustBadge="99.9% uptime SLA • RESTful API • Webhooks"
+          backgroundVariant="mesh"
+        />
+        {/* Floating Elements */}
+        <FloatingTerminal 
+          className="absolute top-28 right-8 lg:right-20 hidden lg:block" 
+          delay={0.4}
+        />
+        <FloatingEndpointBadge 
+          method="POST"
+          path="/v1/invoices"
+          className="absolute bottom-40 left-8 lg:left-16 hidden lg:block" 
+          delay={0.6}
+        />
+        <FloatingIcon 
+          icon={Code}
+          className="absolute top-44 left-12 lg:left-28 hidden lg:block" 
+          delay={0.8}
+          size="sm"
+        />
+      </div>
 
       {/* Features */}
       <section className="py-16 lg:py-24">

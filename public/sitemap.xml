@@ -196,8 +196,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://invoicemonk.com/blog/small-business-accounting-guide</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://invoicemonk.com/blog/the-basics-of-small-business-accounting</loc>
-    <lastmod>2023-11-20</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -398,5 +404,57 @@
     <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+  
+  <!-- New GSC-optimized articles -->
+  <url>
+    <loc>https://invoicemonk.com/blog/simple-accounting-for-small-business-beginners</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://invoicemonk.com/blog/how-to-do-accounting-small-business-step-by-step</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://invoicemonk.com/blog/small-business-accounting-for-owners</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Missing cluster articles - Business Finances -->
+  <url>
+    <loc>https://invoicemonk.com/blog/chart-of-accounts-for-small-business</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://invoicemonk.com/blog/financial-reports-every-business-needs</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://invoicemonk.com/blog/monthly-financial-review-checklist</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://invoicemonk.com/blog/business-bank-account-vs-personal</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://invoicemonk.com/blog/year-end-financial-preparation</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

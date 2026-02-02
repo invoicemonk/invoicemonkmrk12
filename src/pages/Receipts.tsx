@@ -13,6 +13,8 @@ import { WaveBlogPreview } from '@/components/home/WaveBlogPreview';
 import { WaveProductFAQ } from '@/components/home/WaveProductFAQ';
 import { WaveCTASection } from '@/components/home/WaveCTASection';
 import { useLocale } from '@/hooks/useLocale';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const receiptTabbedFeatures = [
   {
@@ -132,6 +134,18 @@ const Receipts = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Digital Receipt Management | AI Receipt Scanning | Invoicemonk"
+        description="Capture, organize, and store all your receipts digitally. AI-powered scanning, smart organization, and secure cloud storage."
+        canonical="https://invoicemonk.com/receipts"
+      />
+      <ServiceSchema
+        serviceName="Invoicemonk Receipt Management"
+        serviceType="Receipt Management Software"
+        description="Capture, organize, and store all your receipts digitally with AI-powered scanning and secure cloud storage."
+        url="https://invoicemonk.com/receipts"
+      />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-20 lg:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -372,7 +386,7 @@ const Receipts = () => {
       <WaveBlogPreview
         title="Record keeping tips"
         subtitle="Keep your receipts organized and audit-ready."
-        category="Small Business"
+        pillarId="tax-compliance"
       />
 
       {/* FAQ Section */}

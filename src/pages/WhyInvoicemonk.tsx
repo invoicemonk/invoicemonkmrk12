@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Shield, Layers, TrendingUp, Lock, ArrowRight, Check, FileText, Users, Globe } from 'lucide-react';
+import { Shield, Layers, TrendingUp, Lock, ArrowRight, Check, FileText, Users, Globe, Heart } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
+import { PageHero } from '@/components/shared/PageHero';
+import { 
+  FloatingSecurityBadge,
+  FloatingIcon,
+  FloatingChartCard
+} from '@/components/shared/FloatingElements';
 
 const corePrinciples = [
   {
@@ -46,67 +52,34 @@ const trustIndicators = [
 const WhyInvoicemonk = () => {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-block px-3 py-1 text-caption font-medium rounded-full bg-primary/10 text-primary mb-6"
-            >
-              Our Philosophy
-            </motion.span>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-display text-heading mb-6"
-            >
-              A financial records system,{' '}
-              <span className="text-primary">not just an invoicing app</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-body-lg text-muted-foreground max-w-2xl mx-auto mb-10"
-            >
-              We built Invoicemonk because financial records should inspire confidence, not concern. 
-              Every feature, every decision, starts with compliance at its core.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full px-8 h-12 text-body shadow-soft-md hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-0.5 group"
-              >
-                <a href="https://app.invoicemonk.com/signup">
-                  Start Free
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="rounded-full px-8 h-12 text-body border-border hover:bg-muted"
-              >
-                <Link to="/compliance">Learn About Compliance</Link>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <div className="relative">
+        <PageHero
+          badge={{ icon: Heart, text: 'Our Philosophy' }}
+          title="A financial records system, not just an invoicing app"
+          accentWord="financial records system"
+          description="We built Invoicemonk because financial records should inspire confidence, not concern. Every feature, every decision, starts with compliance at its core."
+          primaryCta={{ text: 'Start Free', href: 'https://app.invoicemonk.com/signup' }}
+          secondaryCta={{ text: 'Learn About Compliance', href: '/compliance', external: false }}
+          backgroundVariant="gradient"
+        />
+        {/* Floating Elements */}
+        <FloatingSecurityBadge 
+          label="Compliance First"
+          className="absolute top-28 right-8 lg:right-20 hidden lg:block" 
+          delay={0.4}
+        />
+        <FloatingChartCard 
+          className="absolute bottom-40 left-8 lg:left-16 hidden lg:block" 
+          delay={0.6}
+        />
+        <FloatingIcon 
+          icon={Layers}
+          className="absolute top-52 left-16 lg:left-32 hidden lg:block" 
+          delay={0.8}
+          size="md"
+        />
+      </div>
 
       {/* Philosophy Statement */}
       <section className="py-20 lg:py-32 bg-card">

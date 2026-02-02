@@ -163,9 +163,9 @@ export function HeroSection() {
                         { label: 'Paid (30 days)', value: formatPrice(locale.pricing.professional * 65, ''), color: 'text-wave-green' },
                         { label: 'Total Invoices', value: '24', color: 'text-primary' },
                       ].map((stat) => (
-                        <div key={stat.label} className="bg-muted/50 rounded-lg p-3">
+                        <div key={stat.label} className="bg-muted/50 rounded-lg p-3 min-w-0">
                           <div className="text-caption text-muted-foreground">{stat.label}</div>
-                          <div className={`text-h4 font-bold ${stat.color}`}>{stat.value}</div>
+                          <div className={`text-h4 font-bold ${stat.color} truncate`} title={stat.value}>{stat.value}</div>
                         </div>
                       ))}
                     </div>

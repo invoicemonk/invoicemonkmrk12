@@ -449,14 +449,18 @@ export const pillarClusters: TopicalCluster[] = [
       'small-business-accounting-guide',
       'the-basics-of-small-business-accounting',
       'how-to-create-a-budget-for-your-small-business',
-      // New cluster posts
+      // Cluster posts
       'chart-of-accounts-for-small-business',
       'monthly-financial-review-checklist',
       'business-bank-account-vs-personal',
       'financial-reports-every-business-needs',
       'profit-margins-how-to-calculate-and-improve',
       'cash-vs-accrual-accounting-explained',
-      'year-end-financial-preparation'
+      'year-end-financial-preparation',
+      // NEW: GSC high-impression keyword targets
+      'simple-accounting-for-small-business-beginners',
+      'how-to-do-accounting-small-business-step-by-step',
+      'small-business-accounting-for-owners'
     ]
   },
   {

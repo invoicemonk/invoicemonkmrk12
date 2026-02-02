@@ -24,7 +24,7 @@ export function HomeBlogSection() {
         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
           {latestPosts.map((post) => (
             <StaggerItem key={post.slug}>
-              <BlogPostCard post={post} showPillar />
+              <BlogPostCard post={post} />
             </StaggerItem>
           ))}
         </StaggerContainer>

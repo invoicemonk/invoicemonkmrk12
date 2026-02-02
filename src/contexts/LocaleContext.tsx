@@ -51,6 +51,37 @@ const timezoneToCountry: Record<string, SupportedCountry> = {
   'Australia/Adelaide': 'AU',
 };
 
+// Map locale codes to country codes
+const localeToCountry: Record<string, SupportedCountry> = {
+  'en-NG': 'NG',
+  'en-US': 'US',
+  'en-GB': 'GB',
+  'en-CA': 'CA',
+  'en-AU': 'AU',
+};
+
+function getLocaleFromURLParam(): SupportedCountry | null {
+  if (typeof window === 'undefined') return null;
+  
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const localeParam = urlParams.get('locale');
+    
+    if (localeParam && localeToCountry[localeParam]) {
+      return localeToCountry[localeParam];
+    }
+    
+    // Also support direct country codes in URL
+    if (localeParam && supportedCountries.includes(localeParam as SupportedCountry)) {
+      return localeParam as SupportedCountry;
+    }
+    
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 function detectCountryFromTimezone(): SupportedCountry | null {
   try {
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -107,8 +138,14 @@ async function detectCountryFromIP(): Promise<SupportedCountry | null> {
 
 export function LocaleProvider({ children }: LocaleProviderProps) {
   const [countryCode, setCountryCode] = useState<SupportedCountry>(() => {
-    // Check localStorage first for SSR safety
     if (typeof window !== 'undefined') {
+      // Priority 1: Check URL parameter first (highest priority for SEO/hreflang)
+      const urlLocale = getLocaleFromURLParam();
+      if (urlLocale) {
+        return urlLocale;
+      }
+      
+      // Priority 2: Check localStorage for returning users
       const saved = localStorage.getItem(LOCALE_STORAGE_KEY);
       if (saved && supportedCountries.includes(saved as SupportedCountry)) {
         return saved as SupportedCountry;
@@ -121,7 +158,16 @@ export function LocaleProvider({ children }: LocaleProviderProps) {
 
   useEffect(() => {
     const detectCountry = async () => {
-      // If already saved in localStorage, use that
+      // Priority 1: URL parameter takes precedence (for hreflang/SEO targeting)
+      const urlLocale = getLocaleFromURLParam();
+      if (urlLocale) {
+        setCountryCode(urlLocale);
+        localStorage.setItem(LOCALE_STORAGE_KEY, urlLocale);
+        setIsLoading(false);
+        return;
+      }
+      
+      // Priority 2: If already saved in localStorage, use that
       const saved = localStorage.getItem(LOCALE_STORAGE_KEY);
       if (saved && supportedCountries.includes(saved as SupportedCountry)) {
         setCountryCode(saved as SupportedCountry);
@@ -129,7 +175,7 @@ export function LocaleProvider({ children }: LocaleProviderProps) {
         return;
       }
 
-      // Try timezone detection first (instant, no network)
+      // Priority 3: Try timezone detection (instant, no network)
       const timezoneCountry = detectCountryFromTimezone();
       if (timezoneCountry) {
         setCountryCode(timezoneCountry);
@@ -138,7 +184,7 @@ export function LocaleProvider({ children }: LocaleProviderProps) {
         return;
       }
 
-      // Fall back to IP-based detection
+      // Priority 4: Fall back to IP-based detection
       const ipCountry = await detectCountryFromIP();
       if (ipCountry) {
         setCountryCode(ipCountry);

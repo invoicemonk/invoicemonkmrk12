@@ -182,7 +182,7 @@ const Blog = () => {
               {/* Featured Post */}
               {featuredPost && (
                 <AnimatedSection className="mb-12">
-                  <BlogPostCard post={featuredPost} featured showPillar />
+                  <BlogPostCard post={featuredPost} featured />
                 </AnimatedSection>
               )}
 
@@ -191,7 +191,7 @@ const Blog = () => {
                 <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {remainingPosts.map((post) => (
                     <StaggerItem key={post.slug}>
-                      <BlogPostCard post={post} showPillar />
+                      <BlogPostCard post={post} />
                     </StaggerItem>
                   ))}
                 </StaggerContainer>
@@ -222,7 +222,7 @@ const Blog = () => {
               <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {blogPosts.slice(0, 6).map((post) => (
                   <StaggerItem key={post.slug}>
-                    <BlogPostCard post={post} showPillar />
+                    <BlogPostCard post={post} />
                   </StaggerItem>
                 ))}
               </StaggerContainer>

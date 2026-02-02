@@ -13,6 +13,8 @@ import { WaveProductFAQ } from '@/components/home/WaveProductFAQ';
 import { WaveBlogPreview } from '@/components/home/WaveBlogPreview';
 import { WaveCTASection } from '@/components/home/WaveCTASection';
 import { useLocale } from '@/hooks/useLocale';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 const automationFeatures = [
   {
@@ -75,21 +77,29 @@ const bannerFeatures = [
   'Multi-entity support',
 ];
 
+import accountingChartOfAccounts from '@/assets/accounting-chart-of-accounts.jpg';
+import accountingFinancialReports from '@/assets/accounting-financial-reports.jpg';
+import accountingMultiEntity from '@/assets/accounting-multi-entity.jpg';
+import accountingAutomation from '@/assets/accounting-automation.jpg';
+
 const tabbedFeatures = [
   {
     label: 'Chart of Accounts',
     title: 'A complete chart of accounts, ready to go',
     description: 'Start with a standard chart of accounts or customize it to fit your business. Every transaction is automatically categorized and recorded correctly.',
+    image: accountingChartOfAccounts,
   },
   {
     label: 'Financial Reports',
     title: 'Financial statements when you need them',
     description: 'Generate balance sheets, profit & loss statements, and cash flow reports with a single click. Always know where your business stands financially.',
+    image: accountingFinancialReports,
   },
   {
     label: 'Multi-Entity',
     title: 'Manage multiple businesses easily',
     description: 'Running more than one business? Switch between entities seamlessly and get consolidated views of your entire portfolio.',
+    image: accountingMultiEntity,
   },
 ];
 
@@ -112,7 +122,7 @@ const accountingFAQs = [
   },
   {
     question: 'Is this suitable for larger businesses?',
-    answer: 'We\'re building accounting features that scale. Multi-entity support, team permissions, and advanced reporting will be available for growing businesses.',
+    answer: 'Yes! Our accounting features scale with your business. Multi-entity support, team permissions, and advanced reporting are available for growing businesses.',
   },
 ];
 
@@ -121,6 +131,18 @@ const Accounting = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Small Business Accounting Software | Double-Entry Bookkeeping | Invoicemonk"
+        description="Complete accounting software with double-entry bookkeeping, financial statements, and tax reports. Designed for small businesses and freelancers."
+        canonical="https://invoicemonk.com/accounting"
+      />
+      <ServiceSchema
+        serviceName="Invoicemonk Accounting Software"
+        serviceType="Accounting Software"
+        description="Complete accounting software with double-entry bookkeeping, financial statements, and tax-ready reports for small businesses."
+        url="https://invoicemonk.com/accounting"
+      />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-20 lg:py-32">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -134,9 +156,9 @@ const Accounting = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wave-orange/10 text-wave-orange mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wave-green/10 text-wave-green mb-6"
               >
-                <span className="text-body-sm font-medium">Coming Soon</span>
+                <span className="text-body-sm font-medium">Now Available</span>
               </motion.div>
 
               <motion.div
@@ -182,7 +204,7 @@ const Accounting = () => {
                   className="rounded-full px-8 h-14 text-body-lg bg-accent-orange hover:bg-accent-orange/90 text-accent-orange-foreground shadow-soft-md group"
                 >
                   <a href="https://app.invoicemonk.com/signup">
-                    Join the Waitlist
+                    Start Your Free Trial
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                   </a>
                 </Button>
@@ -271,7 +293,7 @@ const Accounting = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-h2 text-heading mb-4">
-              What's <span className="font-serif italic text-primary">coming</span>
+              What you'll <span className="font-serif italic text-primary">get</span>
             </h2>
             <p className="text-body-lg text-muted-foreground">
               Professional accounting tools built on top of your invoicing data.
@@ -313,6 +335,7 @@ const Accounting = () => {
         title="Your books, always up to date"
         subtitle="Automation that keeps your accounting accurate."
         features={automationFeatures}
+        image={accountingAutomation}
         className="bg-background"
       />
 
@@ -335,11 +358,41 @@ const Accounting = () => {
         variant="primary"
       />
 
+      {/* Featured Article Link */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-2xl border border-border p-8 lg:p-12">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <BookOpen className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <span className="text-caption text-primary font-medium uppercase tracking-wide">Featured Guide</span>
+                  <h2 className="text-h3 text-heading mt-2">Small Business Accounting Basics: A Simple Guide</h2>
+                </div>
+              </div>
+              <p className="text-body-lg text-muted-foreground mb-6">
+                Master small business accounting in 7 simple steps. Learn how to set up your chart of accounts, 
+                choose between cash and accrual methods, and generate tax-ready financial reports—no accounting 
+                degree required.
+              </p>
+              <Button asChild variant="outline" size="lg" className="rounded-full">
+                <Link to="/blog/small-business-accounting-guide">
+                  Read the Complete Guide
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Blog Preview */}
       <WaveBlogPreview
         title="Learn about small business accounting"
         subtitle="Tips and guides to help you manage your finances."
-        category="Small Business"
+        pillarId="business-finances"
       />
 
       {/* FAQ Section */}

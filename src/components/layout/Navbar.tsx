@@ -18,7 +18,7 @@ const products = [
     href: '/expenses', 
     icon: Wallet, 
     description: 'Track and manage expenses',
-    status: 'coming-soon'
+    status: 'available'
   },
   { 
     name: 'Payments', 
@@ -32,7 +32,7 @@ const products = [
     href: '/accounting', 
     icon: Calculator, 
     description: 'Full-featured accounting',
-    status: 'coming-soon'
+    status: 'available'
   },
   { 
     name: 'Estimates', 
@@ -234,7 +234,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="fixed top-0 right-0 bottom-0 w-80 bg-card shadow-soft-xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-[min(80vw,320px)] bg-card shadow-soft-xl z-50 lg:hidden overflow-y-auto"
             >
               <div className="flex flex-col h-full pt-20 pb-8 px-6">
                 {/* Products Section */}
