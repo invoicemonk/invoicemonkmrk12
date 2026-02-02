@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -20,11 +20,18 @@ import { PillarPageLayout } from '@/components/blog/PillarPageLayout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ArticleSchema } from '@/components/seo/ArticleSchema';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { enhanceInternalLinks } from '@/utils/enhanceLinks';
 import NotFound from './NotFound';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
+
+  // Enhance links in post content (must be before early return)
+  const enhancedContent = useMemo(() => {
+    if (!post) return '';
+    return enhanceInternalLinks(post.content);
+  }, [post]);
 
   // Add IDs to headings for TOC navigation
   useEffect(() => {
@@ -92,7 +99,7 @@ const BlogPost = () => {
     <>
       <div 
         className="prose prose-lg dark:prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: post.content }}
+        dangerouslySetInnerHTML={{ __html: enhancedContent }}
       />
 
       {/* Tags */}

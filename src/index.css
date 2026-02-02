@@ -273,4 +273,40 @@ html {
     --tw-prose-code: hsl(var(--foreground));
     --tw-prose-hr: hsl(var(--border));
   }
+  
+  /* Enhanced link styles for blog content */
+  .prose .internal-link {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--primary) / 0.3);
+    transition: text-decoration-color 0.2s;
+  }
+  
+  .prose .internal-link:hover {
+    text-decoration-color: hsl(var(--primary));
+  }
+  
+  .prose .internal-link--product {
+    font-weight: 500;
+  }
+  
+  .prose .internal-link--guide {
+    text-underline-offset: 2px;
+  }
+  
+  .prose .external-link {
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+  }
+  
+  .prose .external-link:hover {
+    color: hsl(var(--foreground));
+    text-decoration: underline;
+  }
+  
+  .prose .external-link::after {
+    content: " ↗";
+    font-size: 0.75em;
+    opacity: 0.7;
+  }
 }
