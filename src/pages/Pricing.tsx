@@ -5,6 +5,8 @@ import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 import { useLocale } from '@/hooks/useLocale';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
 import { getPricingPlans, calculatePrice } from '@/config/pricingPlans';
 
 const faqs = [
@@ -37,8 +39,15 @@ const Pricing = () => {
     ? 'md:grid-cols-2 lg:grid-cols-4' 
     : 'md:grid-cols-3';
 
+  const seo = pageSEO['/pricing'];
+
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle(locale) || 'Pricing | Invoicemonk'}
+        description={seo?.getDescription(locale) || 'Simple, transparent pricing. Start free, upgrade when you need more.'}
+        canonical="https://invoicemonk.com/pricing"
+      />
       {/* Hero */}
       <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-accent/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

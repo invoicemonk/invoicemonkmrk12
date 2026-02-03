@@ -149,6 +149,48 @@ export const pageSEO: Record<string, PageSEO> = {
     priority: 0.7,
     changefreq: 'weekly',
   },
+  '/glossary': {
+    getTitle: () => 'Business Finance Glossary | Invoicing & Accounting Terms | Invoicemonk',
+    getDescription: () => 'Comprehensive glossary of invoicing, payments, accounting, tax, and business finance terms. Learn key concepts for small business owners and freelancers.',
+    ogType: 'website',
+    priority: 0.6,
+    changefreq: 'monthly',
+  },
+  '/consultants': {
+    getTitle: () => 'Invoicing Software for Consultants | Invoicemonk',
+    getDescription: () => 'Professional invoicing for management consultants and strategy firms. Multi-currency billing, detailed reporting, and enterprise-ready compliance.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/contractors': {
+    getTitle: () => 'Invoicing Software for Contractors | Invoicemonk',
+    getDescription: () => 'Professional invoicing built for electrical, building, and trade contractors. Mobile invoicing, multi-project tracking, and job expense management.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/cookie-policy': {
+    getTitle: () => 'Cookie Policy | Invoicemonk',
+    getDescription: () => 'Learn how Invoicemonk uses cookies and similar technologies. Manage your cookie preferences and understand your choices.',
+    ogType: 'website',
+    priority: 0.3,
+    changefreq: 'monthly',
+  },
+  '/guides': {
+    getTitle: () => 'Business Guides & Resources | Invoicemonk',
+    getDescription: () => 'Comprehensive guides on invoicing, getting paid, accounting, tax compliance, freelancing, and business proposals.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/explore': {
+    getTitle: () => 'Explore Topics & Reviews | Invoicemonk',
+    getDescription: () => 'Explore our comprehensive topic guides, read customer reviews, and track your learning progress.',
+    ogType: 'website',
+    priority: 0.6,
+    changefreq: 'weekly',
+  },
 };
 
 export const getPageSEO = (path: string): PageSEO | undefined => {

@@ -8,6 +8,9 @@ import {
   FloatingInvoiceCard,
   FloatingIcon
 } from '@/components/shared/FloatingElements';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
+import { useLocale } from '@/hooks/useLocale';
 
 const SmallBusinesses = () => {
   const benefits = [
@@ -52,8 +55,16 @@ const SmallBusinesses = () => {
     },
   ];
 
+  const { locale } = useLocale();
+  const seo = pageSEO['/small-businesses'];
+
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle(locale) || 'Invoicing for Small Businesses | Invoicemonk'}
+        description={seo?.getDescription(locale) || 'Complete invoicing and accounting solution for small businesses.'}
+        canonical="https://invoicemonk.com/small-businesses"
+      />
       {/* Hero Section */}
       <div className="relative">
         <PageHero

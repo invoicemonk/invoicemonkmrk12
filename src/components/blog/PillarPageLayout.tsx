@@ -20,6 +20,7 @@ import type { Pillar } from '@/data/topicalMap';
 import type { BlogPost } from '@/data/blogPosts';
 import { ClusterSeriesSection } from './ClusterSeriesSection';
 import { ClusterTopicMap } from './ClusterTopicMap';
+import { RelatedQuestions } from './RelatedQuestions';
 
 const iconMap: Record<string, React.ElementType> = {
   FileText,
@@ -167,6 +168,15 @@ export function PillarPageLayout({
         {/* Main Content */}
         <div>
           {children}
+          
+          {/* Inline PAA section after content */}
+          {pillar.faq.length > 0 && (
+            <RelatedQuestions 
+              pillar={pillar} 
+              variant="inline" 
+              maxQuestions={5} 
+            />
+          )}
         </div>
 
         {/* Sidebar */}
@@ -231,6 +241,15 @@ export function PillarPageLayout({
                   </nav>
                 </CardContent>
               </Card>
+            )}
+
+            {/* People Also Ask Sidebar Card */}
+            {pillar.faq.length > 0 && sortedClusterPosts.length <= 3 && (
+              <RelatedQuestions 
+                pillar={pillar} 
+                variant="default" 
+                maxQuestions={4} 
+              />
             )}
 
             {/* Related Articles in Series */}

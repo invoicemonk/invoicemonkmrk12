@@ -8,6 +8,9 @@ import { Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
+import { useLocale } from '@/hooks/useLocale';
 
 interface FormData {
   firstName: string;
@@ -137,8 +140,16 @@ const Contact = () => {
     }
   };
 
+  const { locale } = useLocale();
+  const seo = pageSEO['/contact'];
+
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle(locale) || 'Contact Us | Invoicemonk'}
+        description={seo?.getDescription(locale) || 'Get in touch with Invoicemonk. We are here to help with your invoicing needs.'}
+        canonical="https://invoicemonk.com/contact"
+      />
       <div className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}

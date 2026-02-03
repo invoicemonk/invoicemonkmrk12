@@ -8,6 +8,9 @@ import {
   FloatingPDFBadge,
   FloatingIcon
 } from '@/components/shared/FloatingElements';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
+import { useLocale } from '@/hooks/useLocale';
 
 const FreeInvoiceGenerator = () => {
   const features = [
@@ -51,8 +54,16 @@ const FreeInvoiceGenerator = () => {
     },
   ];
 
+  const { locale } = useLocale();
+  const seo = pageSEO['/free-invoice-generator'];
+
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle(locale) || 'Free Invoice Generator | Invoicemonk'}
+        description={seo?.getDescription(locale) || 'Create professional invoices in minutes. No signup required to get started.'}
+        canonical="https://invoicemonk.com/free-invoice-generator"
+      />
       {/* Hero Section */}
       <div className="relative">
         <PageHero

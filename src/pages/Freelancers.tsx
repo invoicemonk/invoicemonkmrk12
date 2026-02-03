@@ -8,6 +8,9 @@ import {
   FloatingPaymentBadge, 
   FloatingCalendarBadge 
 } from '@/components/shared/FloatingElements';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
+import { useLocale } from '@/hooks/useLocale';
 
 const Freelancers = () => {
   const benefits = [
@@ -46,8 +49,16 @@ const Freelancers = () => {
     },
   ];
 
+  const { locale } = useLocale();
+  const seo = pageSEO['/freelancers'];
+
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle(locale) || 'Invoicing for Freelancers | Invoicemonk'}
+        description={seo?.getDescription(locale) || 'Professional invoicing for freelancers. Get paid faster and stay compliant.'}
+        canonical="https://invoicemonk.com/freelancers"
+      />
       {/* Hero Section */}
       <div className="relative">
         <PageHero

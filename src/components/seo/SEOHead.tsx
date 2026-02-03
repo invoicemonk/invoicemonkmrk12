@@ -8,7 +8,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogImageWidth?: number;
   ogImageHeight?: number;
-  ogType?: 'website' | 'article';
+  ogType?: 'website' | 'article' | 'profile';
   noindex?: boolean;
   article?: {
     publishedTime: string;

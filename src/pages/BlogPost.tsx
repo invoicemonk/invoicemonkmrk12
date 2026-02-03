@@ -20,6 +20,7 @@ import { PillarPageLayout } from '@/components/blog/PillarPageLayout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ArticleSchema } from '@/components/seo/ArticleSchema';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { FAQSchema } from '@/components/seo/FAQSchema';
 import { enhanceInternalLinks } from '@/utils/enhanceLinks';
 import NotFound from './NotFound';
 
@@ -151,6 +152,14 @@ const BlogPost = () => {
         relatedArticles={relatedArticlesSchema}
       />
       <BreadcrumbSchema items={breadcrumbs} />
+      
+      {/* FAQ Schema - from pillar or article-specific FAQ */}
+      {isPillarPage && pillar?.faq && pillar.faq.length > 0 && (
+        <FAQSchema items={pillar.faq} />
+      )}
+      {!isPillarPage && post.faq && post.faq.length > 0 && (
+        <FAQSchema items={post.faq} />
+      )}
 
       <article className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

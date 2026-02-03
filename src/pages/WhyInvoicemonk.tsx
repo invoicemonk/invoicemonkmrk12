@@ -10,6 +10,9 @@ import {
   FloatingIcon,
   FloatingChartCard
 } from '@/components/shared/FloatingElements';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
+import { useLocale } from '@/hooks/useLocale';
 
 const corePrinciples = [
   {
@@ -50,8 +53,16 @@ const trustIndicators = [
 ];
 
 const WhyInvoicemonk = () => {
+  const { locale } = useLocale();
+  const seo = pageSEO['/why-invoicemonk'];
+
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle(locale) || 'Why Choose Invoicemonk | Compliance-First Invoicing'}
+        description={seo?.getDescription(locale) || 'Discover why businesses choose Invoicemonk. Compliance-first invoicing, powerful features, and excellent support.'}
+        canonical="https://invoicemonk.com/why-invoicemonk"
+      />
       {/* Hero Section */}
       <div className="relative">
         <PageHero

@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { PersonSchema } from '@/components/seo/PersonSchema';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -21,36 +22,16 @@ const AuthorPage = () => {
   const authorPosts = blogPosts.filter(post => post.author.id === author.id);
   const initials = author.name.split(' ').map(n => n[0]).join('');
 
-  // Person Schema for E-E-A-T
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": author.name,
-    "url": `https://invoicemonk.com/blog/author/${author.slug}`,
-    "image": `https://invoicemonk.com${author.avatar}`,
-    "jobTitle": author.role,
-    "description": author.bio,
-    "sameAs": Object.values(author.socialLinks).filter(Boolean),
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Invoicemonk"
-    }
-  };
-
   return (
     <Layout>
-      <Helmet>
-        <title>{author.name} - Author at Invoicemonk</title>
-        <meta name="description" content={author.bio} />
-        <link rel="canonical" href={`https://invoicemonk.com/blog/author/${author.slug}`} />
-        <meta property="og:type" content="profile" />
-        <meta property="og:title" content={`${author.name} - Author at Invoicemonk`} />
-        <meta property="og:description" content={author.bio} />
-        <meta property="og:image" content={`https://invoicemonk.com${author.avatar}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(personSchema)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title={`${author.name} - Author at Invoicemonk`}
+        description={author.bio}
+        canonical={`https://invoicemonk.com/blog/author/${author.slug}`}
+        ogImage={`https://invoicemonk.com${author.avatar}`}
+        ogType="profile"
+      />
+      <PersonSchema author={author} isMainEntity />
 
       <div className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

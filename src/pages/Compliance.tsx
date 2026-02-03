@@ -8,6 +8,8 @@ import {
   FloatingLockBadge,
   FloatingImmutableStamp
 } from '@/components/shared/FloatingElements';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
 
 const complianceFeatures = [
   { icon: Lock, title: 'Immutable Records', description: 'Once created, invoice records cannot be altered or deleted, ensuring complete data integrity for audits.' },
@@ -19,9 +21,15 @@ const complianceFeatures = [
 const Compliance = () => {
   const { locale } = useLocale();
   const { compliance } = locale.content;
+  const seo = pageSEO['/compliance'];
 
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle(locale) || 'Tax Compliance | Invoicemonk'}
+        description={seo?.getDescription(locale) || 'Stay audit-ready with immutable records and comprehensive audit trails.'}
+        canonical="https://invoicemonk.com/compliance"
+      />
       {/* Hero Section */}
       <div className="relative">
         <PageHero

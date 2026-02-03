@@ -413,6 +413,8 @@ export const pillarClusters: TopicalCluster[] = [
     pillarId: 'invoicing-mastery',
     postSlugs: [
       'complete-guide-to-business-invoicing',
+      'how-to-create-first-professional-invoice',
+      'invoice-mistakes-that-cost-you-money',
       'invoicemonk-template-how-to-create-a-perfect-invoice-template',
       '5-essential-elements-of-an-invoice-a-guide-for-small-business-owners',
       'the-importance-of-invoicing-timely-and-how-to-do-it-efficiently',

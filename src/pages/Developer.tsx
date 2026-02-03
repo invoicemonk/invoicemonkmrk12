@@ -8,6 +8,8 @@ import {
   FloatingEndpointBadge,
   FloatingIcon
 } from '@/components/shared/FloatingElements';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { pageSEO } from '@/components/seo/seoConfig';
 
 const Developer = () => {
   const features = [
@@ -42,8 +44,15 @@ const Developer = () => {
     { method: 'POST', path: '/v1/expenses', description: 'Record an expense' },
   ];
 
+  const seo = pageSEO['/developer'];
+
   return (
     <Layout>
+      <SEOHead
+        title={seo?.getTitle({} as any) || 'Developer API | Invoicemonk'}
+        description={seo?.getDescription({} as any) || 'Integrate Invoicemonk into your applications with our developer API. Full documentation and SDKs available.'}
+        canonical="https://invoicemonk.com/developer"
+      />
       {/* Hero Section */}
       <div className="relative">
         <PageHero
