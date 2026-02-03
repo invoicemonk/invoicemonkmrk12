@@ -46,7 +46,7 @@ export function TopicBreadcrumb({
         {pillar ? (
           <li className="flex items-center gap-1.5">
             <Link 
-              to={`/blog?pillar=${pillar.id}`}
+              to={`/blog/topic/${pillar.id}`}
               className="hover:text-primary transition-colors"
               style={{ color: pillar.color }}
             >

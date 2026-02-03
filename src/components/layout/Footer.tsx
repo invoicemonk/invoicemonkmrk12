@@ -25,6 +25,16 @@ const footerLinks = {
     { name: 'Explore Topics', href: '/explore' },
     { name: 'Video Tutorials', href: 'https://learn.invoicemonk.com', external: true },
     { name: 'Free Invoice Generator', href: '/free-invoice-generator' },
+  ],
+  topics: [
+    { name: 'Invoicing Tips', href: '/blog/topic/invoicing-mastery' },
+    { name: 'Getting Paid Faster', href: '/blog/topic/getting-paid' },
+    { name: 'Business Finances', href: '/blog/topic/business-finances' },
+    { name: 'Tax Compliance', href: '/blog/topic/tax-compliance' },
+    { name: 'Freelancer Guides', href: '/blog/topic/freelancer-success' },
+    { name: 'Proposals & Quotes', href: '/blog/topic/estimates-proposals' },
+  ],
+  audiences: [
     { name: 'For Freelancers', href: '/freelancers' },
     { name: 'For Consultants', href: '/consultants' },
     { name: 'For Contractors', href: '/contractors' },
@@ -43,9 +53,9 @@ export function Footer() {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 lg:gap-10">
           {/* Logo & Description */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-4 lg:mb-0">
+          <div className="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-2 mb-4 lg:mb-0">
             <Link to="/" className="inline-block mb-4">
               <img src={logo} alt="Invoicemonk" className="h-8 w-auto" />
             </Link>
@@ -57,7 +67,7 @@ export function Footer() {
           {/* Platform Links */}
           <div>
             <h4 className="text-body-sm font-semibold text-foreground mb-4">Platform</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {footerLinks.platform.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -80,11 +90,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Topics Links (Semantic Hubs) */}
           <div>
-            <h4 className="text-body-sm font-semibold text-foreground mb-4">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
+            <h4 className="text-body-sm font-semibold text-foreground mb-4">Topics</h4>
+            <ul className="space-y-2.5">
+              {footerLinks.topics.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
@@ -100,8 +110,8 @@ export function Footer() {
           {/* Resources Links */}
           <div>
             <h4 className="text-body-sm font-semibold text-foreground mb-4">Resources</h4>
-            <ul className="space-y-3">
-{footerLinks.resources.map((link) => (
+            <ul className="space-y-2.5">
+              {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   {'external' in link && link.external ? (
                     <a
@@ -122,13 +132,41 @@ export function Footer() {
                   )}
                 </li>
               ))}
+              {/* Audiences under Resources */}
+              <li className="pt-2 border-t border-border/50 mt-3">
+                <span className="text-body-sm font-medium text-foreground/70">For You</span>
+              </li>
+              {footerLinks.audiences.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-body-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Legal Links */}
+          {/* Company + Legal Links */}
           <div>
-            <h4 className="text-body-sm font-semibold text-foreground mb-4">Legal</h4>
-            <ul className="space-y-3">
+            <h4 className="text-body-sm font-semibold text-foreground mb-4">Company</h4>
+            <ul className="space-y-2.5">
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-body-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+              {/* Legal under Company */}
+              <li className="pt-2 border-t border-border/50 mt-3">
+                <span className="text-body-sm font-medium text-foreground/70">Legal</span>
+              </li>
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link

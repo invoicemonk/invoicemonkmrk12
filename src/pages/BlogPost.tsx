@@ -53,7 +53,7 @@ const BlogPost = () => {
   }
 
   const { pillar, clusterType } = getPostClusterInfo(post.slug);
-  const relatedPosts = getRelatedPostsEnhanced(post.slug, 3);
+  const relatedPosts = getRelatedPostsEnhanced(post.slug, 5);
   const clusterPosts = pillar ? getPostsForPillar(pillar.id) : [];
   
   // Find the hub post for this cluster (the pillar content page)
@@ -80,7 +80,7 @@ const BlogPost = () => {
     { name: 'Home', url: 'https://invoicemonk.com' },
     { name: 'Blog', url: 'https://invoicemonk.com/blog' },
     ...(pillar 
-      ? [{ name: pillar.title, url: `https://invoicemonk.com/blog?pillar=${pillar.id}` }]
+      ? [{ name: pillar.title, url: `https://invoicemonk.com/blog/topic/${pillar.id}` }]
       : [{ name: post.category, url: `https://invoicemonk.com/blog?category=${encodeURIComponent(post.category)}` }]
     ),
     { name: post.title, url: articleUrl }
