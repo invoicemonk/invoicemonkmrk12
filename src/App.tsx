@@ -27,6 +27,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import BlogTopic from "./pages/BlogTopic";
 import AuthorPage from "./pages/AuthorPage";
 import FreeInvoiceGenerator from "./pages/FreeInvoiceGenerator";
 import Freelancers from "./pages/Freelancers";
@@ -76,6 +77,7 @@ const App = () => (
             <Route path="/cookie-policy" element={<CookiePolicy />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/topic/:topicId" element={<BlogTopic />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/blog/author/:authorSlug" element={<AuthorPage />} />
             <Route path="/free-invoice-generator" element={<FreeInvoiceGenerator />} />

@@ -13,6 +13,7 @@ import {
 } from '@/data/contentIntents';
 import { BlogPostCard } from '@/components/blog/BlogPostCard';
 import { PillarCard } from '@/components/blog/PillarCard';
+import { BlogPagination } from '@/components/blog/BlogPagination';
 import { IntentFilter, IntentBadge, ExperienceBadge } from '@/components/blog/IntentFilter';
 import { ContentSearchBox } from '@/components/blog/ContentSearchBox';
 import { SEOHead } from '@/components/seo/SEOHead';
@@ -23,6 +24,7 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/
 import { Grid3X3, List, Sparkles, Filter } from 'lucide-react';
 
 type ViewMode = 'topics' | 'all';
+const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
   const { locale } = useLocale();
@@ -33,6 +35,7 @@ const Blog = () => {
   const selectedCategory = searchParams.get('category');
   const searchQuery = searchParams.get('q') || '';
   const [viewMode, setViewMode] = useState<ViewMode>(selectedPillar ? 'all' : 'topics');
+  const [currentPage, setCurrentPage] = useState(1);
   
   // Intent filters
   const [selectedIntent, setSelectedIntent] = useState<ContentIntent | null>(null);
@@ -118,8 +121,26 @@ const Blog = () => {
   };
 
   const hasIntentFilters = selectedIntent || selectedStage || selectedExperience;
-  const featuredPost = filteredPosts[0];
-  const remainingPosts = filteredPosts.slice(1);
+  
+  // Pagination for "all" view
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  );
+  const featuredPost = paginatedPosts[0];
+  const remainingPosts = paginatedPosts.slice(1);
+  
+  // Reset page when filters change
+  const handleViewModeChange = (mode: ViewMode) => {
+    setViewMode(mode);
+    setCurrentPage(1);
+  };
+  
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <Layout>
@@ -161,7 +182,7 @@ const Blog = () => {
           {/* View Mode Toggle (when not filtering) */}
           {!selectedPillar && !selectedCategory && !searchQuery && (
             <AnimatedSection className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <Tabs value={viewMode} onValueChange={(v) => setViewMode(v as ViewMode)}>
+              <Tabs value={viewMode} onValueChange={(v) => handleViewModeChange(v as ViewMode)}>
                 <TabsList className="h-11">
                   <TabsTrigger value="topics" className="gap-2 px-4">
                     <Grid3X3 className="h-4 w-4" />
@@ -322,6 +343,18 @@ const Blog = () => {
                     );
                   })}
                 </StaggerContainer>
+              )}
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <AnimatedSection className="mt-12">
+                  <BlogPagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    basePath="/blog"
+                    onPageChange={handlePageChange}
+                  />
+                </AnimatedSection>
               )}
 
               {/* Empty State */}
