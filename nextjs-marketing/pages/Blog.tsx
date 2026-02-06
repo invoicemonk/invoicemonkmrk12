@@ -29,6 +29,7 @@ type ViewMode = 'topics' | 'all';
 const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
+  const router = useRouter();
   const { locale } = useLocale();
   const seo = pageSEO['/blog'];
   const searchParams = useSearchParams();
