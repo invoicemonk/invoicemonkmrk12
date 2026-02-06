@@ -103,16 +103,18 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-message', {
-        body: formData,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      if (error) {
-        throw error;
-      }
+      const data = await response.json();
 
-      if (data?.error) {
-        throw new Error(data.error);
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
       }
 
       toast({
