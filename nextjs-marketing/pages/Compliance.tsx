@@ -1,3 +1,5 @@
+'use client';
+
 import { Layout } from '@/components/layout/Layout';
 import { StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 import { Shield, FileCheck, Clock, Lock } from 'lucide-react';

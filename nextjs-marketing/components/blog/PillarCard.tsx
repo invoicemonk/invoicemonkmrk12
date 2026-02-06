@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from 'next/link';
 import { ArrowRight, FileText, Wallet, Calculator, Shield, User, ClipboardList, type LucideIcon } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';

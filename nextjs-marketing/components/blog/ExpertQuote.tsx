@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import { Quote, ExternalLink } from 'lucide-react';
 

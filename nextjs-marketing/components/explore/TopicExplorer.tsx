@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useMemo } from 'react';
 import { Link, useNavigate } from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';

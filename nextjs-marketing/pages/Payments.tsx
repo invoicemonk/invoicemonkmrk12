@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Link } from 'next/link';
 import { CreditCard, ArrowRight, Banknote, RefreshCw, BarChart3, Shield, Check, Zap, Clock, Globe } from 'lucide-react';

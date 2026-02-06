@@ -1,3 +1,5 @@
+'use client';
+
 import { Layout } from '@/components/layout/Layout';
 import { HeroSection } from '@/components/home/HeroSection';
 import { WaveProductTabs } from '@/components/home/WaveProductTabs';

@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from 'next/link';
 import { Check, Circle, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';

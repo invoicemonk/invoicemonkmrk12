@@ -1,3 +1,5 @@
+'use client';
+
 import { Layout } from '@/components/layout/Layout';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { TeamMemberCard } from '@/components/about/TeamMemberCard';

@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Link } from 'next/link';
 import { Calculator, ArrowRight, BookOpen, FileSpreadsheet, TrendingUp, Building2, PieChart, BarChart3, Shield, RefreshCw, CheckCircle, Calendar } from 'lucide-react';

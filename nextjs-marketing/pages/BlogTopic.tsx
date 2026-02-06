@@ -1,3 +1,5 @@
+'use client';
+
 import { useParams, Link } from 'next/link';
 import { useMemo, useState } from 'react';
 import { Layout } from '@/components/layout/Layout';

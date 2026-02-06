@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Link } from 'next/link';
 import { Receipt, ArrowRight, Camera, FolderOpen, Search, Cloud, Smartphone, Shield, Tag } from 'lucide-react';

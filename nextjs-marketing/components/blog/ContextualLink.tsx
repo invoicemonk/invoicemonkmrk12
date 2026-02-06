@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from 'next/link';
 import { cn } from '@/lib/utils';
 import { ArrowRight, ExternalLink, FileText, ShoppingCart, BookOpen } from 'lucide-react';

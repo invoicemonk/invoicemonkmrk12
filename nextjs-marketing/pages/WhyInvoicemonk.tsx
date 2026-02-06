@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Link } from 'next/link';
 import { Shield, Layers, TrendingUp, Lock, ArrowRight, Check, FileText, Users, Globe, Heart } from 'lucide-react';

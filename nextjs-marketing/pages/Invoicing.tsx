@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Link } from 'next/link';
 import { FileText, Check, ArrowRight, Send, Clock, Globe, Users, Shield, Repeat, Smartphone, Bell, Zap } from 'lucide-react';

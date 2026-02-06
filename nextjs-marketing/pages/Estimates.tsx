@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Link } from 'next/link';
 import { FileCheck, ArrowRight, FileText, CheckCircle, Clock, RefreshCw, Send, Users, TrendingUp, MessageSquare, BarChart } from 'lucide-react';

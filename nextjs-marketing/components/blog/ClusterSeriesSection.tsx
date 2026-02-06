@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from 'next/link';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
