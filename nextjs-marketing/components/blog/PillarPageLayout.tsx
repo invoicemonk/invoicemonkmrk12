@@ -313,7 +313,7 @@ export function PillarPageLayout({
                     color: 'white'
                   }}
                 >
-                  <Link to={pillar.targetProduct}>
+                  <Link href={pillar.targetProduct}>
                     <span>Start Free Trial</span>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>

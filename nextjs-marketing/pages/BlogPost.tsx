@@ -176,7 +176,7 @@ const BlogPost = ({ params }: { params: { slug: string } }) => {
           {/* Back Button */}
           <div className="max-w-5xl mx-auto mb-8">
             <Button variant="ghost" asChild className="gap-2">
-              <Link to="/blog">
+              <Link href="/blog">
                 <ArrowLeft className="h-4 w-4" />
                 Back to Blog
               </Link>
@@ -304,7 +304,7 @@ const BlogPost = ({ params }: { params: { slug: string } }) => {
               Join thousands of businesses using Invoicemonk to manage their finances.
             </p>
             <Button asChild size="lg">
-              <Link to={post.targetProduct || pillar?.targetProduct || "/invoicing"}>
+              <Link href={post.targetProduct || pillar?.targetProduct || "/invoicing"}>
                 {pillar?.title === 'Freelancer Success' ? 'Start for Free' : 'Start Your Free Trial'}
               </Link>
             </Button>

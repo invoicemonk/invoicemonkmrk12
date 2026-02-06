@@ -63,7 +63,7 @@ export default function GuidesIndex() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Link to={`/guides/${pillar.slug}`}>
+                  <Link href={`/guides/${pillar.slug}`}>
                     <Card className="h-full hover:shadow-soft-lg transition-all duration-300 group border-border/50">
                       <CardContent className="p-6">
                         <div 

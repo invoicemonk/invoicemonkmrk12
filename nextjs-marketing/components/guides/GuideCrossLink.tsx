@@ -86,7 +86,7 @@ export function GuideCrossLink({ pillar }: GuideCrossLinkProps) {
               
               <div className="flex-shrink-0">
                 <Button asChild variant="outline" className="rounded-full group">
-                  <Link to={`/blog/${blogPillar.slug}`}>
+                  <Link href={`/blog/${blogPillar.slug}`}>
                     Read Full Guide
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>

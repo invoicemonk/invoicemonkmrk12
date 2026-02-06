@@ -349,7 +349,7 @@ const CookiePolicy = () => {
                 </p>
                 <p>
                   <strong>Privacy Policy:</strong>{' '}
-                  <Link to="/privacy-policy" className="text-primary hover:underline">
+                  <Link href="/privacy-policy" className="text-primary hover:underline">
                     View our Privacy Policy
                   </Link>
                 </p>

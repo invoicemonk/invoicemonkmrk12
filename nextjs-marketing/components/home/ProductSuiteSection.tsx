@@ -112,7 +112,7 @@ export function ProductSuiteSection() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="rounded-full">
-                      <Link to="/invoicing">Learn More</Link>
+                      <Link href="/invoicing">Learn More</Link>
                     </Button>
                   </div>
                 </div>

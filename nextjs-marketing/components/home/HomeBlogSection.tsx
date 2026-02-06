@@ -38,7 +38,7 @@ export function HomeBlogSection() {
             size="lg"
             className="rounded-full px-8 h-12 group"
           >
-            <Link to="/blog">
+            <Link href="/blog">
               View All Posts
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>

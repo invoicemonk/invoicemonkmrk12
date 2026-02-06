@@ -74,23 +74,23 @@ const About = () => {
               </p>
               <p className="text-body-lg text-muted-foreground leading-relaxed mt-6">
                 How we intend to achieve that is by providing a{' '}
-                <Link to="/invoicing" className="text-primary hover:underline">
+                <Link href="/invoicing" className="text-primary hover:underline">
                   simple & easy to use invoice application
                 </Link>{' '}
                 and{' '}
-                <Link to="/estimates" className="text-primary hover:underline">
+                <Link href="/estimates" className="text-primary hover:underline">
                   free estimate application
                 </Link>
                 ,{' '}
-                <Link to="/features/client-management" className="text-primary hover:underline">
+                <Link href="/features/client-management" className="text-primary hover:underline">
                   user friendly client management application
                 </Link>
                 ,{' '}
-                <Link to="/payments" className="text-primary hover:underline">
+                <Link href="/payments" className="text-primary hover:underline">
                   highly functional payment accepting application
                 </Link>{' '}
                 and a financial management solution they can't live without. We also have{' '}
-                <Link to="/blog" className="text-primary hover:underline">
+                <Link href="/blog" className="text-primary hover:underline">
                   a blog to teach, educate and guide freelancers and small business owners
                 </Link>{' '}
                 in their hustle.
@@ -154,7 +154,7 @@ const About = () => {
               individuals to help us build the future of business tools.
             </p>
             <Button asChild>
-              <Link to="/contact">
+              <Link href="/contact">
                 Join Our Team <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>

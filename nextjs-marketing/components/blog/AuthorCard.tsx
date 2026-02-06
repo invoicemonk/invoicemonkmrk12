@@ -40,7 +40,7 @@ export function AuthorCard({ author, variant = 'compact', showCredentials = true
   return (
     <div className="bg-card rounded-xl border border-border p-6">
       <div className="flex items-start gap-4">
-        <Link to={`/blog/author/${author.slug}`}>
+        <Link href={`/blog/author/${author.slug}`}>
           <Avatar className="h-16 w-16">
             <AvatarImage src={author.avatar} alt={author.name} />
             <AvatarFallback className="text-lg">{initials}</AvatarFallback>

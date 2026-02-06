@@ -40,7 +40,7 @@ const AuthorPage = ({ params }: { params: { authorSlug: string } }) => {
           {/* Back Button */}
           <div className="max-w-4xl mx-auto mb-8">
             <Button variant="ghost" asChild className="gap-2">
-              <Link to="/blog">
+              <Link href="/blog">
                 <ArrowLeft className="h-4 w-4" />
                 Back to Blog
               </Link>

@@ -202,7 +202,7 @@ const WhyInvoicemonk = () => {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8">
-                <Link to="/pricing">View Pricing</Link>
+                <Link href="/pricing">View Pricing</Link>
               </Button>
             </div>
           </AnimatedSection>

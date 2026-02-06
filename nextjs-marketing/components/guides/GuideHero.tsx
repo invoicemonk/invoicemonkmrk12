@@ -62,7 +62,7 @@ export function GuideHero({ pillar }: GuideHeroProps) {
           {/* CTA buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button asChild size="lg" className="rounded-full">
-              <Link to={pillar.targetProduct}>
+              <Link href={pillar.targetProduct}>
                 Try {pillar.title.split(' ')[0]} Free
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

@@ -197,7 +197,7 @@ const Invoicing = () => {
                   size="lg"
                   className="rounded-full px-8 h-14 text-body border-border hover:bg-muted"
                 >
-                  <Link to="/pricing">View Pricing</Link>
+                  <Link href="/pricing">View Pricing</Link>
                 </Button>
               </motion.div>
 

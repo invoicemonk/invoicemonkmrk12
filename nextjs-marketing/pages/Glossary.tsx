@@ -318,7 +318,7 @@ const Glossary = () => {
                   Start using professional invoicing software that handles the complexity for you.
                 </p>
                 <Button asChild>
-                  <Link to="/pricing" className="gap-2">
+                  <Link href="/pricing" className="gap-2">
                     Get Started Free <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>

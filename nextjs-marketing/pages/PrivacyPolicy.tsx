@@ -97,7 +97,7 @@ const PrivacyPolicy = () => {
                 <li><strong>Device Information:</strong> IP address, browser type, operating system, device identifiers</li>
                 <li><strong>Usage Data:</strong> Pages visited, features used, time spent on the platform, click patterns</li>
                 <li><strong>Log Data:</strong> Access times, error logs, referring URLs</li>
-                <li><strong>Cookies & Similar Technologies:</strong> See our <Link to="/cookie-policy" className="text-primary hover:underline">Cookie Policy</Link> for details</li>
+                <li><strong>Cookies & Similar Technologies:</strong> See our <Link href="/cookie-policy" className="text-primary hover:underline">Cookie Policy</Link> for details</li>
               </ul>
 
               <h3 className="text-heading-sm font-medium text-foreground mt-6 mb-3">
@@ -213,7 +213,7 @@ const PrivacyPolicy = () => {
               </ul>
               <p className="mb-6">
                 For detailed information about the cookies we use and how to manage your preferences, 
-                please see our <Link to="/cookie-policy" className="text-primary hover:underline">Cookie Policy</Link>.
+                please see our <Link href="/cookie-policy" className="text-primary hover:underline">Cookie Policy</Link>.
               </p>
             </section>
 

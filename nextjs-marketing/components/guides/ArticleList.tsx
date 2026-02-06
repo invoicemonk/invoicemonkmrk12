@@ -105,7 +105,7 @@ function ArticleCard({ article, pillar, index, featured }: ArticleCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
     >
-      <Link to={`/blog/${article.slug}`}>
+      <Link href={`/blog/${article.slug}`}>
         <Card className={`h-full hover:shadow-soft-lg transition-all duration-300 group border-border/50 ${
           featured ? 'bg-gradient-to-br from-card to-muted/30' : ''
         }`}>

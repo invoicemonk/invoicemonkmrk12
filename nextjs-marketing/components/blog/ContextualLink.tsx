@@ -64,7 +64,7 @@ export function ContextualLink({
   }
 
   return (
-    <Link to={to} className={linkClasses}>
+    <Link href={to} className={linkClasses}>
       {showIcon && <Icon className="h-3 w-3 flex-shrink-0" />}
       {children}
       {type === 'product' && <ArrowRight className="h-3 w-3 flex-shrink-0" />}

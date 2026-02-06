@@ -52,7 +52,7 @@ export function WaveBlogPreview({
             {subtitle && <p className="text-body-lg text-muted-foreground">{subtitle}</p>}
           </div>
           <Button asChild variant="ghost" className="group">
-            <Link to="/blog" className="flex items-center gap-2">
+            <Link href="/blog" className="flex items-center gap-2">
               View all articles
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>

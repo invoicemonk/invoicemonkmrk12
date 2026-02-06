@@ -212,7 +212,7 @@ const Accounting = () => {
                   size="lg"
                   className="rounded-full px-8 h-14 text-body border-border hover:bg-muted"
                 >
-                  <Link to="/invoicing">Start with Invoicing</Link>
+                  <Link href="/invoicing">Start with Invoicing</Link>
                 </Button>
               </motion.div>
             </div>
@@ -376,7 +376,7 @@ const Accounting = () => {
                 degree required.
               </p>
               <Button asChild variant="outline" size="lg" className="rounded-full">
-                <Link to="/blog/small-business-accounting-guide">
+                <Link href="/blog/small-business-accounting-guide">
                   Read the Complete Guide
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>

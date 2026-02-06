@@ -81,7 +81,7 @@ const BlogTopic = ({ params }: { params: { topicId: string } }) => {
           {/* Back Navigation */}
           <AnimatedSection className="mb-8">
             <Button variant="ghost" asChild className="gap-2">
-              <Link to="/blog">
+              <Link href="/blog">
                 <ArrowLeft className="h-4 w-4" />
                 All Topics
               </Link>
@@ -107,7 +107,7 @@ const BlogTopic = ({ params }: { params: { topicId: string } }) => {
                 {posts.length} {posts.length === 1 ? 'article' : 'articles'}
               </Badge>
               <Button asChild size="sm" style={{ backgroundColor: pillar.color }}>
-                <Link to={pillar.targetProduct}>
+                <Link href={pillar.targetProduct}>
                   Explore {pillar.title.split(' ')[0]} Features
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -227,7 +227,7 @@ const BlogTopic = ({ params }: { params: { topicId: string } }) => {
               Join thousands of businesses using Invoicemonk to manage their finances professionally.
             </p>
             <Button asChild size="lg">
-              <Link to={pillar.targetProduct}>
+              <Link href={pillar.targetProduct}>
                 Get Started Free
               </Link>
             </Button>

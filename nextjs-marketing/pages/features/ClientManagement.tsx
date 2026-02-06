@@ -121,7 +121,7 @@ const ClientManagement = () => {
                   size="lg"
                   className="rounded-full px-8 h-14 text-body border-border hover:bg-muted"
                 >
-                  <Link to="/invoicing">View All Invoicing Features</Link>
+                  <Link href="/invoicing">View All Invoicing Features</Link>
                 </Button>
               </motion.div>
             </div>

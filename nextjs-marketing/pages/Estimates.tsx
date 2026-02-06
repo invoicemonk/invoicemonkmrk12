@@ -216,7 +216,7 @@ const Estimates = () => {
                   size="lg"
                   className="rounded-full px-8 h-14 text-body border-border hover:bg-muted"
                 >
-                  <Link to="/invoicing">Start with Invoicing</Link>
+                  <Link href="/invoicing">Start with Invoicing</Link>
                 </Button>
               </motion.div>
             </div>

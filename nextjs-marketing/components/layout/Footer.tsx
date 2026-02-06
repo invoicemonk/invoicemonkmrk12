@@ -57,7 +57,7 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 lg:gap-10">
           {/* Logo & Description */}
           <div className="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-2 mb-4 lg:mb-0">
-            <Link to="/" className="inline-block mb-4">
+            <Link href="/" className="inline-block mb-4">
               <img src={logo} alt="Invoicemonk" className="h-8 w-auto" />
             </Link>
             <p className="text-body-sm text-muted-foreground max-w-xs">

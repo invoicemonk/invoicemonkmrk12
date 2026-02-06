@@ -110,7 +110,7 @@ export function ClusterSeriesSection({
             asChild
             className="group"
           >
-            <Link to={`/blog?pillar=${pillar.id}`}>
+            <Link href={`/blog?pillar=${pillar.id}`}>
               <span>View all {posts.length} articles in {pillar.title}</span>
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>

@@ -86,13 +86,13 @@ export function GuideCTA({ pillar }: GuideCTAProps) {
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Button asChild size="lg" className="rounded-full">
-                      <Link to={pillar.targetProduct}>
+                      <Link href={pillar.targetProduct}>
                         Get Started Free
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="rounded-full">
-                      <Link to="/pricing">
+                      <Link href="/pricing">
                         View Pricing
                       </Link>
                     </Button>

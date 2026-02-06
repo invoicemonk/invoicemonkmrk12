@@ -65,7 +65,7 @@ const TermsOfService = () => {
               </p>
               <p className="mb-6">
                 By accessing or using our Service, you acknowledge that you have read, understood, and 
-                agree to be bound by these Terms and our <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
+                agree to be bound by these Terms and our <Link href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
               </p>
             </section>
 
@@ -166,7 +166,7 @@ const TermsOfService = () => {
               </h3>
               <p className="mb-4">
                 We offer different service tiers with varying features and limitations. Details of 
-                current pricing and features are available on our <Link to="/pricing" className="text-primary hover:underline">Pricing page</Link>.
+                current pricing and features are available on our <Link href="/pricing" className="text-primary hover:underline">Pricing page</Link>.
               </p>
 
               <h3 className="text-heading-sm font-medium text-foreground mt-6 mb-3">
@@ -293,7 +293,7 @@ const TermsOfService = () => {
               <p className="mb-6">
                 <strong>Data on Termination:</strong> Upon account termination, you will have 30 days to 
                 export your data. After this period, we will delete your User Data in accordance with 
-                our <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>, 
+                our <Link href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>, 
                 except where retention is required by law.
               </p>
             </section>
