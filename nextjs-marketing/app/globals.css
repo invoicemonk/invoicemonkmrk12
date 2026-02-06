@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Invoicemonk Design System - Wave.com inspired premium aesthetic */
+/* All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Clean white background */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    /* Cards: Clean white */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary: Invoicemonk Red #d80000 */
+    --primary: 0 100% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light gray */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+
+    /* Muted: For subtle backgrounds and text */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent: Red accent for CTAs and highlights */
+    --accent-orange: 0 100% 42%;
+    --accent-orange-foreground: 0 0% 100%;
+
+    /* Accent: Soft highlight */
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 100% 42%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens for Invoicemonk */
+    --hero-gradient-start: 0 0% 100%;
+    --hero-gradient-end: 0 0% 98%;
+    
+    /* Text hierarchy */
+    --heading: 0 0% 0%;
+    --body: 0 0% 25%;
+    --caption: 0 0% 45%;
+
+    /* Invoicemonk-specific tokens */
+    --wave-blue: 0 100% 42%;
+    --wave-blue-light: 0 10% 97%;
+    --wave-orange: 0 100% 42%;
+    --wave-cream: 0 0% 100%;
+    --wave-green: 142 69% 38%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.08), 0 2px 4px -1px hsl(0 0% 0% / 0.04);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.08), 0 4px 6px -2px hsl(0 0% 0% / 0.04);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.08), 0 10px 10px -5px hsl(0 0% 0% / 0.03);
+
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 100% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 100% 42%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent-orange: 0 100% 50%;
+    --accent-orange-foreground: 0 0% 100%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 96%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 100% 50%;
+
+    --heading: 0 0% 96%;
+    --body: 0 0% 75%;
+    --caption: 0 0% 55%;
+
+    --wave-blue: 0 100% 50%;
+    --wave-blue-light: 0 0% 15%;
+    --wave-orange: 0 100% 50%;
+    --wave-cream: 0 0% 5%;
+    --wave-green: 142 69% 45%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 0 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-heading font-semibold tracking-tight;
+  }
+
+  p {
+    @apply text-body leading-relaxed;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Article Typography - Blog Content Styling */
+@layer components {
+  .prose {
+    /* Headings */
+    --tw-prose-headings: hsl(var(--foreground));
+    
+    /* Body text */
+    --tw-prose-body: hsl(var(--muted-foreground));
+    
+    /* Links */
+    --tw-prose-links: hsl(var(--primary));
+    
+    /* Bold text */
+    --tw-prose-bold: hsl(var(--foreground));
+    
+    /* Bullets and numbers */
+    --tw-prose-bullets: hsl(var(--primary));
+    --tw-prose-counters: hsl(var(--primary));
+    
+    /* Quotes */
+    --tw-prose-quotes: hsl(var(--foreground));
+    --tw-prose-quote-borders: hsl(var(--primary));
+    
+    /* Code */
+    --tw-prose-code: hsl(var(--foreground));
+    
+    /* Horizontal rules */
+    --tw-prose-hr: hsl(var(--border));
+  }
+  
+  /* Enhanced spacing for readability */
+  .prose h2 {
+    @apply mt-12 mb-6 text-2xl font-bold;
+  }
+  
+  .prose h3 {
+    @apply mt-8 mb-4 text-xl font-semibold;
+  }
+  
+  .prose p {
+    @apply mb-6 leading-relaxed;
+  }
+  
+  .prose ul, .prose ol {
+    @apply my-6 pl-6;
+  }
+  
+  .prose li {
+    @apply mb-3;
+  }
+  
+  .prose a {
+    @apply font-medium underline underline-offset-4 hover:text-primary/80 transition-colors;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-foreground;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-6 italic my-8;
+  }
+  
+  /* Dark mode overrides */
+  .dark .prose {
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-body: hsl(var(--muted-foreground));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-bullets: hsl(var(--primary));
+    --tw-prose-counters: hsl(var(--primary));
+    --tw-prose-quotes: hsl(var(--foreground));
+    --tw-prose-quote-borders: hsl(var(--primary));
+    --tw-prose-code: hsl(var(--foreground));
+    --tw-prose-hr: hsl(var(--border));
+  }
+  
+  /* Enhanced link styles for blog content */
+  .prose .internal-link {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--primary) / 0.3);
+    transition: text-decoration-color 0.2s;
+  }
+  
+  .prose .internal-link:hover {
+    text-decoration-color: hsl(var(--primary));
+  }
+  
+  .prose .internal-link--product {
+    font-weight: 500;
+  }
+  
+  .prose .internal-link--guide {
+    text-underline-offset: 2px;
+  }
+  
+  .prose .external-link {
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+  }
+  
+  .prose .external-link:hover {
+    color: hsl(var(--foreground));
+    text-decoration: underline;
+  }
+  
+  .prose .external-link::after {
+    content: " ↗";
+    font-size: 0.75em;
+    opacity: 0.7;
+  }
+}
