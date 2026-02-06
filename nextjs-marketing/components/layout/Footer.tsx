@@ -59,7 +59,7 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-2 mb-4 lg:mb-0">
             <Link href="/" className="inline-block mb-4">
-              <img src={logo} alt="Invoicemonk" className="h-8 w-auto" />
+              <img src="/assets/invoicemonk-logo.png" alt="Invoicemonk" className="h-8 w-auto" />
             </Link>
             <p className="text-body-sm text-muted-foreground max-w-xs">
               The compliance-first financial platform. Start with invoicing, grow into a complete suite.
