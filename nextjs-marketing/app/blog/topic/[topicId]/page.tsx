@@ -2,6 +2,11 @@
 
 import BlogTopicComponent from '@/pages/BlogTopic';
 
-export default function BlogTopicPage({ params }: { params: { topicId: string } }) {
-  return <BlogTopicComponent params={params} />;
+export default async function BlogTopicPage({ 
+  params 
+}: { 
+  params: Promise<{ topicId: string }> 
+}) {
+  const resolvedParams = await params;
+  return <BlogTopicComponent params={resolvedParams} />;
 }
