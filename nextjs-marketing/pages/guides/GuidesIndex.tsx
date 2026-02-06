@@ -1,4 +1,4 @@
-import Link from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, FileText, Wallet, Calculator, Shield, User, ClipboardList } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
