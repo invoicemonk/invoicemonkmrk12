@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { Wallet, ArrowRight, Camera, Tag, PieChart, Receipt, Smartphone, FileText, TrendingDown, Clock, FolderCheck, FileBarChart } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';

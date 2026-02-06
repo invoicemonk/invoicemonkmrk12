@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { Button } from '@/components/ui/button';

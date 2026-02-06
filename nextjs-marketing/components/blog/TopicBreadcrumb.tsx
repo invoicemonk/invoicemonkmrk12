@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Pillar } from '@/data/topicalMap';

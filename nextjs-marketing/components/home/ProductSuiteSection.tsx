@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { FileText, Wallet, CreditCard, Calculator, FileCheck, Receipt, ArrowRight, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';

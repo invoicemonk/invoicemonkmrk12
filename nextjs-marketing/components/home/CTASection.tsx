@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';

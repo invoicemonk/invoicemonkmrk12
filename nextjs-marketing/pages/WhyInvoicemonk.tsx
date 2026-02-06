@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { Shield, Layers, TrendingUp, Lock, ArrowRight, Check, FileText, Users, Globe, Heart } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
