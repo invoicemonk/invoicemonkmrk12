@@ -43,6 +43,7 @@ const categoryConfig: Record<GlossaryTerm['category'], { icon: typeof FileText; 
 };
 
 const Glossary = () => {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const selectedCategory = searchParams?.get('category') as GlossaryTerm['category'] | null;
@@ -90,22 +91,23 @@ const Glossary = () => {
 
   const handleCategoryFilter = (category: GlossaryTerm['category'] | null) => {
     if (category) {
-      setSearchParams({ category });
+      router.push(`/glossary?category=${category}`);
     } else {
-      setSearchParams({});
+      router.push('/glossary');
     }
   };
 
   const handleTermSelect = (slug: string) => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set('term', slug);
-    setSearchParams(newParams);
+    const params = new URLSearchParams(searchParams?.toString() || '');
+    params.set('term', slug);
+    router.push(`/glossary?${params.toString()}`);
   };
 
   const handleCloseTerm = () => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.delete('term');
-    setSearchParams(newParams);
+    const params = new URLSearchParams(searchParams?.toString() || '');
+    params.delete('term');
+    const query = params.toString();
+    router.push(query ? `/glossary?${query}` : '/glossary');
   };
 
   return (
