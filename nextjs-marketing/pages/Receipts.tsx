@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import Link from 'next/navigation';
 import { Receipt, ArrowRight, Camera, FolderOpen, Search, Cloud, Smartphone, Shield, Tag } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';

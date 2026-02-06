@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from 'next/navigation';
 import { useEffect, useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Badge } from '@/components/ui/badge';

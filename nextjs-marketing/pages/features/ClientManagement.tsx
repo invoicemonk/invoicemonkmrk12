@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import Link from 'next/navigation';
 import { Users, ArrowRight, FileText, Mail, Clock, UserCheck } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';

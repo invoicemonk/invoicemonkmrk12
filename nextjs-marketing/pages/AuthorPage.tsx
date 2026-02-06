@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from 'next/navigation';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { PersonSchema } from '@/components/seo/PersonSchema';

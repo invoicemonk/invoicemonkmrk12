@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import Link from 'next/navigation';
 import { CreditCard, ArrowRight, Banknote, RefreshCw, BarChart3, Shield, Check, Zap, Clock, Globe } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';

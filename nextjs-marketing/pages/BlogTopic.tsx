@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from 'next/navigation';
 import { useMemo, useState } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';

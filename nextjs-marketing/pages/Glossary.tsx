@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Link, useSearchParams } from 'next/link';
+import { Link, useSearchParams } from 'next/navigation';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { DefinedTermSetSchema } from '@/components/seo/DefinedTermSetSchema';

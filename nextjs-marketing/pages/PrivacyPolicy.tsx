@@ -1,7 +1,7 @@
 'use client';
 
 import { Layout } from '@/components/layout/Layout';
-import Link from 'next/link';
+import Link from 'next/navigation';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { pageSEO } from '@/components/seo/seoConfig';
 
