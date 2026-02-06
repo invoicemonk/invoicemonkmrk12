@@ -77,7 +77,7 @@ export function ClusterTopicMap({
                     </div>
                   ) : (
                     <Link 
-                      to={`/blog/${post.slug}`}
+                      href={`/blog/${post.slug}`}
                       className={cn(
                         "group flex items-start gap-3 py-2 px-3 rounded-lg",
                         "text-muted-foreground hover:text-foreground",

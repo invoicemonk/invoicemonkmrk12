@@ -18,7 +18,7 @@ export function AuthorCard({ author, variant = 'compact', showCredentials = true
   if (variant === 'compact') {
     return (
       <Link 
-        to={`/blog/author/${author.slug}`}
+        href={`/blog/author/${author.slug}`}
         className="flex items-center gap-3 group"
       >
         <Avatar className="h-10 w-10">
@@ -48,7 +48,7 @@ export function AuthorCard({ author, variant = 'compact', showCredentials = true
         </Link>
         <div className="flex-1">
           <Link 
-            to={`/blog/author/${author.slug}`}
+            href={`/blog/author/${author.slug}`}
             className="text-heading-sm font-bold text-foreground hover:text-primary transition-colors"
           >
             {author.name}

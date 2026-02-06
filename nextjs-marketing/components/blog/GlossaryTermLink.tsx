@@ -34,7 +34,7 @@ export function GlossaryTermLink({
 
   const link = (
     <Link
-      to={`/glossary?term=${termSlug}`}
+      href={`/glossary?term=${termSlug}`}
       className={`text-primary underline decoration-dotted underline-offset-2 hover:decoration-solid ${className}`}
     >
       {children}

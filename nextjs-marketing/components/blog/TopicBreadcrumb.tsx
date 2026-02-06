@@ -48,7 +48,7 @@ export function TopicBreadcrumb({
         {pillar ? (
           <li className="flex items-center gap-1.5">
             <Link 
-              to={`/blog/topic/${pillar.id}`}
+              href={`/blog/topic/${pillar.id}`}
               className="hover:text-primary transition-colors"
               style={{ color: pillar.color }}
             >
@@ -61,7 +61,7 @@ export function TopicBreadcrumb({
         ) : (
           <li className="flex items-center gap-1.5">
             <Link 
-              to={`/blog?category=${encodeURIComponent(category)}`}
+              href={`/blog?category=${encodeURIComponent(category)}`}
               className="hover:text-primary transition-colors"
             >
               {category}

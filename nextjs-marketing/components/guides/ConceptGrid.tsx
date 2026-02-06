@@ -62,7 +62,7 @@ export function ConceptGrid({ pillar }: ConceptGridProps) {
                     </p>
                     {topic.link && (
                       <Link 
-                        to={topic.link}
+                        href={topic.link}
                         className="inline-flex items-center text-sm font-medium text-primary hover:underline"
                       >
                         Learn more

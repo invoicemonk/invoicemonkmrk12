@@ -133,7 +133,7 @@ export function Navbar() {
                             return (
                               <Link
                                 key={product.name}
-                                to={product.href}
+                                href={product.href}
                                 className={`flex items-start gap-3 p-3 rounded-xl transition-all duration-200 ${
                                   isAvailable 
                                     ? 'hover:bg-primary/5 group' 
@@ -181,7 +181,7 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  href={link.href}
                   className={`text-body-sm font-medium transition-colors duration-200 hover:text-primary ${
                     pathname === link.href
                       ? 'text-primary'
@@ -257,7 +257,7 @@ export function Navbar() {
                           transition={{ delay: index * 0.03 + 0.1 }}
                         >
                           <Link
-                            to={product.href}
+                            href={product.href}
                             className={`flex items-center gap-3 py-3 px-4 rounded-lg transition-colors ${
                               isAvailable
                                 ? 'text-foreground hover:bg-primary/5 hover:text-primary'
@@ -296,7 +296,7 @@ export function Navbar() {
                         transition={{ delay: (products.length + index) * 0.03 + 0.1 }}
                       >
                         <Link
-                          to={link.href}
+                          href={link.href}
                           className={`block py-3 px-4 rounded-lg text-body font-medium transition-colors ${
                             pathname === link.href
                               ? 'bg-primary/10 text-primary'

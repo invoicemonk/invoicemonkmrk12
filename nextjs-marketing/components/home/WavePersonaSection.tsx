@@ -54,7 +54,7 @@ export function WavePersonaSection() {
                 transition={{ duration: 0.2 }}
               >
                 <Link
-                  to={persona.link}
+                  href={persona.link}
                   className="block group"
                 >
                   <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary-foreground/20 hover:border-primary-foreground/40 transition-colors">

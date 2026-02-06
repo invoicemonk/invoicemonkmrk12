@@ -84,7 +84,7 @@ export function BlogPagination({
       {/* Previous Button */}
       {currentPage > 1 ? (
         <Link
-          to={getPageUrl(currentPage - 1)}
+          href={getPageUrl(currentPage - 1)}
           onClick={(e) => handleClick(currentPage - 1, e)}
           className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
           aria-label="Previous page"
@@ -119,7 +119,7 @@ export function BlogPagination({
           return (
             <Link
               key={page}
-              to={getPageUrl(page)}
+              href={getPageUrl(page)}
               onClick={(e) => handleClick(page, e)}
               className={cn(
                 'inline-flex items-center justify-center w-10 h-10 rounded-lg text-sm font-medium transition-colors',
@@ -138,7 +138,7 @@ export function BlogPagination({
       {/* Next Button */}
       {currentPage < totalPages ? (
         <Link
-          to={getPageUrl(currentPage + 1)}
+          href={getPageUrl(currentPage + 1)}
           onClick={(e) => handleClick(currentPage + 1, e)}
           className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
           aria-label="Next page"

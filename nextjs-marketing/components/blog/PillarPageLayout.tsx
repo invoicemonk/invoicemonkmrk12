@@ -268,7 +268,7 @@ export function PillarPageLayout({
                       .map((clusterPost) => (
                         <li key={clusterPost.slug}>
                           <Link 
-                            to={`/blog/${clusterPost.slug}`}
+                            href={`/blog/${clusterPost.slug}`}
                             className="group flex items-start gap-3 text-sm hover:text-primary transition-colors"
                           >
                             <span 

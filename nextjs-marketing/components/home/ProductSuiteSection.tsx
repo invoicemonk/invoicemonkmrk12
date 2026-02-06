@@ -187,7 +187,7 @@ export function ProductSuiteSection() {
                       transition={{ duration: 0.2 }}
                     >
                       <Link
-                        to={product.href}
+                        href={product.href}
                         className="block h-full bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-card-hover transition-all duration-300 group"
                       >
                         <div className="flex items-start gap-4">

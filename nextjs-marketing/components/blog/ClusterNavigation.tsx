@@ -71,7 +71,7 @@ export function ClusterNavigation({
                 {filteredPosts.slice(0, 5).map((post) => (
                   <li key={post.slug}>
                     <Link 
-                      to={`/blog/${post.slug}`}
+                      href={`/blog/${post.slug}`}
                       className="group flex items-start gap-3 text-sm hover:text-primary transition-colors"
                     >
                       <span 
@@ -138,7 +138,7 @@ export function ClusterNavigation({
               {countryGuides.map((country) => (
                 <Link
                   key={country.code}
-                  to={`/blog/${country.slug}`}
+                  href={`/blog/${country.slug}`}
                   className={cn(
                     "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium",
                     "bg-muted hover:bg-muted/80 text-foreground transition-colors",
@@ -168,7 +168,7 @@ export function ClusterNavigation({
               {crossPillarSuggestions.map((relatedPillar) => (
                 <Link
                   key={relatedPillar.id}
-                  to={relatedPillar.hubPage}
+                  href={relatedPillar.hubPage}
                   className="group flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors"
                 >
                   <div 
@@ -239,7 +239,7 @@ export function CountryComplianceNav({ currentSlug, className }: CountryComplian
             {countryGuides.map((country) => (
               <li key={country.code}>
                 <Link
-                  to={`/blog/${country.slug}`}
+                  href={`/blog/${country.slug}`}
                   className={cn(
                     "flex items-center gap-3 p-2 rounded-lg transition-colors",
                     currentSlug === country.slug 

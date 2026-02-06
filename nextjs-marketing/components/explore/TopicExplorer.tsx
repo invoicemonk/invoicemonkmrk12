@@ -269,7 +269,7 @@ export function TopicExplorer() {
                                     return (
                                       <Link
                                         key={post.slug}
-                                        to={`/blog/${post.slug}`}
+                                        href={`/blog/${post.slug}`}
                                         onClick={(e) => e.stopPropagation()}
                                         className="group"
                                       >
@@ -396,7 +396,7 @@ export function TopicExplorer() {
                           return (
                             <Link
                               key={slug}
-                              to={`/blog/${slug}`}
+                              href={`/blog/${slug}`}
                               className="group flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors"
                             >
                               <div className={cn(

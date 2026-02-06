@@ -51,7 +51,7 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
               </p>
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <Link 
-                  to={`/blog/author/${post.author.slug}`}
+                  href={`/blog/author/${post.author.slug}`}
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                   onClick={(e) => e.stopPropagation()}
                 >

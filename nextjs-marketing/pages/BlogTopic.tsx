@@ -125,7 +125,7 @@ const BlogTopic = ({ params }: { params: { topicId: string } }) => {
                 {pillar.keyTopics.map((topic, index) => (
                   <Link 
                     key={index}
-                    to={topic.link || '#'}
+                    href={topic.link || '#'}
                     className="group p-5 rounded-xl border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all"
                   >
                     <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
@@ -200,7 +200,7 @@ const BlogTopic = ({ params }: { params: { topicId: string } }) => {
                 return (
                   <Link
                     key={related.id}
-                    to={`/blog/topic/${related.id}`}
+                    href={`/blog/topic/${related.id}`}
                     className="group p-6 rounded-xl border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all text-center"
                   >
                     <div 

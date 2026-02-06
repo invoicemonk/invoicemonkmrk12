@@ -56,7 +56,7 @@ export function ClusterSeriesSection({
         {displayPosts.map((post) => (
           <Link 
             key={post.slug} 
-            to={`/blog/${post.slug}`}
+            href={`/blog/${post.slug}`}
             className="group"
           >
             <Card className="h-full border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary/30">

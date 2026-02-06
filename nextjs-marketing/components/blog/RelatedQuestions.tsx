@@ -91,7 +91,7 @@ export function RelatedQuestions({
                 <p>{item.answer}</p>
                 {item.relatedLink && (
                   <Link 
-                    to={item.relatedLink}
+                    href={item.relatedLink}
                     className="inline-flex items-center gap-1 mt-2 text-primary hover:underline text-xs font-medium"
                   >
                     Learn more: {item.relatedLinkText}
@@ -150,7 +150,7 @@ export function RelatedQuestions({
                   <p>{item.answer}</p>
                   {item.relatedLink && (
                     <Link 
-                      to={item.relatedLink}
+                      href={item.relatedLink}
                       className="inline-flex items-center gap-1 mt-3 text-primary hover:underline font-medium"
                     >
                       <span>Read more: {item.relatedLinkText}</span>
@@ -166,7 +166,7 @@ export function RelatedQuestions({
         {/* Link to guide for full FAQ */}
         <div className="px-4 pt-3 mt-2 border-t border-border">
           <Link 
-            to={pillar.hubPage}
+            href={pillar.hubPage}
             className="text-sm text-primary hover:underline font-medium flex items-center gap-1"
           >
             View complete {pillar.title.toLowerCase()} guide

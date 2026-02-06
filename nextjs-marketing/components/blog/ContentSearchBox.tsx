@@ -103,7 +103,7 @@ export function ContentSearchBox({
                 return (
                   <Link
                     key={slug}
-                    to={`/blog/${slug}`}
+                    href={`/blog/${slug}`}
                     onClick={handleResultClick}
                     className="flex items-start gap-3 p-2 rounded-md hover:bg-muted transition-colors"
                   >
@@ -135,7 +135,7 @@ export function ContentSearchBox({
           
           <div className="border-t border-border p-2">
             <Link
-              to={`/blog?q=${encodeURIComponent(query)}`}
+              href={`/blog?q=${encodeURIComponent(query)}`}
               onClick={handleResultClick}
               className="flex items-center justify-center gap-2 p-2 text-sm text-primary hover:bg-muted rounded-md transition-colors"
             >
