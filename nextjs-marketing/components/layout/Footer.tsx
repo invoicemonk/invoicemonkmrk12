@@ -1,5 +1,5 @@
 import { Link } from 'next/link';
-import logo from '@/assets/invoicemonk-logo.png';
+import logo from '/assets/invoicemonk-logo.png';
 
 const footerLinks = {
   platform: [

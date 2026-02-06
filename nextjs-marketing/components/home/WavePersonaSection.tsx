@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
-import personaFreelancer from '@/assets/persona-freelancer.jpg';
-import personaConsultant from '@/assets/persona-consultant.jpg';
-import personaSmallBusiness from '@/assets/persona-smallbusiness.jpg';
-import personaContractor from '@/assets/persona-contractor.jpg';
+import personaFreelancer from '/assets/persona-freelancer.jpg';
+import personaConsultant from '/assets/persona-consultant.jpg';
+import personaSmallBusiness from '/assets/persona-smallbusiness.jpg';
+import personaContractor from '/assets/persona-contractor.jpg';
 
 const personas = [
   {

@@ -58,10 +58,10 @@ const bannerFeatures = [
   'Generate expense reports',
 ];
 
-import expensesReceiptScanning from '@/assets/expenses-receipt-scanning.jpg';
-import expensesCategories from '@/assets/expenses-categories.jpg';
-import expensesTaxTracking from '@/assets/expenses-tax-tracking.jpg';
-import expensesAutomation from '@/assets/expenses-automation.jpg';
+import expensesReceiptScanning from '/assets/expenses-receipt-scanning.jpg';
+import expensesCategories from '/assets/expenses-categories.jpg';
+import expensesTaxTracking from '/assets/expenses-tax-tracking.jpg';
+import expensesAutomation from '/assets/expenses-automation.jpg';
 
 const tabbedFeatures = [
   {

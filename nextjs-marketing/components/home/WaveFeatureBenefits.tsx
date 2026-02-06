@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
-import featureRelief from '@/assets/feature-relief.jpg';
-import featureProfessional from '@/assets/feature-professional.jpg';
-import featureCompliance from '@/assets/feature-compliance.jpg';
+import featureRelief from '/assets/feature-relief.jpg';
+import featureProfessional from '/assets/feature-professional.jpg';
+import featureCompliance from '/assets/feature-compliance.jpg';
 
 const benefits = [
   {
