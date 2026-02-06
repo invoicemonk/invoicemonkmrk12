@@ -4,7 +4,7 @@ import { TeamMemberCard } from '@/components/about/TeamMemberCard';
 import { MissionVision } from '@/components/about/MissionVision';
 import { PressSection } from '@/components/about/PressSection';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { pageSEO } from '@/components/seo/seoConfig';

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/link';
 import { FileCheck, ArrowRight, FileText, CheckCircle, Clock, RefreshCw, Send, Users, TrendingUp, MessageSquare, BarChart } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';

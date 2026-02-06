@@ -1,5 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/link';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { pageSEO } from '@/components/seo/seoConfig';
 

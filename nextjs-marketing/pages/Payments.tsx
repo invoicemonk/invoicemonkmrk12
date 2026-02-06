@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from 'next/link';
 import { CreditCard, ArrowRight, Banknote, RefreshCw, BarChart3, Shield, Check, Zap, Clock, Globe } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';

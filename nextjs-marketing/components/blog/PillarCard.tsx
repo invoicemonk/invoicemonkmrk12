@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'next/link';
 import { ArrowRight, FileText, Wallet, Calculator, Shield, User, ClipboardList, type LucideIcon } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';

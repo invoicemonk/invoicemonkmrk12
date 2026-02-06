@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'next/link';
 import { useEffect, useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Badge } from '@/components/ui/badge';
