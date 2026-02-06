@@ -43,10 +43,10 @@ const categoryConfig: Record<GlossaryTerm['category'], { icon: typeof FileText; 
 };
 
 const Glossary = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
-  const selectedCategory = searchParams.get('category') as GlossaryTerm['category'] | null;
-  const selectedTerm = searchParams.get('term');
+  const selectedCategory = searchParams?.get('category') as GlossaryTerm['category'] | null;
+  const selectedTerm = searchParams?.get('term');
 
   const categories = getGlossaryCategories();
 
