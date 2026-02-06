@@ -1,3 +1,5 @@
+'use client';
+
 import { Clock, ShieldCheck, Sparkles } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedSection';
 

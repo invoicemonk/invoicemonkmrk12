@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
