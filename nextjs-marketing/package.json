@@ -2,5 +2,10 @@
   "name": "nextjs-marketing",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "next": "15",
+    "react": "^18",
+    "react-dom": "^18"
+  }
 }
