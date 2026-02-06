@@ -7,25 +7,25 @@ const personas = [
   {
     title: 'Freelancers',
     description: 'Invoice clients, track expenses, and get paid faster — all in one place.',
-    image: personaFreelancer,
+    image: '/assets/persona-freelancer.jpg',
     link: '/freelancers',
   },
   {
     title: 'Consultants',
     description: 'Professional invoicing with compliance features your enterprise clients expect.',
-    image: personaConsultant,
+    image: '/assets/persona-consultant.jpg',
     link: '/consultants',
   },
   {
     title: 'Small Businesses',
     description: 'Grow from one-person shop to full team with tools that scale with you.',
-    image: personaSmallBusiness,
+    image: '/assets/persona-smallbusiness.jpg',
     link: '/small-businesses',
   },
   {
     title: 'Contractors',
     description: 'Manage multiple clients, track project expenses, and stay organized.',
-    image: personaContractor,
+    image: '/assets/persona-contractor.jpg',
     link: '/contractors',
   },
 ];
