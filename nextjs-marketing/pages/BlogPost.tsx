@@ -1,6 +1,6 @@
 'use client';
 
-import { useParams, Link } from 'next/link';
+import Link from 'next/link';
 import { useEffect, useMemo } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Badge } from '@/components/ui/badge';
@@ -26,8 +26,8 @@ import { FAQSchema } from '@/components/seo/FAQSchema';
 import { enhanceInternalLinks } from '@/utils/enhanceLinks';
 import NotFound from './NotFound';
 
-const BlogPost = () => {
-  const { slug } = useParams<{ slug: string }>();
+const BlogPost = ({ params }: { params: { slug: string } }) => {
+  const slug = params.slug;
   const post = slug ? getBlogPostBySlug(slug) : undefined;
 
   // Enhance links in post content (must be before early return)
