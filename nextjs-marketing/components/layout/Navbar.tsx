@@ -95,7 +95,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 relative z-10">
-              <img src={logo} alt="Invoicemonk" className="h-8 lg:h-10 w-auto" />
+              <img src="/assets/invoicemonk-logo.png" alt="Invoicemonk" className="h-8 lg:h-10 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
