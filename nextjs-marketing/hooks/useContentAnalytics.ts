@@ -171,7 +171,7 @@ export function useContentAnalytics(articleSlug?: string, pillarId?: string) {
     storeAnalyticsEvent(event);
     
     // Log for debugging in development
-    if (import.meta.env.DEV) {
+    if (process.env.NODE_ENV === "development") {
       console.log('[Analytics]', type, event.data);
     }
   }, [sessionId, articleSlug, pillarId]);
