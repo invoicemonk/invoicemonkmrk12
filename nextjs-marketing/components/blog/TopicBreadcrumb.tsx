@@ -26,7 +26,7 @@ export function TopicBreadcrumb({
       <ol className="flex items-center flex-wrap gap-1.5">
         <li className="flex items-center gap-1.5">
           <Link 
-            to="/" 
+            href="/" 
             className="flex items-center gap-1 hover:text-primary transition-colors"
             aria-label="Home"
           >
@@ -37,7 +37,7 @@ export function TopicBreadcrumb({
         
         <li className="flex items-center gap-1.5">
           <Link 
-            to="/blog" 
+            href="/blog" 
             className="hover:text-primary transition-colors"
           >
             Blog

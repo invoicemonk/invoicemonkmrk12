@@ -151,7 +151,7 @@ export function ContentSearchBox({
         <div className="absolute top-full left-0 right-0 mt-2 bg-popover border border-border rounded-lg shadow-lg z-50 p-4 text-center">
           <p className="text-muted-foreground">No articles found for "{query}"</p>
           <Link
-            to="/blog"
+            href="/blog"
             className="text-sm text-primary hover:underline mt-2 inline-block"
           >
             Browse all articles
