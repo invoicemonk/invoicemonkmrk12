@@ -121,7 +121,7 @@ const readingPaths: ReadingPath[] = [
 export function TopicExplorer() {
   const [selectedPillar, setSelectedPillar] = useState<string | null>(null);
   const [view, setView] = useState<'map' | 'paths'>('map');
-  const navigate = useNavigate();
+  const router = useRouter();
   const readingProgress = getReadingProgress();
 
   // Get posts for selected pillar
@@ -254,7 +254,7 @@ export function TopicExplorer() {
                                     size="sm"
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      navigate(pillar.hubPage);
+                                      router.push(pillar.hubPage);
                                     }}
                                   >
                                     View complete guide
@@ -424,7 +424,7 @@ export function TopicExplorer() {
                         variant={progress > 0 ? "default" : "outline"}
                         onClick={() => {
                           const nextSlug = path.slugs.find(slug => (readingProgress[slug] || 0) < 75) || path.slugs[0];
-                          navigate(`/blog/${nextSlug}`);
+                          router.push(`/blog/${nextSlug}`);
                         }}
                       >
                         {progress === 0 ? 'Start Learning' : progress === 100 ? 'Review Path' : 'Continue Learning'}
