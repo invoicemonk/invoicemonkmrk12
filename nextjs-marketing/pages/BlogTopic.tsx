@@ -28,8 +28,8 @@ const iconMap: Record<string, LucideIcon> = {
   ClipboardList
 };
 
-const BlogTopic = () => {
-  const { topicId } = useParams<{ topicId: string }>();
+const BlogTopic = ({ params }: { params: { topicId: string } }) => {
+  const topicId = params.topicId;
   const [currentPage, setCurrentPage] = useState(1);
   
   const pillar = useMemo(() => 
