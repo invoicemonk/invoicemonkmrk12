@@ -1,3 +1,5 @@
+'use client';
+
 import { motion, useReducedMotion } from 'framer-motion';
 import { 
   FileText, DollarSign, Calendar, CheckCircle, Clock,
