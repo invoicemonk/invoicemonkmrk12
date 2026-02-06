@@ -103,17 +103,17 @@ const Blog = () => {
     : null;
 
   const handlePillarClear = () => {
-    setSearchParams({});
+    router.push('/blog');
     setViewMode('topics');
     clearIntentFilters();
   };
 
   const handleCategoryFilter = (category: string | null) => {
     if (category) {
-      setSearchParams({ category });
+      router.push(`/blog?category=${category}`);
       setViewMode('all');
     } else {
-      setSearchParams({});
+      router.push('/blog');
     }
   };
 
