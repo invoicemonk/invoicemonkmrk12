@@ -1,6 +1,7 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/api/contact/route": "app/api/contact/route.js",
+  "/about/page": "app/about/page.js",
   "/accounting/page": "app/accounting/page.js",
   "/blog/[slug]/page": "app/blog/[slug]/page.js",
   "/blog/author/[authorSlug]/page": "app/blog/author/[authorSlug]/page.js",
@@ -9,8 +10,8 @@
   "/compliance/page": "app/compliance/page.js",
   "/consultants/page": "app/consultants/page.js",
   "/contact/page": "app/contact/page.js",
-  "/contractors/page": "app/contractors/page.js",
   "/cookie-policy/page": "app/cookie-policy/page.js",
+  "/contractors/page": "app/contractors/page.js",
   "/developer/page": "app/developer/page.js",
   "/estimates/page": "app/estimates/page.js",
   "/expenses/page": "app/expenses/page.js",
@@ -26,6 +27,5 @@
   "/receipts/page": "app/receipts/page.js",
   "/small-businesses/page": "app/small-businesses/page.js",
   "/terms-of-service/page": "app/terms-of-service/page.js",
-  "/why-invoicemonk/page": "app/why-invoicemonk/page.js",
-  "/about/page": "app/about/page.js"
+  "/why-invoicemonk/page": "app/why-invoicemonk/page.js"
 }
