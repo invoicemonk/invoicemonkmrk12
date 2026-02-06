@@ -1,6 +1,6 @@
 'use client';
 
-import { useParams, Link } from 'next/link';
+import Link from 'next/link';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { PersonSchema } from '@/components/seo/PersonSchema';
@@ -13,8 +13,8 @@ import { blogPosts } from '@/data/blogPosts';
 import { BlogPostCard } from '@/components/blog/BlogPostCard';
 import NotFound from './NotFound';
 
-const AuthorPage = () => {
-  const { authorSlug } = useParams<{ authorSlug: string }>();
+const AuthorPage = ({ params }: { params: { authorSlug: string } }) => {
+  const authorSlug = params.authorSlug;
   const author = authorSlug ? getAuthorBySlug(authorSlug) : undefined;
 
   if (!author) {
