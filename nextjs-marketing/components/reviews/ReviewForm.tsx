@@ -64,12 +64,18 @@ export function ReviewForm({ onSuccess, className }: ReviewFormProps) {
       localStorage.setItem('invoicemonk_reviews', JSON.stringify(existingReviews));
 
       // Also send to contact form endpoint as a backup
-      await supabase.from('contact_messages').insert({
-        first_name: name.split(' ')[0] || name,
-        last_name: name.split(' ').slice(1).join(' ') || '',
-        email,
-        subject: `Review Submission (${rating} stars)`,
-        message: `Rating: ${rating}/5\nCompany: ${company || 'N/A'}\nRole: ${role || 'N/A'}\n\nReview:\n${reviewText}`
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: name.split(' ')[0] || name,
+          lastName: name.split(' ').slice(1).join(' ') || '',
+          email,
+          subject: `Review Submission (${rating} stars)`,
+          message: `Rating: ${rating}/5\nCompany: ${company || 'N/A'}\nRole: ${role || 'N/A'}\n\nReview:\n${reviewText}`
+        }),
       });
 
       setSubmitStatus('success');
