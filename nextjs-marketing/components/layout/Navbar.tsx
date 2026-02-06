@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, FileText, Receipt, CreditCard, Calculator, FileCheck, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { CountrySelector } from '@/components/CountrySelector';
-import logo from '/assets/invoicemonk-logo.png';
 const products = [
   { 
     name: 'Invoicing', 
