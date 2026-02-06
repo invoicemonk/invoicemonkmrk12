@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Privacy-policyComponent from '@/pages/Privacy-policy';
+import PrivacyPolicyComponent from '@/pages/Privacy-policy';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy ',
@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Privacy-policyPage() {
-  return <Privacy-policyComponent />;
+  return <PrivacyPolicyComponent />;
 }

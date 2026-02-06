@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Small-businessesComponent from '@/pages/Small-businesses';
+import SmallBusinessesComponent from '@/pages/Small-businesses';
 
 export const metadata: Metadata = {
   title: 'Accounting Software for Small Businesses ',
@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Small-businessesPage() {
-  return <Small-businessesComponent />;
+  return <SmallBusinessesComponent />;
 }

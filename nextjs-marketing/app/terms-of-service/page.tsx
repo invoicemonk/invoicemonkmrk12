@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Terms-of-serviceComponent from '@/pages/Terms-of-service';
+import TermsOfServiceComponent from '@/pages/Terms-of-service';
 
 export const metadata: Metadata = {
   title: 'Terms of Service ',
@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Terms-of-servicePage() {
-  return <Terms-of-serviceComponent />;
+  return <TermsOfServiceComponent />;
 }

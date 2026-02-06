@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Why-invoicemonkComponent from '@/pages/Why-invoicemonk';
+import WhyInvoicemonkComponent from '@/pages/Why-invoicemonk';
 
 export const metadata: Metadata = {
   title: 'Why Choose InvoiceMonk - Features & Benefits ',
@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Why-invoicemonkPage() {
-  return <Why-invoicemonkComponent />;
+  return <WhyInvoicemonkComponent />;
 }

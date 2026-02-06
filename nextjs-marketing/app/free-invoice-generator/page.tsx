@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Free-invoice-generatorComponent from '@/pages/Free-invoice-generator';
+import FreeInvoiceGeneratorComponent from '@/pages/Free-invoice-generator';
 
 export const metadata: Metadata = {
   title: 'Free Online Invoice Generator - Create Invoices Instantly ',
@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Free-invoice-generatorPage() {
-  return <Free-invoice-generatorComponent />;
+  return <FreeInvoiceGeneratorComponent />;
 }

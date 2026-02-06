@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Cookie-policyComponent from '@/pages/Cookie-policy';
+import CookiePolicyComponent from '@/pages/Cookie-policy';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy ',
@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Cookie-policyPage() {
-  return <Cookie-policyComponent />;
+  return <CookiePolicyComponent />;
 }
