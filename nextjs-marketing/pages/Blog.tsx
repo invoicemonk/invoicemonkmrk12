@@ -31,11 +31,11 @@ const POSTS_PER_PAGE = 12;
 const Blog = () => {
   const { locale } = useLocale();
   const seo = pageSEO['/blog'];
-  const [searchParams, setSearchParams] = useSearchParams();
+  const searchParams = useSearchParams();
   
-  const selectedPillar = searchParams.get('pillar');
-  const selectedCategory = searchParams.get('category');
-  const searchQuery = searchParams.get('q') || '';
+  const selectedPillar = searchParams?.get('pillar') || null;
+  const selectedCategory = searchParams?.get('category') || null;
+  const searchQuery = searchParams?.get('q') || '';
   const [viewMode, setViewMode] = useState<ViewMode>(selectedPillar ? 'all' : 'topics');
   const [currentPage, setCurrentPage] = useState(1);
   
