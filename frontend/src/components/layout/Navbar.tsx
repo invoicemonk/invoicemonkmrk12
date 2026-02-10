@@ -46,7 +46,7 @@ const products = [
     href: '/receipts', 
     icon: Receipt, 
     description: 'Digital receipt management',
-    status: 'coming-soon'
+    status: 'available'
   },
 ];
 
