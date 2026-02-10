@@ -332,6 +332,14 @@ function GlossaryContent() {
       </div>
     </Layout>
   );
+}
+
+const Glossary = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <GlossaryContent />
+    </Suspense>
+  );
 };
 
 export default Glossary;
