@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicAbout } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'About InvoiceMonk - Our Story & Mission | InvoiceMonk',
@@ -12,8 +12,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/about/' },
 };
 
-const AboutComponent = dynamic(() => import('@/pages/About'), { ssr: false });
-
 export default function AboutPage() {
-  return <AboutComponent />;
+  return <DynamicAbout />;
 }

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicCompliance } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Compliance & Audit-Ready Financial Management | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/compliance/' },
 };
 
-const ComplianceComponent = dynamic(() => import('@/pages/Compliance'), { ssr: false });
-
 export default function CompliancePage() {
-  return <ComplianceComponent />;
+  return <DynamicCompliance />;
 }

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicContact } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get Help & Support | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/contact/' },
 };
 
-const ContactComponent = dynamic(() => import('@/pages/Contact'), { ssr: false });
-
 export default function ContactPage() {
-  return <ContactComponent />;
+  return <DynamicContact />;
 }

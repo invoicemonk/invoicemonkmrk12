@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicCookiePolicy } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/cookie-policy/' },
 };
 
-const CookiePolicyComponent = dynamic(() => import('@/pages/CookiePolicy'), { ssr: false });
-
 export default function CookiePolicyPage() {
-  return <CookiePolicyComponent />;
+  return <DynamicCookiePolicy />;
 }

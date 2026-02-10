@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicEstimates } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Create Professional Estimates & Quotes | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/estimates/' },
 };
 
-const EstimatesComponent = dynamic(() => import('@/pages/Estimates'), { ssr: false });
-
 export default function EstimatesPage() {
-  return <EstimatesComponent />;
+  return <DynamicEstimates />;
 }

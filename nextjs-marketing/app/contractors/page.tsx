@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicContractors } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Financial Management for Contractors | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/contractors/' },
 };
 
-const ContractorsComponent = dynamic(() => import('@/pages/Contractors'), { ssr: false });
-
 export default function ContractorsPage() {
-  return <ContractorsComponent />;
+  return <DynamicContractors />;
 }
