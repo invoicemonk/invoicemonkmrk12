@@ -4,6 +4,9 @@ import { ThemeProvider } from "next-themes";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import { Toaster } from "@/components/ui/toaster";
 
+// Force dynamic rendering for all pages since we use client-side context
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://invoicemonk.com"),
   title: {
