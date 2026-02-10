@@ -28,7 +28,7 @@ import { Grid3X3, List, Sparkles, Filter } from 'lucide-react';
 type ViewMode = 'topics' | 'all';
 const POSTS_PER_PAGE = 12;
 
-const Blog = () => {
+function BlogContent() {
   const router = useRouter();
   const { locale } = useLocale();
   const seo = pageSEO['/blog'];
