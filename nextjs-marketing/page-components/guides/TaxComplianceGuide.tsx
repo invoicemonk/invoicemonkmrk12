@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { GuideHero, ConceptGrid, ArticleList, GuideCTA, GuideFAQ, GuideCrossLink } from '@/components/guides';
 import { getPillarBySlug, getClusterPostsForPillar } from '@/data/topicalMap';
 import { blogPosts } from '@/data/blogPosts';
-import NotFound from '@/pages/NotFound';
+import NotFound from '@/page-components/NotFound';
 
 export default function TaxComplianceGuide() {
   const pillar = getPillarBySlug('tax-compliance');
