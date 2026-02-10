@@ -13,11 +13,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About InvoiceMonk',
-    description: 'Learn about InvoiceMonk mission to simplify financial management for small businesses and freelancers.',
   },
-  alternates: {
-    canonical: 'https://invoicemonk.com/about/',
-  },
+  alternates: { canonical: 'https://invoicemonk.com/about/' },
 };
 
 export default function AboutPage() {

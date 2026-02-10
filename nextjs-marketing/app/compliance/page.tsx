@@ -1,14 +1,13 @@
-'use client';
+import { Metadata } from 'next';
+import ComplianceComponent from '@/pages/Compliance';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const ComplianceComponent = dynamicImport(() => import('@/pages/Compliance'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Compliance & Audit-Ready Financial Management | InvoiceMonk',
+  description: 'Stay compliant with immutable records, complete audit trails, and financial controls. Built for regulatory requirements.',
+  openGraph: { title: 'Compliance & Audit-Ready', url: 'https://invoicemonk.com/compliance/', type: 'website' },
+  twitter: { card: 'summary_large_image' },
+  alternates: { canonical: 'https://invoicemonk.com/compliance/' },
+};
 
 export default function CompliancePage() {
   return <ComplianceComponent />;
