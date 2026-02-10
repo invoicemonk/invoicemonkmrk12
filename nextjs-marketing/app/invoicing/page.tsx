@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import InvoicingComponent from '@/pages/Invoicing';
-export const dynamic = 'force-dynamic';
 
 
 export const metadata: Metadata = {

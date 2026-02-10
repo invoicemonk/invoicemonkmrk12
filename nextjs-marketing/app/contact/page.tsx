@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import ContactComponent from '@/pages/Contact';
-export const dynamic = 'force-dynamic';
 
 
 export const metadata: Metadata = {

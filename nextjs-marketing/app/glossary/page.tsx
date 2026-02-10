@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import GlossaryComponent from '@/pages/Glossary';
-export const dynamic = 'force-dynamic';
 
 
 export const metadata: Metadata = {

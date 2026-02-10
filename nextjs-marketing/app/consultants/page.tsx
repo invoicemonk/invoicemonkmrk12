@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import ConsultantsComponent from '@/pages/Consultants';
-export const dynamic = 'force-dynamic';
 
 
 export const metadata: Metadata = {

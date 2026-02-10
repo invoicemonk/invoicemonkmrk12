@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import ComplianceComponent from '@/pages/Compliance';
-export const dynamic = 'force-dynamic';
 
 
 export const metadata: Metadata = {
