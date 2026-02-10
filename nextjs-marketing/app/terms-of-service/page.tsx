@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import TermsOfServiceComponent from '@/pages/TermsOfService';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Terms of Service | InvoiceMonk',
-  description: 'Terms and conditions for using InvoiceMonk services. User rights and responsibilities.',
-  openGraph: {
-    title: 'Terms of Service',
-    description: 'Terms and conditions for using InvoiceMonk services. User rights and responsibilities.',
-    url: 'https://invoicemonk.com/terms-of-service/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/terms-of-service/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function TermsOfServicePage() {
-  return <TermsOfServiceComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

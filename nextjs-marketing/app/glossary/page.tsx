@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import GlossaryComponent from '@/pages/Glossary';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Financial Glossary - Accounting & Business Terms | InvoiceMonk',
-  description: 'Comprehensive glossary of accounting, invoicing, and business financial terms. Learn the language of finance.',
-  openGraph: {
-    title: 'Financial Glossary - Accounting & Business Terms',
-    description: 'Comprehensive glossary of accounting, invoicing, and business financial terms. Learn the language of finance.',
-    url: 'https://invoicemonk.com/glossary/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/glossary/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function GlossaryPage() {
-  return <GlossaryComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

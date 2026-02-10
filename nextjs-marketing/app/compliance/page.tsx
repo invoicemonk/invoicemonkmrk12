@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import ComplianceComponent from '@/pages/Compliance';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Compliance & Audit-Ready Financial Management | InvoiceMonk',
-  description: 'Stay compliant with immutable records, complete audit trails, and financial controls. Built for regulatory requirements.',
-  openGraph: {
-    title: 'Compliance & Audit-Ready Financial Management',
-    description: 'Stay compliant with immutable records, complete audit trails, and financial controls. Built for regulatory requirements.',
-    url: 'https://invoicemonk.com/compliance/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/compliance/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function CompliancePage() {
-  return <ComplianceComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

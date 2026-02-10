@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import SmallBusinessesComponent from '@/pages/SmallBusinesses';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Accounting Software for Small Businesses | InvoiceMonk',
-  description: 'Grow from one-person shop to full team. Scalable invoicing, expense tracking, and accounting tools.',
-  openGraph: {
-    title: 'Accounting Software for Small Businesses',
-    description: 'Grow from one-person shop to full team. Scalable invoicing, expense tracking, and accounting tools.',
-    url: 'https://invoicemonk.com/small-businesses/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/small-businesses/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function SmallBusinessesPage() {
-  return <SmallBusinessesComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

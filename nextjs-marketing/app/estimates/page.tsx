@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import EstimatesComponent from '@/pages/Estimates';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Create Professional Estimates & Quotes | InvoiceMonk',
-  description: 'Create and send professional estimates quickly. Convert approved estimates to invoices with one click.',
-  openGraph: {
-    title: 'Create Professional Estimates & Quotes',
-    description: 'Create and send professional estimates quickly. Convert approved estimates to invoices with one click.',
-    url: 'https://invoicemonk.com/estimates/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/estimates/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function EstimatesPage() {
-  return <EstimatesComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

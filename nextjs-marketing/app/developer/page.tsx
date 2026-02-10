@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import DeveloperComponent from '@/pages/Developer';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Developer API & Integrations | InvoiceMonk',
-  description: 'Integrate InvoiceMonk into your applications. RESTful API, webhooks, and developer documentation.',
-  openGraph: {
-    title: 'Developer API & Integrations',
-    description: 'Integrate InvoiceMonk into your applications. RESTful API, webhooks, and developer documentation.',
-    url: 'https://invoicemonk.com/developer/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/developer/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function DeveloperPage() {
-  return <DeveloperComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

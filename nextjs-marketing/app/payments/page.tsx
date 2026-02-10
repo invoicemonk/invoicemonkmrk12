@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import PaymentsComponent from '@/pages/Payments';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Payment Processing & Tracking Software | InvoiceMonk',
-  description: 'Accept online payments, track payment status, and get paid faster. Integrated payment processing for your invoices.',
-  openGraph: {
-    title: 'Payment Processing & Tracking Software',
-    description: 'Accept online payments, track payment status, and get paid faster. Integrated payment processing for your invoices.',
-    url: 'https://invoicemonk.com/payments/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/payments/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function PaymentsPage() {
-  return <PaymentsComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

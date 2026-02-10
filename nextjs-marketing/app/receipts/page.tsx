@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import ReceiptsComponent from '@/pages/Receipts';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Receipt Management & Scanning Software | InvoiceMonk',
-  description: 'Scan, organize, and manage receipts digitally. Automatic expense categorization and tax tracking.',
-  openGraph: {
-    title: 'Receipt Management & Scanning Software',
-    description: 'Scan, organize, and manage receipts digitally. Automatic expense categorization and tax tracking.',
-    url: 'https://invoicemonk.com/receipts/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/receipts/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function ReceiptsPage() {
-  return <ReceiptsComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

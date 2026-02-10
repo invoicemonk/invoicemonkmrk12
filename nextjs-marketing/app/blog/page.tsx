@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import BlogComponent from '@/pages/Blog';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Blog - Invoicing, Accounting & Business Tips | InvoiceMonk',
-  description: 'Expert guides and resources on invoicing, expense tracking, accounting, and small business financial management. Learn best practices and tips.',
-  openGraph: {
-    title: 'InvoiceMonk Blog - Financial Management Tips & Guides',
-    description: 'Expert guides and resources on invoicing, expense tracking, accounting, and small business financial management.',
-    url: 'https://invoicemonk.com/blog/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/blog/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function BlogPage() {
-  return <BlogComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

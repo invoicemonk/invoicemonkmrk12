@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import ContactComponent from '@/pages/Contact';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Contact Us - Get Help & Support | InvoiceMonk',
-  description: 'Get in touch with InvoiceMonk support. We are here to help with any questions about invoicing, expenses, or accounting.',
-  openGraph: {
-    title: 'Contact Us - Get Help & Support',
-    description: 'Get in touch with InvoiceMonk support. We are here to help with any questions about invoicing, expenses, or accounting.',
-    url: 'https://invoicemonk.com/contact/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/contact/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function ContactPage() {
-  return <ContactComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

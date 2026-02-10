@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import WhyInvoicemonkComponent from '@/pages/WhyInvoicemonk';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Why Choose InvoiceMonk - Features & Benefits | InvoiceMonk',
-  description: 'Discover why thousands of businesses trust InvoiceMonk for invoicing, expenses, and accounting. Compliance-first, easy to use.',
-  openGraph: {
-    title: 'Why Choose InvoiceMonk - Features & Benefits',
-    description: 'Discover why thousands of businesses trust InvoiceMonk for invoicing, expenses, and accounting. Compliance-first, easy to use.',
-    url: 'https://invoicemonk.com/why-invoicemonk/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/why-invoicemonk/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function WhyInvoicemonkPage() {
-  return <WhyInvoicemonkComponent />;
+export default function Page() {
+  return <PageComponent />;
 }

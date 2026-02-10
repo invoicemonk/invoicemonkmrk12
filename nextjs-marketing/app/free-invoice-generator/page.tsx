@@ -1,20 +1,12 @@
-import { Metadata } from 'next';
-import FreeInvoiceGeneratorComponent from '@/pages/FreeInvoiceGenerator';
+'use client';
 
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: 'Free Online Invoice Generator - Create Invoices Instantly | InvoiceMonk',
-  description: 'Create professional invoices instantly with our free invoice generator. No signup required. Download as PDF.',
-  openGraph: {
-    title: 'Free Online Invoice Generator',
-    description: 'Create professional invoices instantly with our free invoice generator. No signup required. Download as PDF.',
-    url: 'https://invoicemonk.com/free-invoice-generator/',
-  },
-  alternates: {
-    canonical: 'https://invoicemonk.com/free-invoice-generator/',
-  },
-};
+// Dynamically import the page component with no SSR
+const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+  ssr: false,
+});
 
-export default function FreeInvoiceGeneratorPage() {
-  return <FreeInvoiceGeneratorComponent />;
+export default function Page() {
+  return <PageComponent />;
 }
