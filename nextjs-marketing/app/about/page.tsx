@@ -2,13 +2,11 @@ import { Metadata } from 'next';
 import AboutComponent from '@/pages/About';
 
 export const metadata: Metadata = {
-  title: 'About InvoiceMonk - Our Story & Mission ',
-  description: '",
-  description: "Learn about InvoiceMonk's mission to simplify financial management for small businesses and freelancers.',
+  title: 'About InvoiceMonk - Our Story & Mission | InvoiceMonk',
+  description: 'Learn about InvoiceMonk mission to simplify financial management for small businesses and freelancers.',
   openGraph: {
-    title: 'About InvoiceMonk - Our Story & Mission ',
-    description: '",
-  description: "Learn about InvoiceMonk's mission to simplify financial management for small businesses and freelancers.',
+    title: 'About InvoiceMonk - Our Story & Mission',
+    description: 'Learn about InvoiceMonk mission to simplify financial management for small businesses and freelancers.',
     url: 'https://invoicemonk.com/about/',
   },
   alternates: {
