@@ -9,7 +9,7 @@ const footerLinks = {
     { name: 'Payments', href: '/payments', badge: 'Soon' },
     { name: 'Accounting', href: '/accounting', badge: 'Available' },
     { name: 'Estimates', href: '/estimates', badge: 'Soon' },
-    { name: 'Receipts', href: '/receipts', badge: 'Soon' },
+    { name: 'Receipts', href: '/receipts', badge: 'Available' },
   ],
   company: [
     { name: 'About', href: '/about' },
