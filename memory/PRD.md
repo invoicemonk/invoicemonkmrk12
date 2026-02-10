@@ -59,6 +59,19 @@ Migration of React SPA marketing website to Next.js for improved SEO. The main a
   3. Updated all page.tsx files to use the PageWrapper exports
 - **Result:** Build succeeds, all 28 pages statically generated
 
+### ✅ Client-Side Error Fix (P0)
+- **Issue:** Live website showed "Application error: a client-side exception has occurred" with `Cannot read properties of undefined (reading 'add')` in browser console
+- **Root Cause:**
+  1. `react-helmet-async` was used without `HelmetProvider` wrapper
+  2. Framer Motion v12 had hydration issues
+- **Solution:**
+  1. Removed `react-helmet-async` dependency entirely
+  2. Created `components/seo/JsonLd.tsx` using `next/script` for JSON-LD injection
+  3. Updated all 12 SEO schema components to use the new JsonLd component
+  4. Downgraded `framer-motion` from v12.33.0 to v11.15.0 (more stable)
+  5. Added `MotionConfig` wrapper in Providers
+- **Result:** Clean build, no client-side errors
+
 ### ✅ SEO Implementation
 - All pages have proper `<Metadata>` exports
 - Security headers configured in `next.config.ts`
