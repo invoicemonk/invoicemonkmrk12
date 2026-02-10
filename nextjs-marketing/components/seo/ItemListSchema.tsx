@@ -1,4 +1,6 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+
+import { JsonLd } from './JsonLd';
 
 interface ItemListItem {
   name: string;
@@ -46,16 +48,9 @@ export function ItemListSchema({
     }))
   };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }
 
-// Specific variant for blog topic categories
 interface BlogTopicListSchemaProps {
   topics: Array<{
     id: string;
@@ -67,7 +62,6 @@ interface BlogTopicListSchemaProps {
 
 export function BlogTopicListSchema({ topics }: BlogTopicListSchemaProps) {
   const baseUrl = 'https://invoicemonk.com';
-  
   const items = topics.map(topic => ({
     name: topic.title,
     url: `${baseUrl}/blog?pillar=${topic.id}`,

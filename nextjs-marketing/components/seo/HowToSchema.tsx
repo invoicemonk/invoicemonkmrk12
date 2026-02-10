@@ -1,4 +1,6 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+
+import { JsonLd } from './JsonLd';
 
 export interface HowToStep {
   name: string;
@@ -11,7 +13,7 @@ interface HowToSchemaProps {
   name: string;
   description: string;
   steps: HowToStep[];
-  totalTime?: string; // ISO 8601 duration format, e.g., "PT30M" for 30 minutes
+  totalTime?: string;
   estimatedCost?: {
     currency: string;
     value: string;
@@ -46,10 +48,7 @@ export function HowToSchema({
     }))
   };
 
-  if (totalTime) {
-    schema.totalTime = totalTime;
-  }
-
+  if (totalTime) schema.totalTime = totalTime;
   if (estimatedCost) {
     schema.estimatedCost = {
       "@type": "MonetaryAmount",
@@ -57,30 +56,13 @@ export function HowToSchema({
       "value": estimatedCost.value
     };
   }
-
-  if (image) {
-    schema.image = image;
-  }
-
+  if (image) schema.image = image;
   if (supply && supply.length > 0) {
-    schema.supply = supply.map(item => ({
-      "@type": "HowToSupply",
-      "name": item
-    }));
+    schema.supply = supply.map(item => ({ "@type": "HowToSupply", "name": item }));
   }
-
   if (tool && tool.length > 0) {
-    schema.tool = tool.map(item => ({
-      "@type": "HowToTool",
-      "name": item
-    }));
+    schema.tool = tool.map(item => ({ "@type": "HowToTool", "name": item }));
   }
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }
