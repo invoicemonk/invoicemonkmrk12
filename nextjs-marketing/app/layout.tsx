@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { LocaleProvider } from "@/contexts/LocaleContext";
-import { Toaster } from "@/components/ui/toaster";
+import dynamic from "next/dynamic";
+
+// Import Toaster dynamically with no SSR
+const Toaster = dynamic(
+  () => import("@/components/ui/toaster").then((mod) => ({ default: mod.Toaster })),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://invoicemonk.com"),
