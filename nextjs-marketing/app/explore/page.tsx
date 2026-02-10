@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ExploreComponent from '@/pages/Explore';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Explore Topics - Guides & Resources | InvoiceMonk',

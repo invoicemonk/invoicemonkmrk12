@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PrivacyPolicyComponent from '@/pages/PrivacyPolicy';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | InvoiceMonk',

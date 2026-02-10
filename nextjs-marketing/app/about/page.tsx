@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import AboutComponent from '@/pages/About';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'About InvoiceMonk - Our Story & Mission | InvoiceMonk',

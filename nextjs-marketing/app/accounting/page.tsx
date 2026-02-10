@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import AccountingComponent from '@/pages/Accounting';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Small Business Accounting Software | InvoiceMonk',

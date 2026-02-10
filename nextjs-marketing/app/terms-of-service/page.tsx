@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import TermsOfServiceComponent from '@/pages/TermsOfService';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Terms of Service | InvoiceMonk',

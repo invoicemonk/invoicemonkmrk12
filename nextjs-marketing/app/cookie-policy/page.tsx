@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import CookiePolicyComponent from '@/pages/CookiePolicy';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Cookie Policy | InvoiceMonk',

@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import FreeInvoiceGeneratorComponent from '@/pages/FreeInvoiceGenerator';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Free Online Invoice Generator - Create Invoices Instantly | InvoiceMonk',

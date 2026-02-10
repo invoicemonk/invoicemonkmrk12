@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ComplianceComponent from '@/pages/Compliance';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Compliance & Audit-Ready Financial Management | InvoiceMonk',

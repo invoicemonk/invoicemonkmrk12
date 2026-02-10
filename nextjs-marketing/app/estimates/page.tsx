@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import EstimatesComponent from '@/pages/Estimates';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Create Professional Estimates & Quotes | InvoiceMonk',

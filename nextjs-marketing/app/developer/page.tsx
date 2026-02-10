@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import DeveloperComponent from '@/pages/Developer';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Developer API & Integrations | InvoiceMonk',

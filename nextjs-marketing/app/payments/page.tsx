@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PaymentsComponent from '@/pages/Payments';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Payment Processing & Tracking Software | InvoiceMonk',

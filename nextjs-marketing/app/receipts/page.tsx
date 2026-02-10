@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ReceiptsComponent from '@/pages/Receipts';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Receipt Management & Scanning Software | InvoiceMonk',

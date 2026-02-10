@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PricingComponent from '@/pages/Pricing';
+export const dynamic = 'force-dynamic';
+
 
 export const metadata: Metadata = {
   title: 'Pricing Plans - Start Free | InvoiceMonk',
