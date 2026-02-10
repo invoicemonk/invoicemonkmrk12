@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { pageSEO } from '@/components/seo/seoConfig';
@@ -30,7 +30,21 @@ interface FormErrors {
 }
 
 const Contact = () => {
+  const [isClient, setIsClient] = useState(false);
   const { toast } = useToast();
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Show minimal loading state during SSR
+  if (!isClient) {
+    return (
+      <Layout>
+        <div className="min-h-screen" />
+      </Layout>
+    );
+  }
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
