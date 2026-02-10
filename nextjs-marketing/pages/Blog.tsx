@@ -402,6 +402,14 @@ function BlogContent() {
       </div>
     </Layout>
   );
+}
+
+const Blog = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogContent />
+    </Suspense>
+  );
 };
 
 export default Blog;
