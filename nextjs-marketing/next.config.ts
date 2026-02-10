@@ -1,15 +1,13 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Force all routes to be dynamically rendered
-  experimental: {
-    dynamicIO: true,
-  },
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
+  // Disable static optimization to prevent prerendering issues with client contexts
+  reactStrictMode: true,
   async headers() {
     return [
       {
