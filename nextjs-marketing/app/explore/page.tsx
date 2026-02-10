@@ -2,13 +2,11 @@ import { Metadata } from 'next';
 import ExploreComponent from '@/pages/Explore';
 
 export const metadata: Metadata = {
-  title: 'Explore Topics - Guides & Resources ',
-  description: '",
-  description: "Browse our comprehensive guides and resources on invoicing, accounting, expenses, and financial management.',
+  title: 'Explore Topics - Guides & Resources | InvoiceMonk',
+  description: 'Browse our comprehensive guides and resources on invoicing, accounting, expenses, and financial management.',
   openGraph: {
-    title: 'Explore Topics - Guides & Resources ',
-    description: '",
-  description: "Browse our comprehensive guides and resources on invoicing, accounting, expenses, and financial management.',
+    title: 'Explore Topics - Guides & Resources',
+    description: 'Browse our comprehensive guides and resources on invoicing, accounting, expenses, and financial management.',
     url: 'https://invoicemonk.com/explore/',
   },
   alternates: {
