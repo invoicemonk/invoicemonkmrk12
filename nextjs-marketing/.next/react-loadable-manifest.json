@@ -1,282 +1,152 @@
 {
   "components/PageWrapper.tsx -> @/page-components/About": {
-    "id": 8001,
+    "id": "components/PageWrapper.tsx -> @/page-components/About",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/8001.0dae32635bb4275b.js"
+      "static/chunks/_app-pages-browser_page-components_About_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Accounting": {
-    "id": 573,
+    "id": "components/PageWrapper.tsx -> @/page-components/Accounting",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/423.f5acef338ddf4233.js",
-      "static/chunks/9631.49ecd07f17ed062b.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/4733.a19da3e829009f26.js",
-      "static/chunks/6193.0b6c98a0b43ee447.js",
-      "static/chunks/573.d80f9d01f4fa9529.js"
+      "static/chunks/_app-pages-browser_page-components_Accounting_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Blog": {
-    "id": 5518,
+    "id": "components/PageWrapper.tsx -> @/page-components/Blog",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/1084.42ddf6bfed384b82.js",
-      "static/chunks/5852.eb7e75a28cf947b4.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/5518.646cda412662f16b.js"
+      "static/chunks/_app-pages-browser_page-components_Blog_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Compliance": {
-    "id": 3339,
+    "id": "components/PageWrapper.tsx -> @/page-components/Compliance",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/3339.4b587aba7169b23c.js"
+      "static/chunks/_app-pages-browser_page-components_Compliance_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Consultants": {
-    "id": 9200,
+    "id": "components/PageWrapper.tsx -> @/page-components/Consultants",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/9200.ac702d94066353d0.js"
+      "static/chunks/_app-pages-browser_page-components_Consultants_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Contact": {
-    "id": 5696,
+    "id": "components/PageWrapper.tsx -> @/page-components/Contact",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5696.9aaf5170a7f28fa5.js"
+      "static/chunks/_app-pages-browser_page-components_Contact_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Contractors": {
-    "id": 354,
+    "id": "components/PageWrapper.tsx -> @/page-components/Contractors",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/354.7eb5f2a6907a7f23.js"
+      "static/chunks/_app-pages-browser_page-components_Contractors_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/CookiePolicy": {
-    "id": 1766,
+    "id": "components/PageWrapper.tsx -> @/page-components/CookiePolicy",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/1766.d1dc9876692ec30b.js"
+      "static/chunks/_app-pages-browser_page-components_CookiePolicy_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Developer": {
-    "id": 4396,
+    "id": "components/PageWrapper.tsx -> @/page-components/Developer",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/4396.c5d725cb13e2dfb4.js"
+      "static/chunks/_app-pages-browser_page-components_Developer_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Estimates": {
-    "id": 5311,
+    "id": "components/PageWrapper.tsx -> @/page-components/Estimates",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/423.f5acef338ddf4233.js",
-      "static/chunks/2438.34680e03c4442431.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/4733.a19da3e829009f26.js",
-      "static/chunks/6193.0b6c98a0b43ee447.js",
-      "static/chunks/5311.376d840dc00d8b98.js"
+      "static/chunks/_app-pages-browser_page-components_Estimates_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Expenses": {
-    "id": 4993,
+    "id": "components/PageWrapper.tsx -> @/page-components/Expenses",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/423.f5acef338ddf4233.js",
-      "static/chunks/9956.53007f95785b6693.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/4733.a19da3e829009f26.js",
-      "static/chunks/6193.0b6c98a0b43ee447.js",
-      "static/chunks/4993.38e0097fc9e7dc60.js"
+      "static/chunks/_app-pages-browser_page-components_Expenses_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Explore": {
-    "id": 2676,
+    "id": "components/PageWrapper.tsx -> @/page-components/Explore",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/1084.42ddf6bfed384b82.js",
-      "static/chunks/1339.81c4999266f66785.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/2676.47396d1b38e7b62f.js"
+      "static/chunks/_app-pages-browser_page-components_Explore_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/FreeInvoiceGenerator": {
-    "id": 5983,
+    "id": "components/PageWrapper.tsx -> @/page-components/FreeInvoiceGenerator",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/8364.1a3b5c503a57a0f3.js"
+      "static/chunks/_app-pages-browser_page-components_FreeInvoiceGenerator_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Freelancers": {
-    "id": 8264,
+    "id": "components/PageWrapper.tsx -> @/page-components/Freelancers",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/8264.ce8f8b710e96b801.js"
+      "static/chunks/_app-pages-browser_page-components_Freelancers_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Glossary": {
-    "id": 5583,
+    "id": "components/PageWrapper.tsx -> @/page-components/Glossary",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/5583.4b7e512fcf33fbd1.js"
+      "static/chunks/_app-pages-browser_page-components_Glossary_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Index": {
-    "id": 1185,
+    "id": "components/PageWrapper.tsx -> @/page-components/Index",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/423.f5acef338ddf4233.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/4733.a19da3e829009f26.js",
-      "static/chunks/1185.1411cff69e7a054c.js"
+      "static/chunks/_app-pages-browser_page-components_Index_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Invoicing": {
-    "id": 9274,
+    "id": "components/PageWrapper.tsx -> @/page-components/Invoicing",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/423.f5acef338ddf4233.js",
-      "static/chunks/7115.f932b66f5638e918.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/4733.a19da3e829009f26.js",
-      "static/chunks/6193.0b6c98a0b43ee447.js",
-      "static/chunks/9274.40ad4e580ba8589b.js"
+      "static/chunks/_app-pages-browser_page-components_Invoicing_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Payments": {
-    "id": 3555,
+    "id": "components/PageWrapper.tsx -> @/page-components/Payments",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/423.f5acef338ddf4233.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/4733.a19da3e829009f26.js",
-      "static/chunks/6193.0b6c98a0b43ee447.js",
-      "static/chunks/1471.837f88fe749a0a3d.js"
+      "static/chunks/_app-pages-browser_page-components_Payments_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Pricing": {
-    "id": 7304,
+    "id": "components/PageWrapper.tsx -> @/page-components/Pricing",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7304.6d2c2639419881e3.js"
+      "static/chunks/_app-pages-browser_page-components_Pricing_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/PrivacyPolicy": {
-    "id": 5972,
+    "id": "components/PageWrapper.tsx -> @/page-components/PrivacyPolicy",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5972.8bd0450b703f3426.js"
+      "static/chunks/_app-pages-browser_page-components_PrivacyPolicy_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/Receipts": {
-    "id": 1953,
+    "id": "components/PageWrapper.tsx -> @/page-components/Receipts",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/423.f5acef338ddf4233.js",
-      "static/chunks/4513.98b47620483cd129.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/7945.ff287156154524b6.js",
-      "static/chunks/4733.a19da3e829009f26.js",
-      "static/chunks/6193.0b6c98a0b43ee447.js",
-      "static/chunks/1953.c2fd753f400d2179.js"
+      "static/chunks/_app-pages-browser_page-components_Receipts_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/SmallBusinesses": {
-    "id": 7625,
+    "id": "components/PageWrapper.tsx -> @/page-components/SmallBusinesses",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/7625.139ec8d3cfb9fa06.js"
+      "static/chunks/_app-pages-browser_page-components_SmallBusinesses_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/TermsOfService": {
-    "id": 969,
+    "id": "components/PageWrapper.tsx -> @/page-components/TermsOfService",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/969.64a16aefc6de1639.js"
+      "static/chunks/_app-pages-browser_page-components_TermsOfService_tsx.js"
     ]
   },
   "components/PageWrapper.tsx -> @/page-components/WhyInvoicemonk": {
-    "id": 1475,
+    "id": "components/PageWrapper.tsx -> @/page-components/WhyInvoicemonk",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/8979.59e16eb79176252d.js",
-      "static/chunks/2935.7544bc471541b841.js",
-      "static/chunks/5525.949be4a40d5dfae5.js",
-      "static/chunks/1475.f169e06bb7cee530.js"
+      "static/chunks/_app-pages-browser_page-components_WhyInvoicemonk_tsx.js"
     ]
   },
   "components/providers/Providers.tsx -> @/components/ui/toaster": {
-    "id": 38,
+    "id": "components/providers/Providers.tsx -> @/components/ui/toaster",
     "files": [
-      "static/chunks/3004.b7446c48e1c98a79.js",
-      "static/chunks/6159.3a0a44230e83e0f2.js",
-      "static/chunks/38.72c1df43f261660f.js"
+      "static/chunks/_app-pages-browser_components_ui_toaster_tsx.js"
     ]
   }
 }
