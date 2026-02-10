@@ -1,4 +1,6 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+
+import { JsonLd } from './JsonLd';
 import { useLocale } from '@/hooks/useLocale';
 
 export function WebSiteSchema() {
@@ -32,11 +34,5 @@ export function WebSiteSchema() {
     ]
   };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }

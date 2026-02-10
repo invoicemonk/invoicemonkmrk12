@@ -1,4 +1,6 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+
+import { JsonLd } from './JsonLd';
 import { useLocale } from '@/hooks/useLocale';
 
 interface SoftwareApplicationSchemaProps {
@@ -84,11 +86,5 @@ export function SoftwareApplicationSchema({
     };
   }
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(baseSchema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={baseSchema} />;
 }
