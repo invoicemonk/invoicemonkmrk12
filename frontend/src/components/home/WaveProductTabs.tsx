@@ -76,7 +76,7 @@ const products = [
     description: 'Snap photos of receipts and let us handle the rest. Automatic data extraction and organization for stress-free bookkeeping.',
     features: ['Photo capture', 'Auto-extraction', 'Cloud storage', 'Search & filter'],
     link: '/receipts',
-    available: false,
+    available: true,
   },
 ];
 
