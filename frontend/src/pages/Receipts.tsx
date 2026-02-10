@@ -159,9 +159,9 @@ const Receipts = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wave-orange/10 text-wave-orange mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wave-green/10 text-wave-green mb-6"
               >
-                <span className="text-body-sm font-medium">Coming Soon</span>
+                <span className="text-body-sm font-medium">Now Available</span>
               </motion.div>
 
               <motion.div
