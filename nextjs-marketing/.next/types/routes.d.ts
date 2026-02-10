@@ -3,7 +3,7 @@
 
 type AppRoutes = "/" | "/about" | "/accounting" | "/blog" | "/compliance" | "/consultants" | "/contact" | "/contractors" | "/cookie-policy" | "/developer" | "/estimates" | "/expenses" | "/explore" | "/free-invoice-generator" | "/freelancers" | "/glossary" | "/invoicing" | "/payments" | "/pricing" | "/privacy-policy" | "/receipts" | "/small-businesses" | "/terms-of-service" | "/why-invoicemonk"
 type AppRouteHandlerRoutes = "/api/contact"
-type PageRoutes = "/About" | "/Accounting" | "/AuthorPage" | "/Blog" | "/BlogPost" | "/BlogTopic" | "/Compliance" | "/Consultants" | "/Contact" | "/Contractors" | "/CookiePolicy" | "/Developer" | "/Estimates" | "/Expenses" | "/Explore" | "/FreeInvoiceGenerator" | "/Freelancers" | "/Glossary" | "/Index" | "/Invoicing" | "/NotFound" | "/Payments" | "/Pricing" | "/PrivacyPolicy" | "/Receipts" | "/SmallBusinesses" | "/TermsOfService" | "/WhyInvoicemonk" | "/features/ClientManagement" | "/guides/BusinessFinancesGuide" | "/guides/EstimatesGuide" | "/guides/FreelancingGuide" | "/guides/GettingPaidGuide" | "/guides/GuidesIndex" | "/guides/InvoicingGuide" | "/guides/TaxComplianceGuide"
+type PageRoutes = "/About" | "/Accounting" | "/Blog" | "/Compliance" | "/Consultants" | "/Contact" | "/Contractors" | "/CookiePolicy" | "/Developer" | "/Estimates" | "/Expenses" | "/Explore" | "/FreeInvoiceGenerator" | "/Freelancers" | "/Glossary" | "/Index" | "/Invoicing" | "/NotFound" | "/Payments" | "/Pricing" | "/PrivacyPolicy" | "/Receipts" | "/SmallBusinesses" | "/TermsOfService" | "/WhyInvoicemonk" | "/features/ClientManagement" | "/guides/BusinessFinancesGuide" | "/guides/EstimatesGuide" | "/guides/FreelancingGuide" | "/guides/GettingPaidGuide" | "/guides/GuidesIndex" | "/guides/InvoicingGuide" | "/guides/TaxComplianceGuide"
 type LayoutRoutes = "/"
 type RedirectRoutes = never
 type RewriteRoutes = never
@@ -17,11 +17,8 @@ interface ParamMap {
   "/accounting": {}
   "/Accounting": {}
   "/api/contact": {}
-  "/AuthorPage": {}
   "/blog": {}
   "/Blog": {}
-  "/BlogPost": {}
-  "/BlogTopic": {}
   "/compliance": {}
   "/Compliance": {}
   "/consultants": {}

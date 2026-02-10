@@ -76,12 +76,6 @@
       "namedRegex": "^/Accounting(?:/)?$"
     },
     {
-      "page": "/AuthorPage",
-      "regex": "^/AuthorPage(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/AuthorPage(?:/)?$"
-    },
-    {
       "page": "/blog",
       "regex": "^/blog(?:/)?$",
       "routeKeys": {},
@@ -92,18 +86,6 @@
       "regex": "^/Blog(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/Blog(?:/)?$"
-    },
-    {
-      "page": "/BlogPost",
-      "regex": "^/BlogPost(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/BlogPost(?:/)?$"
-    },
-    {
-      "page": "/BlogTopic",
-      "regex": "^/BlogTopic(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/BlogTopic(?:/)?$"
     },
     {
       "page": "/compliance",
