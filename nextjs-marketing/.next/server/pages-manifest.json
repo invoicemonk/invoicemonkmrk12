@@ -6,12 +6,12 @@
   "/AuthorPage": "pages/AuthorPage.js",
   "/Blog": "pages/Blog.js",
   "/BlogPost": "pages/BlogPost.js",
-  "/BlogTopic": "pages/BlogTopic.js",
   "/Compliance": "pages/Compliance.js",
+  "/BlogTopic": "pages/BlogTopic.js",
   "/Consultants": "pages/Consultants.js",
   "/Contact": "pages/Contact.js",
   "/Contractors": "pages/Contractors.js",
-  "/Expenses": "pages/Expenses.js",
+  "/CookiePolicy": "pages/CookiePolicy.js",
   "/Explore": "pages/Explore.js",
   "/FreeInvoiceGenerator": "pages/FreeInvoiceGenerator.js",
   "/Freelancers": "pages/Freelancers.js",
@@ -34,8 +34,8 @@
   "/guides/GuidesIndex": "pages/guides/GuidesIndex.js",
   "/guides/InvoicingGuide": "pages/guides/InvoicingGuide.js",
   "/guides/TaxComplianceGuide": "pages/guides/TaxComplianceGuide.js",
-  "/Developer": "pages/Developer.js",
   "/Estimates": "pages/Estimates.js",
+  "/Expenses": "pages/Expenses.js",
   "/_document": "pages/_document.js",
-  "/CookiePolicy": "pages/CookiePolicy.js"
+  "/Developer": "pages/Developer.js"
 }
