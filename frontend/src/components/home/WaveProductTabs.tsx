@@ -46,7 +46,7 @@ const products = [
     description: 'Track income and expenses, pull financial reports, and stay on top of your business finances without the accounting degree.',
     features: ['Double-entry bookkeeping', 'Financial reports', 'Tax preparation', 'Bank connections'],
     link: '/accounting',
-    available: false,
+    available: true,
   },
   {
     id: 'clients',
