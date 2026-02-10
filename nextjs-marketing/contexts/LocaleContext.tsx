@@ -24,7 +24,19 @@ interface LocaleContextType {
   supportedCountries: SupportedCountry[];
 }
 
-export const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
+// Default context value for SSR
+const defaultLocale = getLocale(defaultCountry);
+const defaultContextValue: LocaleContextType = {
+  locale: defaultLocale,
+  countryCode: defaultCountry,
+  setCountry: () => {},
+  formatCurrency: (amount: number) => formatCurrencyUtil(amount, defaultCountry),
+  formatPrice: (amount: number, period?: string) => formatPriceUtil(amount, defaultCountry, period),
+  isLoading: false,
+  supportedCountries: supportedCountries,
+};
+
+export const LocaleContext = createContext<LocaleContextType>(defaultContextValue);
 
 interface LocaleProviderProps {
   children: React.ReactNode;
