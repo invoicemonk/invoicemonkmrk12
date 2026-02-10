@@ -1,6 +1,6 @@
 {
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/About": "pages/About.js",
   "/Accounting": "pages/Accounting.js",
   "/AuthorPage": "pages/AuthorPage.js",
@@ -11,9 +11,8 @@
   "/Consultants": "pages/Consultants.js",
   "/Contact": "pages/Contact.js",
   "/Contractors": "pages/Contractors.js",
-  "/Expenses": "pages/Expenses.js",
+  "/CookiePolicy": "pages/CookiePolicy.js",
   "/Explore": "pages/Explore.js",
-  "/Developer": "pages/Developer.js",
   "/FreeInvoiceGenerator": "pages/FreeInvoiceGenerator.js",
   "/Freelancers": "pages/Freelancers.js",
   "/Glossary": "pages/Glossary.js",
@@ -31,11 +30,12 @@
   "/guides/BusinessFinancesGuide": "pages/guides/BusinessFinancesGuide.js",
   "/guides/EstimatesGuide": "pages/guides/EstimatesGuide.js",
   "/guides/FreelancingGuide": "pages/guides/FreelancingGuide.js",
-  "/guides/GuidesIndex": "pages/guides/GuidesIndex.js",
   "/guides/GettingPaidGuide": "pages/guides/GettingPaidGuide.js",
+  "/guides/GuidesIndex": "pages/guides/GuidesIndex.js",
   "/guides/InvoicingGuide": "pages/guides/InvoicingGuide.js",
   "/guides/TaxComplianceGuide": "pages/guides/TaxComplianceGuide.js",
+  "/Expenses": "pages/Expenses.js",
   "/Estimates": "pages/Estimates.js",
-  "/_document": "pages/_document.js",
-  "/CookiePolicy": "pages/CookiePolicy.js"
+  "/Developer": "pages/Developer.js",
+  "/_document": "pages/_document.js"
 }
