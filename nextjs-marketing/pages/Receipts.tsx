@@ -209,7 +209,7 @@ const Receipts = () => {
                   className="rounded-full px-8 h-14 text-body-lg bg-accent-orange hover:bg-accent-orange/90 text-accent-orange-foreground shadow-soft-md group"
                 >
                   <a href="https://app.invoicemonk.com/signup">
-                    Join the Waitlist
+                    Get Started Free
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                   </a>
                 </Button>
