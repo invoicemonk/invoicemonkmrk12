@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  // For static export, dynamic routes will be handled client-side
+  skipTrailingSlashRedirect: true,
   async headers() {
     return [
       {
