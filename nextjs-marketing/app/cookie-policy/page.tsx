@@ -1,14 +1,12 @@
 import { Metadata } from 'next';
-import CookiePolicyComponent from '@/pages/Cookie-policy';
+import CookiePolicyComponent from '@/pages/CookiePolicy';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy ',
-  description: '",
-  description: "How InvoiceMonk uses cookies to improve your experience. Cookie preferences and management.',
+  title: 'Cookie Policy | InvoiceMonk',
+  description: 'How InvoiceMonk uses cookies to improve your experience. Cookie preferences and management.',
   openGraph: {
-    title: 'Cookie Policy ',
-    description: '",
-  description: "How InvoiceMonk uses cookies to improve your experience. Cookie preferences and management.',
+    title: 'Cookie Policy',
+    description: 'How InvoiceMonk uses cookies to improve your experience. Cookie preferences and management.',
     url: 'https://invoicemonk.com/cookie-policy/',
   },
   alternates: {
