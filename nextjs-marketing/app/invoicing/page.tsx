@@ -2,10 +2,12 @@ import { Metadata } from 'next';
 import InvoicingComponent from '@/pages/Invoicing';
 
 export const metadata: Metadata = {
-  title: 'Professional Invoicing Software - Create & Send Invoices Online | InvoiceMonk',
+  title: 'Professional Invoicing Software - Create & Send Invoices Online ",
+  description: " InvoiceMonk',
   description: 'Create professional invoices in seconds. Track payments, send automated reminders, and get paid faster. Perfect for freelancers and small businesses.',
   openGraph: {
-    title: 'Professional Invoicing Software | InvoiceMonk',
+    title: 'Professional Invoicing Software ",
+  description: " InvoiceMonk',
     description: 'Create professional invoices in seconds. Track payments, send automated reminders, and get paid faster.',
     url: 'https://invoicemonk.com/invoicing/',
   },

@@ -3,10 +3,12 @@ import EstimatesComponent from '@/pages/Estimates';
 
 export const metadata: Metadata = {
   title: 'Create Professional Estimates & Quotes ',
-  description: ' InvoiceMonk|Create and send professional estimates quickly. Convert approved estimates to invoices with one click.',
+  description: '",
+  description: "Create and send professional estimates quickly. Convert approved estimates to invoices with one click.',
   openGraph: {
     title: 'Create Professional Estimates & Quotes ',
-    description: ' InvoiceMonk|Create and send professional estimates quickly. Convert approved estimates to invoices with one click.',
+    description: '",
+  description: "Create and send professional estimates quickly. Convert approved estimates to invoices with one click.',
     url: 'https://invoicemonk.com/estimates/',
   },
   alternates: {

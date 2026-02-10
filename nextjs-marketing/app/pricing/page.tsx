@@ -3,10 +3,12 @@ import PricingComponent from '@/pages/Pricing';
 
 export const metadata: Metadata = {
   title: 'Pricing Plans - Start Free ',
-  description: ' InvoiceMonk|Simple, transparent pricing for freelancers and small businesses. Start free, upgrade as you grow.',
+  description: '",
+  description: "Simple, transparent pricing for freelancers and small businesses. Start free, upgrade as you grow.',
   openGraph: {
     title: 'Pricing Plans - Start Free ',
-    description: ' InvoiceMonk|Simple, transparent pricing for freelancers and small businesses. Start free, upgrade as you grow.',
+    description: '",
+  description: "Simple, transparent pricing for freelancers and small businesses. Start free, upgrade as you grow.',
     url: 'https://invoicemonk.com/pricing/',
   },
   alternates: {

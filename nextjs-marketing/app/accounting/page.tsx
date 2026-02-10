@@ -3,10 +3,12 @@ import AccountingComponent from '@/pages/Accounting';
 
 export const metadata: Metadata = {
   title: 'Small Business Accounting Software ',
-  description: ' InvoiceMonk|Complete accounting solution for small businesses. Chart of accounts, financial reports, multi-entity support, and automated bookkeeping.',
+  description: '",
+  description: "Complete accounting solution for small businesses. Chart of accounts, financial reports, multi-entity support, and automated bookkeeping.',
   openGraph: {
     title: 'Small Business Accounting Software ',
-    description: ' InvoiceMonk|Complete accounting solution for small businesses. Chart of accounts, financial reports, multi-entity support, and automated bookkeeping.',
+    description: '",
+  description: "Complete accounting solution for small businesses. Chart of accounts, financial reports, multi-entity support, and automated bookkeeping.',
     url: 'https://invoicemonk.com/accounting/',
   },
   alternates: {

@@ -3,10 +3,12 @@ import WhyInvoicemonkComponent from '@/pages/Why-invoicemonk';
 
 export const metadata: Metadata = {
   title: 'Why Choose InvoiceMonk - Features & Benefits ',
-  description: ' InvoiceMonk|Discover why thousands of businesses trust InvoiceMonk for invoicing, expenses, and accounting. Compliance-first, easy to use.',
+  description: '",
+  description: "Discover why thousands of businesses trust InvoiceMonk for invoicing, expenses, and accounting. Compliance-first, easy to use.',
   openGraph: {
     title: 'Why Choose InvoiceMonk - Features & Benefits ',
-    description: ' InvoiceMonk|Discover why thousands of businesses trust InvoiceMonk for invoicing, expenses, and accounting. Compliance-first, easy to use.',
+    description: '",
+  description: "Discover why thousands of businesses trust InvoiceMonk for invoicing, expenses, and accounting. Compliance-first, easy to use.',
     url: 'https://invoicemonk.com/why-invoicemonk/',
   },
   alternates: {
@@ -14,6 +16,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Why-invoicemonkPage() {
+export default function WhyInvoicemonkPage() {
   return <WhyInvoicemonkComponent />;
 }

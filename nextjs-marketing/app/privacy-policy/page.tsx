@@ -3,10 +3,12 @@ import PrivacyPolicyComponent from '@/pages/Privacy-policy';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy ',
-  description: ' InvoiceMonk|How InvoiceMonk collects, uses, and protects your personal information. Our commitment to data privacy.',
+  description: '",
+  description: "How InvoiceMonk collects, uses, and protects your personal information. Our commitment to data privacy.',
   openGraph: {
     title: 'Privacy Policy ',
-    description: ' InvoiceMonk|How InvoiceMonk collects, uses, and protects your personal information. Our commitment to data privacy.',
+    description: '",
+  description: "How InvoiceMonk collects, uses, and protects your personal information. Our commitment to data privacy.',
     url: 'https://invoicemonk.com/privacy-policy/',
   },
   alternates: {
@@ -14,6 +16,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Privacy-policyPage() {
+export default function PrivacyPolicyPage() {
   return <PrivacyPolicyComponent />;
 }

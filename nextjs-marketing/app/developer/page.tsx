@@ -3,10 +3,12 @@ import DeveloperComponent from '@/pages/Developer';
 
 export const metadata: Metadata = {
   title: 'Developer API & Integrations ',
-  description: ' InvoiceMonk|Integrate InvoiceMonk into your applications. RESTful API, webhooks, and developer documentation.',
+  description: '",
+  description: "Integrate InvoiceMonk into your applications. RESTful API, webhooks, and developer documentation.',
   openGraph: {
     title: 'Developer API & Integrations ',
-    description: ' InvoiceMonk|Integrate InvoiceMonk into your applications. RESTful API, webhooks, and developer documentation.',
+    description: '",
+  description: "Integrate InvoiceMonk into your applications. RESTful API, webhooks, and developer documentation.',
     url: 'https://invoicemonk.com/developer/',
   },
   alternates: {
