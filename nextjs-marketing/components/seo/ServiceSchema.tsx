@@ -1,21 +1,16 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+
+import { JsonLd } from './JsonLd';
 
 interface ServiceSchemaProps {
   serviceName: string;
   serviceType: string;
   description: string;
   url: string;
-  /** Optional price - defaults to "0" for free tier */
   price?: string;
   priceCurrency?: string;
 }
 
-/**
- * ServiceSchema - Schema.org Service markup for product pages
- * 
- * Use this on product pages (Invoicing, Expenses, Payments, etc.)
- * to help search engines understand each service offering.
- */
 export function ServiceSchema({
   serviceName,
   serviceType,
@@ -55,11 +50,5 @@ export function ServiceSchema({
     }
   };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }

@@ -1,34 +1,23 @@
-import { Helmet } from 'react-helmet-async';
-import type { Author } from '@/data/authors';
+'use client';
 
-interface CredentialSchema {
-  '@type': 'EducationalOccupationalCredential';
-  name: string;
-  credentialCategory?: string;
-}
+import { JsonLd } from './JsonLd';
+import type { Author } from '@/data/authors';
 
 interface PersonSchemaProps {
   author: Author;
   isMainEntity?: boolean;
 }
 
-/**
- * Enhanced Person Schema following Koray Tuğberk Gübür's E-E-A-T principles
- * Includes knowsAbout (expertise), hasCredential (certifications), and sameAs (authoritative profiles)
- */
 export function PersonSchema({ author, isMainEntity = false }: PersonSchemaProps) {
-  // Convert credentials to structured schema format
-  const credentialSchemas: CredentialSchema[] = author.credentials.map((credential) => ({
+  const credentialSchemas = author.credentials.map((credential) => ({
     '@type': 'EducationalOccupationalCredential',
     name: credential,
     credentialCategory: credential.toLowerCase().includes('certified') ? 'certificate' : 'degree'
   }));
 
-  // Map expertise to knowsAbout entities with proper semantic references
   const knowsAboutEntities = author.expertise.map((topic) => ({
     '@type': 'Thing',
     name: topic,
-    // Add sameAs references for known topics
     ...(getTopicSameAs(topic) && { sameAs: getTopicSameAs(topic) })
   }));
 
@@ -41,17 +30,9 @@ export function PersonSchema({ author, isMainEntity = false }: PersonSchemaProps
     image: `https://invoicemonk.com${author.avatar}`,
     jobTitle: author.role,
     description: author.bio,
-    
-    // E-E-A-T: Expertise signals
     knowsAbout: knowsAboutEntities,
-    
-    // E-E-A-T: Credential signals
     hasCredential: credentialSchemas,
-    
-    // E-E-A-T: Trust signals via authoritative profiles
     sameAs: Object.values(author.socialLinks).filter(Boolean),
-    
-    // Employment relationship
     worksFor: {
       '@type': 'Organization',
       '@id': 'https://invoicemonk.com/#organization',
@@ -60,7 +41,6 @@ export function PersonSchema({ author, isMainEntity = false }: PersonSchemaProps
     }
   };
 
-  // If this is the main entity of the page (e.g., author page)
   if (isMainEntity) {
     schema.mainEntityOfPage = {
       '@type': 'ProfilePage',
@@ -68,19 +48,9 @@ export function PersonSchema({ author, isMainEntity = false }: PersonSchemaProps
     };
   }
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }
 
-/**
- * Get sameAs references for known topics to establish entity relationships
- * This helps search engines understand the semantic context of expertise
- */
 function getTopicSameAs(topic: string): string | undefined {
   const topicReferences: Record<string, string> = {
     'Digital Marketing': 'https://en.wikipedia.org/wiki/Digital_marketing',
@@ -97,6 +67,5 @@ function getTopicSameAs(topic: string): string | undefined {
     'Content Creation': 'https://en.wikipedia.org/wiki/Content_creation',
     'Product Strategy': 'https://en.wikipedia.org/wiki/Product_management'
   };
-
   return topicReferences[topic];
 }

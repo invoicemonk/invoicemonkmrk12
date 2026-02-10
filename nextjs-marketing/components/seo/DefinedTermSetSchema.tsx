@@ -1,4 +1,6 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+
+import { JsonLd } from './JsonLd';
 import { GlossaryTerm } from '@/data/glossaryTerms';
 
 interface DefinedTermSetSchemaProps {
@@ -21,13 +23,7 @@ export function DefinedTermSetSchema({ terms }: DefinedTermSetSchemaProps) {
     }))
   };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }
 
 interface SingleTermSchemaProps {
@@ -48,11 +44,5 @@ export function SingleTermSchema({ term }: SingleTermSchemaProps) {
     }
   };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }

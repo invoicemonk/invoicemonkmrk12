@@ -1,4 +1,6 @@
-import { Helmet } from 'react-helmet-async';
+'use client';
+
+import { JsonLd } from './JsonLd';
 
 interface Review {
   author: string;
@@ -7,7 +9,6 @@ interface Review {
   maxRating?: number;
   datePublished: string;
   reviewBody: string;
-  // Optional verification fields for when real reviews are available
   verifiedPurchase?: boolean;
   source?: string;
 }
@@ -28,35 +29,6 @@ interface ReviewSchemaProps {
   };
 }
 
-/**
- * ReviewSchema - Structured data for reviews and ratings
- * 
- * Use this component when you have REAL, VERIFIABLE customer reviews.
- * Do NOT use with fabricated testimonials - this violates Google's guidelines
- * and can result in penalties.
- * 
- * Prerequisites for using this component:
- * 1. Real customer reviews with verified identities
- * 2. Actual ratings given by customers
- * 3. Genuine review dates
- * 
- * @example
- * // Only use when you have real reviews:
- * <ReviewSchema
- *   itemReviewed={{ name: "Invoicemonk", type: "SoftwareApplication" }}
- *   reviews={[{
- *     author: "John Smith",
- *     reviewRating: 5,
- *     datePublished: "2026-01-15",
- *     reviewBody: "Great invoicing software...",
- *     verifiedPurchase: true
- *   }]}
- *   aggregateRating={{
- *     ratingValue: 4.8,
- *     reviewCount: 127
- *   }}
- * />
- */
 export function ReviewSchema({
   reviews,
   itemReviewed,
@@ -70,15 +42,9 @@ export function ReviewSchema({
     "name": itemReviewed.name,
   };
 
-  if (itemReviewed.description) {
-    schema.description = itemReviewed.description;
-  }
+  if (itemReviewed.description) schema.description = itemReviewed.description;
+  if (itemReviewed.image) schema.image = itemReviewed.image;
 
-  if (itemReviewed.image) {
-    schema.image = itemReviewed.image;
-  }
-
-  // Add aggregate rating if provided
   if (aggregateRating) {
     schema.aggregateRating = {
       "@type": "AggregateRating",
@@ -89,7 +55,6 @@ export function ReviewSchema({
     };
   }
 
-  // Add individual reviews
   if (reviews && reviews.length > 0) {
     schema.review = reviews.map(review => ({
       "@type": "Review",
@@ -107,19 +72,9 @@ export function ReviewSchema({
     }));
   }
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <JsonLd data={schema} />;
 }
 
-/**
- * Placeholder component for when real reviews are not yet available
- * Displays a softer "loved by businesses" message without structured data
- */
 interface SocialProofBannerProps {
   heading?: string;
   subheading?: string;
