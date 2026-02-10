@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
-import ExploreComponent from '@/pages/Explore';
+import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
-  title: 'Page Title | InvoiceMonk',
-  description: 'Page description',
+  title: 'Explore Topics - Guides & Resources | InvoiceMonk',
+  description: 'Browse our comprehensive guides and resources.',
   alternates: { canonical: 'https://invoicemonk.com/explore/' },
 };
+
+const ExploreComponent = dynamic(() => import('@/pages/Explore'), { ssr: false });
 
 export default function ExplorePage() {
   return <ExploreComponent />;

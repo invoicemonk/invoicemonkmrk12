@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
-import ContactComponent from '@/pages/Contact';
+import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get Help & Support | InvoiceMonk',
-  description: 'Get in touch with InvoiceMonk support. We are here to help with any questions about invoicing, expenses, or accounting.',
-  openGraph: { url: 'https://invoicemonk.com/contact/', type: 'website' },
-  twitter: { card: 'summary_large_image' },
+  description: 'Get in touch with InvoiceMonk support.',
   alternates: { canonical: 'https://invoicemonk.com/contact/' },
 };
+
+const ContactComponent = dynamic(() => import('@/pages/Contact'), { ssr: false });
 
 export default function ContactPage() {
   return <ContactComponent />;
