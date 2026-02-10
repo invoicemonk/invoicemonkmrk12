@@ -1,14 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!;
-const brevoApiKey = process.env.BREVO_API_KEY!;
-
-const supabase = createClient(supabaseUrl, supabaseKey);
-
 export async function POST(request: NextRequest) {
   try {
+    // Access environment variables at runtime, not build time
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+    const brevoApiKey = process.env.BREVO_API_KEY;
+
+    // Validate environment variables
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('Missing Supabase environment variables');
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
+
+    if (!brevoApiKey) {
+      console.error('Missing Brevo API key');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
     const body = await request.json();
     const { firstName, lastName, email, subject, message } = body;
 
