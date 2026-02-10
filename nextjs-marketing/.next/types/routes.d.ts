@@ -3,7 +3,7 @@
 
 type AppRoutes = "/" | "/about" | "/accounting" | "/blog" | "/compliance" | "/consultants" | "/contact" | "/contractors" | "/cookie-policy" | "/developer" | "/estimates" | "/expenses" | "/explore" | "/free-invoice-generator" | "/freelancers" | "/glossary" | "/invoicing" | "/payments" | "/pricing" | "/privacy-policy" | "/receipts" | "/small-businesses" | "/terms-of-service" | "/why-invoicemonk"
 type AppRouteHandlerRoutes = "/api/contact"
-type PageRoutes = "/About" | "/Accounting" | "/Blog" | "/Compliance" | "/Consultants" | "/Contact" | "/Contractors" | "/CookiePolicy" | "/Developer" | "/Estimates" | "/Expenses" | "/Explore" | "/FreeInvoiceGenerator" | "/Freelancers" | "/Glossary" | "/Index" | "/Invoicing" | "/NotFound" | "/Payments" | "/Pricing" | "/PrivacyPolicy" | "/Receipts" | "/SmallBusinesses" | "/TermsOfService" | "/WhyInvoicemonk" | "/features/ClientManagement" | "/guides/BusinessFinancesGuide" | "/guides/EstimatesGuide" | "/guides/FreelancingGuide" | "/guides/GettingPaidGuide" | "/guides/GuidesIndex" | "/guides/InvoicingGuide" | "/guides/TaxComplianceGuide"
+type PageRoutes = never
 type LayoutRoutes = "/"
 type RedirectRoutes = never
 type RewriteRoutes = never
@@ -13,62 +13,29 @@ type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRo
 interface ParamMap {
   "/": {}
   "/about": {}
-  "/About": {}
   "/accounting": {}
-  "/Accounting": {}
   "/api/contact": {}
   "/blog": {}
-  "/Blog": {}
   "/compliance": {}
-  "/Compliance": {}
   "/consultants": {}
-  "/Consultants": {}
   "/contact": {}
-  "/Contact": {}
   "/contractors": {}
-  "/Contractors": {}
   "/cookie-policy": {}
-  "/CookiePolicy": {}
   "/developer": {}
-  "/Developer": {}
   "/estimates": {}
-  "/Estimates": {}
   "/expenses": {}
-  "/Expenses": {}
   "/explore": {}
-  "/Explore": {}
-  "/features/ClientManagement": {}
   "/free-invoice-generator": {}
-  "/FreeInvoiceGenerator": {}
   "/freelancers": {}
-  "/Freelancers": {}
   "/glossary": {}
-  "/Glossary": {}
-  "/guides/BusinessFinancesGuide": {}
-  "/guides/EstimatesGuide": {}
-  "/guides/FreelancingGuide": {}
-  "/guides/GettingPaidGuide": {}
-  "/guides/GuidesIndex": {}
-  "/guides/InvoicingGuide": {}
-  "/guides/TaxComplianceGuide": {}
-  "/Index": {}
   "/invoicing": {}
-  "/Invoicing": {}
-  "/NotFound": {}
   "/payments": {}
-  "/Payments": {}
   "/pricing": {}
-  "/Pricing": {}
   "/privacy-policy": {}
-  "/PrivacyPolicy": {}
   "/receipts": {}
-  "/Receipts": {}
   "/small-businesses": {}
-  "/SmallBusinesses": {}
   "/terms-of-service": {}
-  "/TermsOfService": {}
   "/why-invoicemonk": {}
-  "/WhyInvoicemonk": {}
 }
 
 
