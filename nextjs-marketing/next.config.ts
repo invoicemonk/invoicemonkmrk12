@@ -1,8 +1,10 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Remove 'output: export' for Vercel deployment - Vercel handles this automatically
-  // output: 'export',
+  // Force all routes to be dynamically rendered
+  experimental: {
+    dynamicIO: true,
+  },
   images: {
     unoptimized: true,
   },
