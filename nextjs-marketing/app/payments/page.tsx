@@ -2,13 +2,11 @@ import { Metadata } from 'next';
 import PaymentsComponent from '@/pages/Payments';
 
 export const metadata: Metadata = {
-  title: 'Payment Processing & Tracking Software ',
-  description: '",
-  description: "Accept online payments, track payment status, and get paid faster. Integrated payment processing for your invoices.',
+  title: 'Payment Processing & Tracking Software | InvoiceMonk',
+  description: 'Accept online payments, track payment status, and get paid faster. Integrated payment processing for your invoices.',
   openGraph: {
-    title: 'Payment Processing & Tracking Software ',
-    description: '",
-  description: "Accept online payments, track payment status, and get paid faster. Integrated payment processing for your invoices.',
+    title: 'Payment Processing & Tracking Software',
+    description: 'Accept online payments, track payment status, and get paid faster. Integrated payment processing for your invoices.',
     url: 'https://invoicemonk.com/payments/',
   },
   alternates: {

@@ -2,13 +2,11 @@ import { Metadata } from 'next';
 import ReceiptsComponent from '@/pages/Receipts';
 
 export const metadata: Metadata = {
-  title: 'Receipt Management & Scanning Software ',
-  description: '",
-  description: "Scan, organize, and manage receipts digitally. Automatic expense categorization and tax tracking.',
+  title: 'Receipt Management & Scanning Software | InvoiceMonk',
+  description: 'Scan, organize, and manage receipts digitally. Automatic expense categorization and tax tracking.',
   openGraph: {
-    title: 'Receipt Management & Scanning Software ',
-    description: '",
-  description: "Scan, organize, and manage receipts digitally. Automatic expense categorization and tax tracking.',
+    title: 'Receipt Management & Scanning Software',
+    description: 'Scan, organize, and manage receipts digitally. Automatic expense categorization and tax tracking.',
     url: 'https://invoicemonk.com/receipts/',
   },
   alternates: {
