@@ -118,8 +118,8 @@ const Invoicing = () => {
   const { locale, formatCurrency } = useLocale();
   const { compliance } = locale.content;
 
-  const serviceAmount = locale.pricing.business * 50;
-  const hostingAmount = locale.pricing.starter * 50;
+  const serviceAmount = (locale.pricing?.business || 0) * 50;
+  const hostingAmount = (locale.pricing?.starter || 0) * 50;
   const totalAmount = serviceAmount + hostingAmount;
 
   return (
