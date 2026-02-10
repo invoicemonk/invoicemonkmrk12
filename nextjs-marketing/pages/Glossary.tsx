@@ -42,7 +42,7 @@ const categoryConfig: Record<GlossaryTerm['category'], { icon: typeof FileText; 
   business: { icon: Briefcase, label: 'Business', color: 'bg-rose-500/10 text-rose-600' },
 };
 
-const Glossary = () => {
+function GlossaryContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
