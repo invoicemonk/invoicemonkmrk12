@@ -1,12 +1,13 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Disable static page generation to prevent SSR issues with client-only libraries
+  output: 'standalone',
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  // Disable static optimization to prevent prerendering issues with client contexts
   reactStrictMode: true,
   async headers() {
     return [
