@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import FreeInvoiceGeneratorComponent from '@/pages/FreeInvoiceGenerator';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const FreeInvoiceGeneratorComponent = dynamicImport(() => import('@/pages/FreeInvoiceGenerator'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Free Online Invoice Generator | InvoiceMonk',
+  description: 'Create professional invoices instantly with our free invoice generator.',
+  alternates: { canonical: 'https://invoicemonk.com/free-invoice-generator/' },
+};
 
 export default function FreeInvoiceGeneratorPage() {
   return <FreeInvoiceGeneratorComponent />;

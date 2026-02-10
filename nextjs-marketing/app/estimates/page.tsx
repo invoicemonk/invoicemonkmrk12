@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import EstimatesComponent from '@/pages/Estimates';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const EstimatesComponent = dynamicImport(() => import('@/pages/Estimates'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Page Title | InvoiceMonk',
+  description: 'Page description',
+  alternates: { canonical: 'https://invoicemonk.com/estimates/' },
+};
 
 export default function EstimatesPage() {
   return <EstimatesComponent />;

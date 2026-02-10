@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import PrivacyPolicyComponent from '@/pages/PrivacyPolicy';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const PrivacyPolicyComponent = dynamicImport(() => import('@/pages/PrivacyPolicy'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Privacy Policy | InvoiceMonk',
+  description: 'How InvoiceMonk collects, uses, and protects your personal information.',
+  alternates: { canonical: 'https://invoicemonk.com/privacy-policy/' },
+};
 
 export default function PrivacyPolicyPage() {
   return <PrivacyPolicyComponent />;

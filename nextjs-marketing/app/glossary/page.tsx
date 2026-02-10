@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import GlossaryComponent from '@/pages/Glossary';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const GlossaryComponent = dynamicImport(() => import('@/pages/Glossary'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Page Title | InvoiceMonk',
+  description: 'Page description',
+  alternates: { canonical: 'https://invoicemonk.com/glossary/' },
+};
 
 export default function GlossaryPage() {
   return <GlossaryComponent />;

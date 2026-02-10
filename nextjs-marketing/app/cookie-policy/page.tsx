@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import CookiePolicyComponent from '@/pages/CookiePolicy';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const CookiePolicyComponent = dynamicImport(() => import('@/pages/CookiePolicy'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Cookie Policy | InvoiceMonk',
+  description: 'How InvoiceMonk uses cookies to improve your experience.',
+  alternates: { canonical: 'https://invoicemonk.com/cookie-policy/' },
+};
 
 export default function CookiePolicyPage() {
   return <CookiePolicyComponent />;

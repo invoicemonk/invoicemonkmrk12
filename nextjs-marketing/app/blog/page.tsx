@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import BlogComponent from '@/pages/Blog';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const BlogComponent = dynamicImport(() => import('@/pages/Blog'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Blog - Invoicing, Accounting & Business Tips | InvoiceMonk',
+  description: 'Expert guides and resources on invoicing, expense tracking, accounting, and small business financial management.',
+  alternates: { canonical: 'https://invoicemonk.com/blog/' },
+};
 
 export default function BlogPage() {
   return <BlogComponent />;

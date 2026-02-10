@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import TermsOfServiceComponent from '@/pages/TermsOfService';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const TermsOfServiceComponent = dynamicImport(() => import('@/pages/TermsOfService'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Terms of Service | InvoiceMonk',
+  description: 'Terms and conditions for using InvoiceMonk services.',
+  alternates: { canonical: 'https://invoicemonk.com/terms-of-service/' },
+};
 
 export default function TermsOfServicePage() {
   return <TermsOfServiceComponent />;

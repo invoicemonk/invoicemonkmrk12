@@ -1,14 +1,11 @@
-'use client';
+import { Metadata } from 'next';
+import ReceiptsComponent from '@/pages/Receipts';
 
-import dynamicImport from 'next/dynamic';
-
-// Force dynamic rendering - must be before component definition
-export const dynamic = 'force-dynamic';
-
-const ReceiptsComponent = dynamicImport(() => import('@/pages/Receipts'), {
-  ssr: false,
-  loading: () => <div style={{ minHeight: '100vh' }}></div>,
-});
+export const metadata: Metadata = {
+  title: 'Page Title | InvoiceMonk',
+  description: 'Page description',
+  alternates: { canonical: 'https://invoicemonk.com/receipts/' },
+};
 
 export default function ReceiptsPage() {
   return <ReceiptsComponent />;
