@@ -30,8 +30,8 @@ const defaultContextValue: LocaleContextType = {
   locale: defaultLocale,
   countryCode: defaultCountry,
   setCountry: () => {},
-  formatCurrency: (amount: number) => formatCurrencyUtil(amount, defaultCountry),
-  formatPrice: (amount: number, period?: string) => formatPriceUtil(amount, defaultCountry, period),
+  formatCurrency: (amount: number) => formatCurrencyUtil(amount, defaultLocale),
+  formatPrice: (amount: number, period?: string) => formatPriceUtil(amount, defaultLocale, period),
   isLoading: false,
   supportedCountries: supportedCountries,
 };
