@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "next-themes";
 import { LocaleProvider } from "@/contexts/LocaleContext";
+import { MotionProvider } from "@/components/motion/SafeMotion";
 import dynamic from "next/dynamic";
 
 // Import Toaster dynamically with no SSR to avoid Radix Toast SSR issues
@@ -14,8 +15,10 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <LocaleProvider>
-        {children}
-        <Toaster />
+        <MotionProvider>
+          {children}
+          <Toaster />
+        </MotionProvider>
       </LocaleProvider>
     </ThemeProvider>
   );
