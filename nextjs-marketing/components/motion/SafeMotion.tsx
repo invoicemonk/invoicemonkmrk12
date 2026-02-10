@@ -1,13 +1,13 @@
 'use client';
 
-import { LazyMotion, domAnimation } from 'framer-motion';
+import { MotionConfig } from 'framer-motion';
 import { ReactNode } from 'react';
 
-// Wrapper to ensure LazyMotion features are loaded before any motion components render
+// Wrapper to configure framer-motion with reduced motion support and proper initialization
 export function MotionProvider({ children }: { children: ReactNode }) {
   return (
-    <LazyMotion features={domAnimation} strict>
+    <MotionConfig reducedMotion="user">
       {children}
-    </LazyMotion>
+    </MotionConfig>
   );
 }
