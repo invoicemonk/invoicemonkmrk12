@@ -2,11 +2,10 @@
 
 import dynamic from 'next/dynamic';
 
-// Dynamically import the page component with no SSR
-const PageComponent = dynamic(() => import('@/pages/COMPONENT_NAME'), {
+const FreelancersComponent = dynamic(() => import('@/pages/Freelancers'), {
   ssr: false,
 });
 
-export default function Page() {
-  return <PageComponent />;
+export default function FreelancersPage() {
+  return <FreelancersComponent />;
 }
