@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicReceipts } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Receipt Management & Scanning Software | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/receipts/' },
 };
 
-const ReceiptsComponent = dynamic(() => import('@/pages/Receipts'), { ssr: false });
-
 export default function ReceiptsPage() {
-  return <ReceiptsComponent />;
+  return <DynamicReceipts />;
 }

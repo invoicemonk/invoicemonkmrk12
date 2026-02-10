@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicTermsOfService } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/terms-of-service/' },
 };
 
-const TermsOfServiceComponent = dynamic(() => import('@/pages/TermsOfService'), { ssr: false });
-
 export default function TermsOfServicePage() {
-  return <TermsOfServiceComponent />;
+  return <DynamicTermsOfService />;
 }

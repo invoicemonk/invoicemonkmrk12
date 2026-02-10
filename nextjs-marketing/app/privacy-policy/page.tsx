@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicPrivacyPolicy } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/privacy-policy/' },
 };
 
-const PrivacyPolicyComponent = dynamic(() => import('@/pages/PrivacyPolicy'), { ssr: false });
-
 export default function PrivacyPolicyPage() {
-  return <PrivacyPolicyComponent />;
+  return <DynamicPrivacyPolicy />;
 }

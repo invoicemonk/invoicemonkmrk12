@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicWhyInvoicemonk } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Why Choose InvoiceMonk - Features & Benefits | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/why-invoicemonk/' },
 };
 
-const WhyInvoicemonkComponent = dynamic(() => import('@/pages/WhyInvoicemonk'), { ssr: false });
-
 export default function WhyInvoicemonkPage() {
-  return <WhyInvoicemonkComponent />;
+  return <DynamicWhyInvoicemonk />;
 }

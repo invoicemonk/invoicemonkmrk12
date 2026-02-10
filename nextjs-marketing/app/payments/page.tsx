@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicPayments } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Payment Processing & Tracking Software | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/payments/' },
 };
 
-const PaymentsComponent = dynamic(() => import('@/pages/Payments'), { ssr: false });
-
 export default function PaymentsPage() {
-  return <PaymentsComponent />;
+  return <DynamicPayments />;
 }

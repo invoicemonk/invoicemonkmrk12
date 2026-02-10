@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicFreeInvoiceGenerator } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Free Online Invoice Generator | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/free-invoice-generator/' },
 };
 
-const FreeInvoiceGeneratorComponent = dynamic(() => import('@/pages/FreeInvoiceGenerator'), { ssr: false });
-
 export default function FreeInvoiceGeneratorPage() {
-  return <FreeInvoiceGeneratorComponent />;
+  return <DynamicFreeInvoiceGenerator />;
 }

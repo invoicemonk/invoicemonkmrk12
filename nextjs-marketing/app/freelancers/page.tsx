@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicFreelancers } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Invoicing Software for Freelancers | InvoiceMonk',
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://invoicemonk.com/freelancers/' },
 };
 
-const FreelancersComponent = dynamic(() => import('@/pages/Freelancers'), { ssr: false });
-
 export default function FreelancersPage() {
-  return <FreelancersComponent />;
+  return <DynamicFreelancers />;
 }

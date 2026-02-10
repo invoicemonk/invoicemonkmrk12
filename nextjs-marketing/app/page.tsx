@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { DynamicIndex } from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'InvoiceMonk - Invoicing, Expenses & Accounting Software for Small Businesses',
@@ -15,12 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Dynamically import the page content to prevent SSR issues with animations
-const HomePageContent = dynamic(() => import('@/components/home/HomePageContent'), { 
-  ssr: false,
-  loading: () => <div className="min-h-screen bg-background" />,
-});
-
 export default function HomePage() {
-  return <HomePageContent />;
+  return <DynamicIndex />;
 }
