@@ -80,7 +80,7 @@ const About = () => {
                   free estimate application
                 </Link>
                 ,{' '}
-                <Link to="/features/client-management" className="text-primary hover:underline">
+                <Link to="/client-management" className="text-primary hover:underline">
                   user friendly client management application
                 </Link>
                 ,{' '}

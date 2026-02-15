@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Redirect } from "@/components/Redirect";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 
 // Pages
@@ -48,6 +49,10 @@ import EstimatesGuide from "./pages/guides/EstimatesGuide";
 import Glossary from "./pages/Glossary";
 import Explore from "./pages/Explore";
 
+// Help Center
+import HelpCenter from "./pages/help/HelpCenter";
+import HelpArticle from "./pages/help/HelpArticle";
+
 // Tool pages
 import InternationalPaymentFeeCalculator from "./pages/tools/InternationalPaymentFeeCalculator";
 import PaypalVsWiseFees from "./pages/tools/PaypalVsWiseFees";
@@ -64,6 +69,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             {/* Main pages */}
             <Route path="/" element={<Index />} />
@@ -96,8 +102,8 @@ const App = () => (
             <Route path="/small-businesses" element={<SmallBusinesses />} />
             <Route path="/developer" element={<Developer />} />
             
-            {/* Feature sub-pages */}
-            <Route path="/features/client-management" element={<ClientManagement />} />
+            {/* Feature pages */}
+            <Route path="/client-management" element={<ClientManagement />} />
             
             {/* Guide pages */}
             <Route path="/guides" element={<GuidesIndex />} />
@@ -112,6 +118,10 @@ const App = () => (
             <Route path="/glossary" element={<Glossary />} />
             <Route path="/explore" element={<Explore />} />
             
+            {/* Help Center */}
+            <Route path="/help" element={<HelpCenter />} />
+            <Route path="/help/:slug" element={<HelpArticle />} />
+            
             {/* Payment Tools */}
             <Route path="/international-payment-fee-calculator" element={<InternationalPaymentFeeCalculator />} />
             <Route path="/paypal-vs-wise-fees" element={<PaypalVsWiseFees />} />
@@ -124,6 +134,7 @@ const App = () => (
             <Route path="/features/estimates" element={<Redirect to="/estimates" />} />
             <Route path="/features/send-invoices" element={<Redirect to="/invoicing" />} />
             <Route path="/features/business-expense-tracking-app" element={<Redirect to="/expenses" />} />
+            <Route path="/features/client-management" element={<Redirect to="/client-management" />} />
             
             {/* Short URL redirects for footer links */}
             <Route path="/privacy" element={<Redirect to="/privacy-policy" />} />

@@ -11,57 +11,60 @@
   :root {
     /* Clean white background */
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 222 47% 11%;
 
     /* Cards: Clean white */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Primary: Invoicemonk Red #d80000 */
-    --primary: 0 100% 42%;
+    /* Primary: Clarity Teal #0F766E */
+    --primary: 170 82% 26%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Light gray */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    /* Secondary: Slate light */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
 
     /* Muted: For subtle backgrounds and text */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Accent: Red accent for CTAs and highlights */
-    --accent-orange: 0 100% 42%;
+    /* Accent: Teal accent for CTAs and highlights */
+    --accent-orange: 170 82% 26%;
     --accent-orange-foreground: 0 0% 100%;
 
     /* Accent: Soft highlight */
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 100% 42%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 170 82% 26%;
 
     --radius: 0.75rem;
 
     /* Custom tokens for Invoicemonk */
     --hero-gradient-start: 0 0% 100%;
-    --hero-gradient-end: 0 0% 98%;
+    --hero-gradient-end: 166 76% 97%;
     
+    /* Soft teal background for alternating sections */
+    --primary-soft: 166 76% 97%;
+
     /* Text hierarchy */
-    --heading: 0 0% 0%;
-    --body: 0 0% 25%;
-    --caption: 0 0% 45%;
+    --heading: 222 47% 11%;
+    --body: 215 16% 47%;
+    --caption: 215 20% 65%;
 
     /* Invoicemonk-specific tokens */
-    --wave-blue: 0 100% 42%;
-    --wave-blue-light: 0 10% 97%;
-    --wave-orange: 0 100% 42%;
+    --wave-blue: 170 82% 26%;
+    --wave-blue-light: 166 76% 97%;
+    --wave-orange: 170 82% 26%;
     --wave-cream: 0 0% 100%;
     --wave-green: 142 69% 38%;
 
@@ -72,66 +75,68 @@
     --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.08), 0 10px 10px -5px hsl(0 0% 0% / 0.03);
 
     /* Sidebar (keeping for compatibility) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 0 100% 42%;
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 170 82% 26%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 0 100% 42%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 170 82% 26%;
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 96%;
+    --background: 222 47% 5%;
+    --foreground: 210 40% 96%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 96%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 96%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 0 100% 50%;
+    --primary: 170 82% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 96%;
+    --secondary: 215 16% 15%;
+    --secondary-foreground: 210 40% 96%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 215 16% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent-orange: 0 100% 50%;
+    --accent-orange: 170 82% 35%;
     --accent-orange-foreground: 0 0% 100%;
 
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 96%;
+    --accent: 215 16% 15%;
+    --accent-foreground: 210 40% 96%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 96%;
+    --destructive-foreground: 210 40% 96%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 100% 50%;
+    --border: 215 16% 18%;
+    --input: 215 16% 18%;
+    --ring: 170 82% 35%;
 
-    --heading: 0 0% 96%;
-    --body: 0 0% 75%;
-    --caption: 0 0% 55%;
+    --primary-soft: 170 30% 12%;
 
-    --wave-blue: 0 100% 50%;
-    --wave-blue-light: 0 0% 15%;
-    --wave-orange: 0 100% 50%;
-    --wave-cream: 0 0% 5%;
+    --heading: 210 40% 96%;
+    --body: 215 20% 75%;
+    --caption: 215 20% 55%;
+
+    --wave-blue: 170 82% 35%;
+    --wave-blue-light: 170 30% 15%;
+    --wave-orange: 170 82% 35%;
+    --wave-cream: 222 47% 5%;
     --wave-green: 142 69% 45%;
 
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 100% 50%;
+    --sidebar-background: 222 47% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 170 82% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 16%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 16%;
-    --sidebar-ring: 0 100% 50%;
+    --sidebar-accent: 215 16% 16%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 215 16% 16%;
+    --sidebar-ring: 170 82% 35%;
   }
 }
 

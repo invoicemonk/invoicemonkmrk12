@@ -30,7 +30,7 @@ const benefits = [
 
 export function WaveFeatureBenefits() {
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-20 lg:py-32 bg-primary-soft">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-h2 text-heading mb-4">
@@ -67,7 +67,7 @@ export function WaveFeatureBenefits() {
                       />
                     </div>
                     {/* Decorative element */}
-                    <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent-orange/10 rounded-2xl -z-10" />
+                    <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
                     <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/10 rounded-2xl -z-10" />
                   </div>
                 </motion.div>

@@ -142,7 +142,7 @@ export const pageSEO: Record<string, PageSEO> = {
     priority: 0.6,
     changefreq: 'monthly',
   },
-  '/features/client-management': {
+  '/client-management': {
     getTitle: (locale) => `Client Management for ${locale.content.seo.targetAudience} Businesses | Invoicemonk`,
     getDescription: (locale) => `Manage client information, track payment history, and build better relationships. Built for ${locale.content.seo.region} businesses.`,
     ogType: 'website',

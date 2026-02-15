@@ -46,6 +46,7 @@ export default {
           DEFAULT: "hsl(var(--accent-orange))",
           foreground: "hsl(var(--accent-orange-foreground))",
         },
+        "primary-soft": "hsl(var(--primary-soft))",
         wave: {
           blue: "hsl(var(--wave-blue))",
           "blue-light": "hsl(var(--wave-blue-light))",

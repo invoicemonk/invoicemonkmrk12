@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, FileText, Receipt, CreditCard, Calculator, FileCheck, Wallet } from 'lucide-react';
+import { Menu, X, ChevronDown, FileText, Receipt, CreditCard, Calculator, FileCheck, Wallet, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { CountrySelector } from '@/components/CountrySelector';
 import logo from '@/assets/invoicemonk-logo.png';
@@ -48,9 +48,17 @@ const products = [
     description: 'Digital receipt management',
     status: 'available'
   },
+  { 
+    name: 'Client Management', 
+    href: '/client-management', 
+    icon: Users, 
+    description: 'Organize clients and track history',
+    status: 'available'
+  },
 ];
 
 const navLinks = [
+  { name: 'Help', href: '/help' },
   { name: 'Guides', href: '/guides' },
   { name: 'Blog', href: '/blog' },
   { name: 'Pricing', href: '/pricing' },
@@ -93,7 +101,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 relative z-10">
-              <img src={logo} alt="Invoicemonk" className="h-8 lg:h-10 w-auto" />
+              <img src={logo} alt="Invoicemonk" className="h-8 lg:h-10 w-auto" style={{ filter: 'hue-rotate(160deg) saturate(0.8)' }} />
             </Link>
 
             {/* Desktop Navigation */}

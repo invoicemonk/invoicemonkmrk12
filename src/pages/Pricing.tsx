@@ -8,6 +8,7 @@ import { useLocale } from '@/hooks/useLocale';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { pageSEO } from '@/components/seo/seoConfig';
 import { getPricingPlans, calculatePrice } from '@/config/pricingPlans';
+import { FeatureComparisonTable } from '@/components/pricing/FeatureComparisonTable';
 
 const faqs = [
   {
@@ -49,7 +50,7 @@ const Pricing = () => {
         canonical="https://invoicemonk.com/pricing"
       />
       {/* Hero */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-accent/30">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-primary-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
             <h1 className="text-display text-heading mb-4">
@@ -80,7 +81,7 @@ const Pricing = () => {
                 }`}
               >
                 Annual
-                <span className="ml-1.5 text-wave-orange font-semibold">
+                <span className="ml-1.5 text-primary-foreground font-semibold">
                   {pricingContent.annualSavingsText}
                 </span>
               </button>
@@ -171,6 +172,9 @@ const Pricing = () => {
           </StaggerContainer>
         </div>
       </section>
+
+      {/* Feature Comparison Table */}
+      <FeatureComparisonTable />
 
       {/* FAQ Section */}
       <section className="py-20 lg:py-32 bg-card">

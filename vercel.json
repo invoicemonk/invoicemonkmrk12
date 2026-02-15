@@ -102,6 +102,16 @@
       "permanent": true
     },
     {
+      "source": "/features/client-management",
+      "destination": "/client-management",
+      "permanent": true
+    },
+    {
+      "source": "/features/client-management/",
+      "destination": "/client-management",
+      "permanent": true
+    },
+    {
       "source": "/category/small-business",
       "destination": "/blog",
       "permanent": true

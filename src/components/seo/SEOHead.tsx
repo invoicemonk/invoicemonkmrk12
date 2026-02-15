@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import { useLocale } from '@/hooks/useLocale';
 
 interface SEOHeadProps {
@@ -30,8 +31,9 @@ export function SEOHead({
   article,
 }: SEOHeadProps) {
   const { locale } = useLocale();
+  const location = useLocation();
   const baseUrl = 'https://invoicemonk.com';
-  const fullCanonical = canonical || baseUrl;
+  const fullCanonical = canonical || `${baseUrl}${location.pathname}`;
   
   return (
     <Helmet>

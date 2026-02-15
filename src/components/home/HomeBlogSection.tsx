@@ -9,7 +9,7 @@ export function HomeBlogSection() {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section className="py-20 lg:py-32 bg-primary-soft">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-h2 text-heading mb-4">

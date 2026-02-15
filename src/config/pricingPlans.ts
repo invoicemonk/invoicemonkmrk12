@@ -19,51 +19,51 @@ export interface PricingPlan {
 
 // Feature lists for each tier
 export const freeTierFeatures = [
-  '5 invoices/month',
-  'Clean invoice layout',
-  'Subtle Invoicemonk branding',
-  'View invoice online',
-  'Basic invoice verification',
-  '7-year data retention',
+  '5 invoices & 5 receipts/month',
+  '1 currency account',
+  '1 payment method per currency',
+  'Accounting & expense tracking',
+  'Credit notes',
+  'Invoice verification portal',
+  'Invoicemonk watermark on PDFs',
 ];
 
 export const starterTierFeatures = [
-  'Unlimited invoices',
-  'PDF export',
-  'Branded invoices (with footer)',
-  'Basic compliance fields',
-  '7-year retention',
-  'Email support',
+  'Unlimited invoices & receipts',
+  '3 currency accounts',
+  '2 payment methods per currency',
+  'Accounting & expense tracking',
+  'Credit notes',
+  'In-app support',
+  'Invoicemonk watermark on PDFs',
 ];
 
 export const professionalTierFeatures = [
-  'Everything in Starter',
-  'Full audit trail (append-only)',
-  'Immutable invoice hashes',
-  'Public invoice verification',
-  'Compliance-ready exports',
-  'Regulator-friendly logs',
-  'Priority support',
+  'Unlimited invoices & receipts',
+  'Unlimited currency accounts',
+  'Unlimited payment methods',
+  'Up to 5 team members',
+  'Full audit trail & data exports',
+  'Custom branding & premium templates',
+  'No watermark on PDFs',
 ];
 
 export const professionalTierFeaturesIntl = [
-  'Unlimited invoices',
-  'Full audit trail (append-only)',
-  'Immutable invoice hashes',
-  'Public invoice verification',
-  'Compliance-ready exports',
-  'Regulator-friendly logs',
-  'Priority support',
+  'Unlimited invoices & receipts',
+  'Unlimited currency accounts',
+  'Unlimited payment methods',
+  'Up to 5 team members',
+  'Full audit trail & data exports',
+  'Custom branding & premium templates',
+  'No watermark on PDFs',
 ];
 
 export const businessTierFeatures = [
   'Everything in Professional',
-  'Multi-user accounts',
-  'Roles & permissions',
-  'Bulk invoicing',
-  'Compliance reports',
-  'API access (when enabled)',
-  'SLA support',
+  'Unlimited team members',
+  'API access',
+  'Advanced reports',
+  'Enterprise-grade support',
 ];
 
 // Get pricing plans based on locale
@@ -74,7 +74,7 @@ export function getPricingPlans(locale: LocaleConfig): PricingPlan[] {
     {
       id: 'free',
       name: 'Free',
-      description: 'For getting started',
+      description: 'For individuals getting started',
       features: freeTierFeatures,
       cta: 'Get Started',
       ctaLink: 'https://app.invoicemonk.com/signup',
@@ -88,7 +88,7 @@ export function getPricingPlans(locale: LocaleConfig): PricingPlan[] {
     plans.push({
       id: 'starter',
       name: 'Starter',
-      description: 'For growing freelancers',
+      description: 'For solo businesses ready to grow',
       features: starterTierFeatures,
       cta: 'Start Free Trial',
       ctaLink: 'https://app.invoicemonk.com/signup?plan=starter',
@@ -101,7 +101,7 @@ export function getPricingPlans(locale: LocaleConfig): PricingPlan[] {
   plans.push({
     id: 'professional',
     name: 'Professional',
-    description: 'For serious businesses',
+    description: 'For growing businesses',
     features: showStarterTier ? professionalTierFeatures : professionalTierFeaturesIntl,
     cta: 'Start Free Trial',
     ctaLink: 'https://app.invoicemonk.com/signup?plan=professional',
@@ -114,7 +114,7 @@ export function getPricingPlans(locale: LocaleConfig): PricingPlan[] {
   plans.push({
     id: 'business',
     name: 'Business',
-    description: 'For teams and enterprises',
+    description: 'For enterprises with advanced needs',
     features: businessTierFeatures,
     cta: 'Contact Sales',
     ctaLink: 'https://app.invoicemonk.com/signup?plan=business',

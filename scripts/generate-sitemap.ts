@@ -52,9 +52,14 @@ const staticPages: SitemapEntry[] = [
   { loc: '/small-businesses', priority: 0.8, changefreq: 'monthly' },
   
   // Feature pages
-  { loc: '/features/client-management', priority: 0.7, changefreq: 'monthly' },
+  { loc: '/client-management', priority: 0.7, changefreq: 'monthly' },
   { loc: '/free-invoice-generator', priority: 0.8, changefreq: 'monthly' },
-  
+
+  // Payment tools
+  { loc: '/international-payment-fee-calculator', priority: 0.8, changefreq: 'weekly' },
+  { loc: '/paypal-vs-wise-fees', priority: 0.8, changefreq: 'weekly' },
+  { loc: '/cheapest-way-to-receive-international-payments', priority: 0.8, changefreq: 'weekly' },
+
   // Blog hub
   { loc: '/blog', priority: 0.8, changefreq: 'daily' },
   

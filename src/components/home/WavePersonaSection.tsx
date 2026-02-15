@@ -39,11 +39,11 @@ export function WavePersonaSection() {
     <section className="py-20 lg:py-32 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="text-h2 mb-4">
+          <h2 className="text-h2 mb-4 text-white">
             Built for small business owners{' '}
-            <span className="font-serif italic opacity-90">like you</span>
+            <span className="font-serif italic text-white/90">like you</span>
           </h2>
-          <p className="text-body-lg opacity-80">
+          <p className="text-body-lg text-white/80">
             Whether you're just starting out or scaling up, Invoicemonk has the tools you need.
           </p>
         </AnimatedSection>

@@ -55,7 +55,7 @@ const products = [
     title: 'Manage clients effortlessly',
     description: 'Keep all your client information organized in one place. Track contact details, payment history, and outstanding balances at a glance.',
     features: ['Contact management', 'Payment history', 'Client notes', 'Quick invoicing'],
-    link: '/features/client-management',
+    link: '/client-management',
     available: true,
   },
   {

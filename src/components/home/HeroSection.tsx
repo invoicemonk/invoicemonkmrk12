@@ -8,11 +8,10 @@ export function HeroSection() {
   const { hero, compliance } = locale.content;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-accent/30 py-16 lg:py-24">
-      {/* Background decoration */}
+    <section className="relative overflow-hidden bg-gradient-to-b from-background to-primary-soft py-16 lg:py-24">
+      {/* Background decoration - subtle */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-wave-orange/5 blur-3xl" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-primary/3 blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -46,7 +45,7 @@ export function HeroSection() {
               </svg>
               <div className="flex items-center gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className={`w-4 h-4 ${i < 4 ? 'fill-wave-orange text-wave-orange' : 'fill-wave-orange/50 text-wave-orange/50'}`} />
+                  <Star key={i} className={`w-4 h-4 ${i < 4 ? 'fill-amber-400 text-amber-400' : 'fill-amber-400/50 text-amber-400/50'}`} />
                 ))}
               </div>
             </div>
