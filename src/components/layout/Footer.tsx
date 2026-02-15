@@ -43,6 +43,12 @@ const footerLinks = {
     { name: 'For Consultants', href: '/consultants' },
     { name: 'For Contractors', href: '/contractors' },
     { name: 'For Small Businesses', href: '/small-businesses' },
+    { name: 'For Agencies', href: '/agencies' },
+    { name: 'For Photographers', href: '/photographers' },
+    { name: 'For Lawyers', href: '/lawyers' },
+    { name: 'For Accountants', href: '/accountants' },
+    { name: 'For E-commerce', href: '/ecommerce' },
+    { name: 'For Creatives', href: '/creatives' },
     { name: 'Developers', href: '/developer' },
   ],
   legal: [
