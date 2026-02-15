@@ -36,6 +36,12 @@ import Consultants from "./pages/Consultants";
 import Contractors from "./pages/Contractors";
 import SmallBusinesses from "./pages/SmallBusinesses";
 import Developer from "./pages/Developer";
+import Agencies from "./pages/Agencies";
+import Photographers from "./pages/Photographers";
+import Lawyers from "./pages/Lawyers";
+import Accountants from "./pages/Accountants";
+import Ecommerce from "./pages/Ecommerce";
+import Creatives from "./pages/Creatives";
 import ClientManagement from "./pages/features/ClientManagement";
 
 // Guide pages
@@ -101,6 +107,12 @@ const App = () => (
             <Route path="/contractors" element={<Contractors />} />
             <Route path="/small-businesses" element={<SmallBusinesses />} />
             <Route path="/developer" element={<Developer />} />
+            <Route path="/agencies" element={<Agencies />} />
+            <Route path="/photographers" element={<Photographers />} />
+            <Route path="/lawyers" element={<Lawyers />} />
+            <Route path="/accountants" element={<Accountants />} />
+            <Route path="/ecommerce" element={<Ecommerce />} />
+            <Route path="/creatives" element={<Creatives />} />
             
             {/* Feature pages */}
             <Route path="/client-management" element={<ClientManagement />} />

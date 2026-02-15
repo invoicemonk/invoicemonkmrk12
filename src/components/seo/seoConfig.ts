@@ -212,6 +212,48 @@ export const pageSEO: Record<string, PageSEO> = {
     priority: 0.8,
     changefreq: 'weekly',
   },
+  '/agencies': {
+    getTitle: () => 'Invoicing Software for Agencies | Invoicemonk',
+    getDescription: () => 'Streamline agency billing with retainer invoicing, multi-project tracking, and branded invoices. Built for digital, creative, and marketing agencies.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/photographers': {
+    getTitle: () => 'Invoice Software for Photographers | Invoicemonk',
+    getDescription: () => 'Create professional photography invoices with milestone payments, package billing, and branded templates. Perfect for wedding, event, and commercial photographers.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/lawyers': {
+    getTitle: () => 'Legal Billing Software for Lawyers | Invoicemonk',
+    getDescription: () => 'Professional legal billing with time tracking, retainer management, and detailed invoicing. Built for law firms, solo practitioners, and legal consultants.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/accountants': {
+    getTitle: () => 'Invoicing for Accountants & Bookkeepers | Invoicemonk',
+    getDescription: () => 'Multi-client invoicing and billing for accountants, bookkeepers, and accounting firms. Recurring billing, tax compliance, and detailed financial reporting.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/ecommerce': {
+    getTitle: () => 'Invoicing for E-commerce Sellers | Invoicemonk',
+    getDescription: () => 'Professional invoicing for e-commerce businesses. B2B wholesale billing, multi-currency invoicing, and subscription billing for online sellers.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
+  '/creatives': {
+    getTitle: () => 'Invoicing for Creatives & Designers | Invoicemonk',
+    getDescription: () => 'Professional invoicing for graphic designers, illustrators, videographers, and creative freelancers. Project billing, branded invoices, and payment tracking.',
+    ogType: 'website',
+    priority: 0.7,
+    changefreq: 'weekly',
+  },
 };
 
 export const getPageSEO = (path: string): PageSEO | undefined => {
